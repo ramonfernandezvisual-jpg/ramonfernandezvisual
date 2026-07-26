@@ -81,17 +81,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Portfolio de Ramón Fernández. Diseño visual, vídeo, inteligencia artificial y narrativa aplicados a diferentes disciplinas y sectores.",
+          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
       },
       { name: "author", content: "Ramón Fernández" },
       { property: "og:title", content: "Ramón Fernández — Visual Designer & AI Specialist" },
       {
         property: "og:description",
         content:
-          "Portfolio visual multidisciplinar: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
+          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ramón Fernández — Visual Designer & AI Specialist" },
+      { name: "twitter:description", content: "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/656cff49-581e-4256-830e-7568ec3d0e4b/id-preview-c2deab01--f0542285-cb11-40ca-b7b5-a066104d9686.lovable.app-1785099139018.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/656cff49-581e-4256-830e-7568ec3d0e4b/id-preview-c2deab01--f0542285-cb11-40ca-b7b5-a066104d9686.lovable.app-1785099139018.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -16,11 +16,11 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
       },
-      { property: "og:title", content: "Ramón Fernández — Portfolio" },
+      { property: "og:title", content: "Ramón Fernández — Visual Designer & AI Specialist" },
       {
         property: "og:description",
         content:
-          "Diseño visual, vídeo, inteligencia artificial y narrativa. Diferentes disciplinas. Una misma mirada visual.",
+          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
       },
     ],
   }),
