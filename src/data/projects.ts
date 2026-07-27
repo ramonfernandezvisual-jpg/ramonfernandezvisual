@@ -54,15 +54,14 @@ const p = (
 export const areas: Area[] = [
   {
     id: "01",
-    slug: "arquitectura",
-    title: "ARQUITECTURA / INTERIORISMO / PRODUCTO",
+    slug: "narrativa",
+    title: "NARRATIVA / CORTOMETRAJES",
     subtitle:
-      "Imagen, espacio y materia convertidos en experiencias visuales.",
+      "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
-      p("a1-01", "01", "horizontal", area01, "Proyecto 01", "Arquitectura"),
-      p("a1-02", "01", "horizontal", area01, "Proyecto 02", "Interiorismo"),
-      p("a1-03", "01", "horizontal", area01, "Proyecto 03", "Producto"),
-      p("a1-04", "01", "horizontal", area01, "Proyecto 04", "Arquitectura"),
+      p("a1-01", "01", "horizontal", area03, "Cortometraje 01", "Narrativa"),
+      p("a1-02", "01", "horizontal", area03, "Cortometraje 02", "Narrativa"),
+      p("a1-03", "01", "vertical", area02, "Pieza vertical", "Narrativa"),
     ],
   },
   {
@@ -79,25 +78,27 @@ export const areas: Area[] = [
   },
   {
     id: "03",
-    slug: "narrativa",
-    title: "NARRATIVA / CORTOMETRAJES",
-    subtitle:
-      "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
-    projects: [
-      p("a3-01", "03", "horizontal", area03, "Cortometraje", "Narrativa"),
-      p("a3-02", "03", "vertical", area02, "Pieza vertical", "Narrativa"),
-    ],
-  },
-  {
-    id: "04",
     slug: "edicion",
     title: "EDICIÓN / CONTENIDO AUDIOVISUAL",
     subtitle:
       "Edición, ritmo y dirección visual para transformar ideas en contenido que conecta.",
     projects: [
-      p("a4-01", "04", "vertical", area04, "Reel 01", "Edición"),
-      p("a4-02", "04", "vertical", area04, "Reel 02", "Social"),
-      p("a4-03", "04", "vertical", area04, "Reel 03", "Contenido"),
+      p("a3-01", "03", "vertical", area04, "Reel 01", "Edición"),
+      p("a3-02", "03", "vertical", area04, "Reel 02", "Social"),
+      p("a3-03", "03", "vertical", area04, "Reel 03", "Contenido"),
+    ],
+  },
+  {
+    id: "04",
+    slug: "arquitectura",
+    title: "ARQUITECTURA / INTERIORISMO / PRODUCTO",
+    subtitle:
+      "Imagen, espacio y materia convertidos en experiencias visuales.",
+    projects: [
+      p("a4-01", "04", "horizontal", area01, "Proyecto 01", "Arquitectura"),
+      p("a4-02", "04", "horizontal", area01, "Proyecto 02", "Interiorismo"),
+      p("a4-03", "04", "horizontal", area01, "Proyecto 03", "Producto"),
+      p("a4-04", "04", "horizontal", area01, "Proyecto 04", "Arquitectura"),
     ],
   },
   {

@@ -15,8 +15,66 @@ function Wrapper({ area, children }: { area: Area; children: React.ReactNode }) 
   );
 }
 
-// Área 01 — 1 hero + 3 secundarios asimétricos
-export function AreaOne({ area, onOpen }: Props) {
+// Narrativa — 2 horizontales + 1 vertical (cinematográfico)
+export function AreaNarrativa({ area, onOpen }: Props) {
+  const horizontals = area.projects.filter((p) => p.orientation === "horizontal");
+  const vertical = area.projects.find((p) => p.orientation === "vertical")!;
+  const [h1, h2] = horizontals;
+  return (
+    <Wrapper area={area}>
+      <ProjectTile project={h1} onOpen={onOpen} index={0} />
+      <div className="mt-12 grid grid-cols-12 gap-6 md:mt-20">
+        <div className="col-span-12 md:col-span-4 md:mt-16">
+          <ProjectTile project={vertical} onOpen={onOpen} index={1} />
+        </div>
+        <div className="col-span-12 md:col-span-7 md:col-start-6">
+          <ProjectTile project={h2} onOpen={onOpen} index={2} />
+        </div>
+      </div>
+    </Wrapper>
+  );
+}
+
+// 3 verticales dinámicos
+export function AreaThreeVerticals({ area, onOpen }: Props) {
+  const [a, b, c] = area.projects;
+  return (
+    <Wrapper area={area}>
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-12 md:col-span-4">
+          <ProjectTile project={a} onOpen={onOpen} index={0} />
+        </div>
+        <div className="col-span-12 md:col-span-4 md:mt-24">
+          <ProjectTile project={b} onOpen={onOpen} index={1} />
+        </div>
+        <div className="col-span-12 md:col-span-4 md:mt-10">
+          <ProjectTile project={c} onOpen={onOpen} index={2} />
+        </div>
+      </div>
+    </Wrapper>
+  );
+}
+
+// 3 verticales social premium
+export function AreaSocialVerticals({ area, onOpen }: Props) {
+  return (
+    <Wrapper area={area}>
+      <div className="grid grid-cols-12 gap-6">
+        {area.projects.map((p, i) => (
+          <div
+            key={p.id}
+            className={`col-span-12 md:col-span-4 ${i === 1 ? "md:mt-16" : ""} ${i === 2 ? "md:mt-6" : ""}`}
+          >
+            <ProjectTile project={p} onOpen={onOpen} index={i} />
+          </div>
+        ))}
+      </div>
+    </Wrapper>
+  );
+}
+
+// Arquitectura — 1 hero + 3 secundarios asimétricos (4 horizontales)
+export function AreaArch({ area, onOpen }: Props) {
   const [hero, a, b, c] = area.projects;
   return (
     <Wrapper area={area}>
@@ -36,62 +94,8 @@ export function AreaOne({ area, onOpen }: Props) {
   );
 }
 
-// Área 02 — 3 verticales dinámicos
-export function AreaTwo({ area, onOpen }: Props) {
-  const [a, b, c] = area.projects;
-  return (
-    <Wrapper area={area}>
-      <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-4">
-          <ProjectTile project={a} onOpen={onOpen} index={0} />
-        </div>
-        <div className="col-span-12 md:col-span-4 md:mt-24">
-          <ProjectTile project={b} onOpen={onOpen} index={1} />
-        </div>
-        <div className="col-span-12 md:col-span-4 md:mt-10">
-          <ProjectTile project={c} onOpen={onOpen} index={2} />
-        </div>
-      </div>
-    </Wrapper>
-  );
-}
-
-// Área 03 — cinematográfico: horizontal grande + vertical complementario
-export function AreaThree({ area, onOpen }: Props) {
-  const horizontal = area.projects.find((p) => p.orientation === "horizontal")!;
-  const vertical = area.projects.find((p) => p.orientation === "vertical")!;
-  return (
-    <Wrapper area={area}>
-      <ProjectTile project={horizontal} onOpen={onOpen} index={0} />
-      <div className="mt-12 grid grid-cols-12 gap-6 md:mt-20">
-        <div className="col-span-12 md:col-span-4 md:col-start-8">
-          <ProjectTile project={vertical} onOpen={onOpen} index={1} />
-        </div>
-      </div>
-    </Wrapper>
-  );
-}
-
-// Área 04 — 3 verticales social premium
-export function AreaFour({ area, onOpen }: Props) {
-  return (
-    <Wrapper area={area}>
-      <div className="grid grid-cols-12 gap-6">
-        {area.projects.map((p, i) => (
-          <div
-            key={p.id}
-            className={`col-span-12 md:col-span-4 ${i === 1 ? "md:mt-16" : ""} ${i === 2 ? "md:mt-6" : ""}`}
-          >
-            <ProjectTile project={p} onOpen={onOpen} index={i} />
-          </div>
-        ))}
-      </div>
-    </Wrapper>
-  );
-}
-
-// Área 05 — 1 horizontal full-width
-export function AreaFive({ area, onOpen }: Props) {
+// 1 horizontal full-width
+export function AreaSingle({ area, onOpen }: Props) {
   const [p] = area.projects;
   return (
     <Wrapper area={area}>

@@ -2,19 +2,14 @@ import { Logo } from "./Logo";
 
 const socials = [
   {
-    label: "INSTAGRAM — VISUAL",
+    label: "INSTAGRAM — VISUAL / CREATIVO",
     handle: "@ramonfernandez.visual",
     href: "https://www.instagram.com/ramonfernandez.visual",
   },
   {
-    label: "INSTAGRAM — ARCHVIZ",
+    label: "INSTAGRAM — ARQUITECTURA / INTERIORISMO",
     handle: "@ramonfernandez.archviz",
     href: "https://www.instagram.com/ramonfernandez.archviz",
-  },
-  {
-    label: "LINKEDIN",
-    handle: "ramon-fdez",
-    href: "https://www.linkedin.com/in/ramon-fdez",
   },
 ];
 
@@ -31,16 +26,15 @@ export function Footer() {
         <div className="grid grid-cols-12 gap-8 border-t pt-12 md:pt-16" style={{ borderColor: "#161616" }}>
           {/* Marca */}
           <div className="col-span-12 md:col-span-4">
-            <Logo className="text-3xl" />
+            <Logo className="text-5xl" />
             <p className="mt-4 font-sans text-lg font-semibold" style={{ color: "#f5f5f5" }}>
               Ramón Fernández
             </p>
             <p className="font-sans text-sm" style={{ color: "#ecd012" }}>
-              Visual Designer &amp; AI Specialist
+              Visual Designer | AI Specialist | Art Direction
             </p>
             <p className="mt-6 max-w-xs font-sans text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
-              Disponible para proyectos, colaboraciones y oportunidades
-              profesionales.
+              Disponible para colaboraciones y proyectos remotos.
             </p>
           </div>
 

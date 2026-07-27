@@ -56,7 +56,7 @@ export function Header() {
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between">
           <button onClick={() => go("hero")} className="flex items-center">
-            <Logo className="text-2xl md:text-3xl" />
+            <Logo className="text-4xl md:text-5xl" />
           </button>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -101,7 +101,7 @@ export function Header() {
             style={{ backgroundColor: "#080808" }}
           >
             <div className="flex items-center justify-between px-5 py-5">
-              <Logo className="text-2xl" />
+              <Logo className="text-4xl" />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Cerrar menú"

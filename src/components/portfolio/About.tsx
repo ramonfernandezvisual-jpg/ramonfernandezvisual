@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import ramon from "@/assets/ramon.jpg";
 
 export function About() {
   return (
@@ -21,21 +22,60 @@ export function About() {
           </motion.span>
         </div>
 
-        <motion.p
+        {/* Fotografía */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="col-span-12 md:col-span-4"
+        >
+          <div className="relative aspect-[4/5] w-full overflow-hidden" style={{ backgroundColor: "#111" }}>
+            <img
+              src={ramon}
+              alt="Ramón Fernández"
+              className="h-full w-full object-cover"
+              style={{ filter: "grayscale(100%) contrast(1.05)" }}
+            />
+          </div>
+          <div className="mt-3 flex items-center justify-between font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
+            <span>RAMÓN FERNÁNDEZ</span>
+            <span>MMXXVI</span>
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="col-span-12 font-sans text-lg leading-relaxed md:col-span-8 md:text-2xl md:leading-snug"
-          style={{ color: "#f5f5f5" }}
+          className="col-span-12 md:col-span-6"
         >
-          Soy Ramón Fernández,{" "}
-          <span style={{ color: "#ecd012" }}>Visual Designer &amp; AI Specialist</span>.
-          Trabajo en la intersección entre diseño visual, vídeo, inteligencia
-          artificial y narrativa. Mi experiencia en arquitectura e interiorismo
-          me ha dado una forma de entender el espacio, la luz, la composición y
-          la atmósfera que hoy aplico a diferentes disciplinas y proyectos.
-        </motion.p>
+          <p
+            className="font-sans text-lg leading-relaxed md:text-2xl md:leading-snug"
+            style={{ color: "#f5f5f5" }}
+          >
+            Soy Ramón Fernández,{" "}
+            <span style={{ color: "#ecd012" }}>Visual Designer | AI Specialist | Art Direction</span>.
+            Trabajo en la intersección entre diseño visual, vídeo, inteligencia
+            artificial y narrativa. Mi experiencia en arquitectura e interiorismo
+            me ha dado una forma de entender el espacio, la luz, la composición y
+            la atmósfera que hoy aplico a diferentes disciplinas y proyectos.
+          </p>
+
+          <div className="mt-10 flex items-center gap-3">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ backgroundColor: "#ecd012" }}
+            />
+            <span
+              className="font-mono text-[11px] tracking-[0.22em]"
+              style={{ color: "#f5f5f5" }}
+            >
+              DISPONIBLE PARA COLABORACIONES Y PROYECTOS REMOTOS
+            </span>
+          </div>
+        </motion.div>
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
