@@ -1,7 +1,13 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { areas, type Project } from "@/data/projects";
-import { AreaFive, AreaFour, AreaOne, AreaThree, AreaTwo } from "./Areas";
+import {
+  AreaArch,
+  AreaNarrativa,
+  AreaSingle,
+  AreaSocialVerticals,
+  AreaThreeVerticals,
+} from "./Areas";
 import { ProjectModal } from "./ProjectModal";
 
 export function PortfolioSection() {
@@ -41,11 +47,11 @@ export function PortfolioSection() {
       </div>
 
       <div className="mt-20 md:mt-28">
-        <AreaOne area={areas[0]} onOpen={setOpen} />
-        <AreaTwo area={areas[1]} onOpen={setOpen} />
-        <AreaThree area={areas[2]} onOpen={setOpen} />
-        <AreaFour area={areas[3]} onOpen={setOpen} />
-        <AreaFive area={areas[4]} onOpen={setOpen} />
+        <AreaNarrativa area={areas[0]} onOpen={setOpen} />
+        <AreaThreeVerticals area={areas[1]} onOpen={setOpen} />
+        <AreaSocialVerticals area={areas[2]} onOpen={setOpen} />
+        <AreaArch area={areas[3]} onOpen={setOpen} />
+        <AreaSingle area={areas[4]} onOpen={setOpen} />
       </div>
 
       <ProjectModal project={open} onClose={() => setOpen(null)} />
