@@ -3,6 +3,17 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
+import cover01 from "@/assets/covers/p01.asset.json";
+import cover04 from "@/assets/covers/p04.asset.json";
+import cover05 from "@/assets/covers/p05.asset.json";
+import cover06 from "@/assets/covers/p06.asset.json";
+import cover07 from "@/assets/covers/p07.asset.json";
+import cover08 from "@/assets/covers/p08.asset.json";
+import cover09 from "@/assets/covers/p09.asset.json";
+import cover10 from "@/assets/covers/p10.asset.json";
+import cover11 from "@/assets/covers/p11.asset.json";
+import cover12 from "@/assets/covers/p12.asset.json";
+
 
 export type Orientation = "horizontal" | "vertical";
 export type AreaId = "01" | "02" | "03" | "04" | "05";
