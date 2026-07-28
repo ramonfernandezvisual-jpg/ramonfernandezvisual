@@ -9,14 +9,15 @@ export type AreaId = "01" | "02" | "03" | "04" | "05";
 
 export type Project = {
   id: string;
+  number: string; // 01..14
   title: string;
   category: string;
   year: string;
   role: string;
   description: string;
-  youtubeId: string; // vacío = placeholder
-  thumbnail: string;
-  orientation: Orientation;
+  orientation: Orientation; // 16:9 vs 9:16
+  cover: string; // portada personalizada (independiente de YouTube)
+  youtubeUrl: string; // URL completa; vacía = pendiente
   area: AreaId;
 };
 
@@ -28,28 +29,36 @@ export type Area = {
   projects: Project[];
 };
 
-// Reemplaza cada `youtubeId` con el ID real del vídeo de YouTube.
-// Si `youtubeId` está vacío, se usa el `thumbnail` estático.
-const p = (
-  id: string,
-  area: AreaId,
-  orientation: Orientation,
-  thumbnail: string,
-  title: string,
-  category: string,
-): Project => ({
-  id,
-  area,
-  orientation,
-  thumbnail,
-  title,
-  category,
+/** Extrae el ID de YouTube desde cualquier formato (shorts, youtu.be, watch?v=, embed). */
+export function getYoutubeId(url: string): string | null {
+  if (!url) return null;
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes("youtu.be")) return u.pathname.slice(1).split("/")[0] || null;
+    const parts = u.pathname.split("/").filter(Boolean);
+    const shortsIdx = parts.indexOf("shorts");
+    if (shortsIdx >= 0 && parts[shortsIdx + 1]) return parts[shortsIdx + 1];
+    const embedIdx = parts.indexOf("embed");
+    if (embedIdx >= 0 && parts[embedIdx + 1]) return parts[embedIdx + 1];
+    const v = u.searchParams.get("v");
+    if (v) return v;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+// Portadas provisionales (placeholders neutros hasta recibir las definitivas).
+// Sustituir individualmente en el campo `cover` de cada proyecto.
+const PENDING_H = area01; // 16:9 placeholder
+const PENDING_V = area02; // 9:16 placeholder
+
+const DEFAULTS = {
   year: "2025",
   role: "Dirección visual, edición",
   description:
-    "Proyecto placeholder. Sustituye este texto por la descripción real del proyecto una vez añadido el vídeo de YouTube.",
-  youtubeId: "",
-});
+    "Descripción pendiente. Se actualizará junto con la portada definitiva del proyecto.",
+};
 
 export const areas: Area[] = [
   {
@@ -59,9 +68,46 @@ export const areas: Area[] = [
     subtitle:
       "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
-      p("a1-01", "01", "horizontal", area03, "Cortometraje 01", "Narrativa"),
-      p("a1-02", "01", "horizontal", area03, "Cortometraje 02", "Narrativa"),
-      p("a1-03", "01", "vertical", area02, "Pieza vertical", "Narrativa"),
+      {
+        id: "p01",
+        number: "01",
+        title: "Síndrome del impostor",
+        category: "Narrativa / Cortometrajes",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
+        area: "01",
+      },
+      {
+        id: "p02",
+        number: "02",
+        title: "Proyecto 02",
+        category: "Narrativa / Cortometrajes",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: DEFAULTS.description,
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "",
+        area: "01",
+      },
+      {
+        id: "p03",
+        number: "03",
+        title: "Proyecto 03",
+        category: "Narrativa / Cortometrajes",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: DEFAULTS.description,
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "",
+        area: "01",
+      },
     ],
   },
   {
@@ -71,9 +117,48 @@ export const areas: Area[] = [
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
-      p("a2-01", "02", "vertical", area02, "Avatar 01", "IA / Avatar"),
-      p("a2-02", "02", "vertical", area02, "Avatar 02", "Presentador virtual"),
-      p("a2-03", "02", "vertical", area02, "Avatar 03", "Personaje digital"),
+      {
+        id: "p04",
+        number: "04",
+        title: "Cerveza Calaca Viva",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
+        area: "02",
+      },
+      {
+        id: "p05",
+        number: "05",
+        title: "El tiempo es oro",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Avatar presentadora generada con IA. Dirección visual y edición del contenido.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
+        area: "02",
+      },
+      {
+        id: "p06",
+        number: "06",
+        title: "Yo no soy real",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Personaje digital generado con IA. Exploración de identidad y presencia sintética.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
+        area: "02",
+      },
     ],
   },
   {
@@ -83,9 +168,45 @@ export const areas: Area[] = [
     subtitle:
       "Edición, ritmo y dirección visual para transformar ideas en contenido que conecta.",
     projects: [
-      p("a3-01", "03", "vertical", area04, "Reel 01", "Edición"),
-      p("a3-02", "03", "vertical", area04, "Reel 02", "Social"),
-      p("a3-03", "03", "vertical", area04, "Reel 03", "Contenido"),
+      {
+        id: "p07",
+        number: "07",
+        title: "El surfista",
+        category: "Edición / Contenido Audiovisual",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Pieza vertical de edición y ritmo narrativo.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/Gbj851Eu-OQ",
+        area: "03",
+      },
+      {
+        id: "p08",
+        number: "08",
+        title: "La realidad",
+        category: "Edición / Contenido Audiovisual",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Edición vertical con dirección visual y tipografía kinética.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/u93f_9onQ8c",
+        area: "03",
+      },
+      {
+        id: "p09",
+        number: "09",
+        title: "Cosmética",
+        category: "Edición / Contenido Audiovisual",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Edición vertical para contenido de cosmética y entrevista.",
+        orientation: "vertical",
+        cover: PENDING_V,
+        youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
+        area: "03",
+      },
     ],
   },
   {
@@ -95,10 +216,59 @@ export const areas: Area[] = [
     subtitle:
       "Imagen, espacio y materia convertidos en experiencias visuales.",
     projects: [
-      p("a4-01", "04", "horizontal", area01, "Proyecto 01", "Arquitectura"),
-      p("a4-02", "04", "horizontal", area01, "Proyecto 02", "Interiorismo"),
-      p("a4-03", "04", "horizontal", area01, "Proyecto 03", "Producto"),
-      p("a4-04", "04", "horizontal", area01, "Proyecto 04", "Arquitectura"),
+      {
+        id: "p10",
+        number: "10",
+        title: "Villa Villa Normanni",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Pieza audiovisual de arquitectura e interiorismo para Villa Villa Normanni.",
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "https://youtu.be/wYAE00f83bc",
+        area: "04",
+      },
+      {
+        id: "p11",
+        number: "11",
+        title: "HOTEL MAZANKA",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual del proyecto Hotel Mazanka.",
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "https://youtu.be/YpxAUusyPiw",
+        area: "04",
+      },
+      {
+        id: "p12",
+        number: "12",
+        title: "Duna Lounge",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "https://youtu.be/nHoQMshg5b4",
+        area: "04",
+      },
+      {
+        id: "p13",
+        number: "13",
+        title: "Proyecto 13",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: DEFAULTS.description,
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "",
+        area: "04",
+      },
     ],
   },
   {
@@ -108,9 +278,24 @@ export const areas: Area[] = [
     subtitle:
       "Comunicar proyectos complejos de forma clara, visual y profesional.",
     projects: [
-      p("a5-01", "05", "horizontal", area05, "Licitación técnica", "Comunicación técnica"),
+      {
+        id: "p14",
+        number: "14",
+        title: "Proyecto 14",
+        category: "Licitaciones / Comunicación Técnica",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: DEFAULTS.description,
+        orientation: "horizontal",
+        cover: PENDING_H,
+        youtubeUrl: "",
+        area: "05",
+      },
     ],
   },
 ];
 
 export const getAllProjects = () => areas.flatMap((a) => a.projects);
+
+// Compat: mantener referencias antiguas
+export { area01, area02, area03, area04, area05 };
