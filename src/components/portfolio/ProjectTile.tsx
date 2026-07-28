@@ -15,10 +15,8 @@ export function ProjectTile({
   className?: string;
 }) {
   const aspect = project.orientation === "horizontal" ? "aspect-[16/9]" : "aspect-[9/16]";
-  const thumb =
-    project.youtubeId
-      ? `https://i.ytimg.com/vi/${project.youtubeId}/maxresdefault.jpg`
-      : project.thumbnail;
+  const thumb = project.cover;
+
 
   return (
     <motion.button
