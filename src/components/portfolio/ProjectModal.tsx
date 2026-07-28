@@ -88,3 +88,44 @@ export function ProjectModal({
     </AnimatePresence>
   );
 }
+
+function ModalPlayer({ project }: { project: Project }) {
+  const ytId = useMemo(() => getYoutubeId(project.youtubeUrl), [project.youtubeUrl]);
+  const isHorizontal = project.orientation === "horizontal";
+  return (
+    <div
+      className={`relative w-full overflow-hidden ${
+        isHorizontal
+          ? "aspect-[16/9]"
+          : "mx-auto aspect-[9/16] max-h-[80vh] w-auto max-w-[min(100%,calc(80vh*9/16))]"
+      }`}
+      style={{ backgroundColor: "#000" }}
+    >
+      {ytId ? (
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+          title={project.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      ) : (
+        <>
+          <img
+            src={project.cover}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-40"
+          />
+          <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
+            <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#ecd012" }}>
+              VÍDEO PENDIENTE
+            </p>
+            <p className="font-sans text-sm" style={{ color: "#f5f5f5" }}>
+              La URL de YouTube se añadirá próximamente.
+            </p>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
