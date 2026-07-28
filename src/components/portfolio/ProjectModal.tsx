@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import type { Project } from "@/data/projects";
+import { getYoutubeId, type Project } from "@/data/projects";
+
 
 export function ProjectModal({
   project,
