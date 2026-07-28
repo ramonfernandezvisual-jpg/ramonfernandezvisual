@@ -3,6 +3,17 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
+import cover01 from "@/assets/covers/p01.asset.json";
+import cover04 from "@/assets/covers/p04.asset.json";
+import cover05 from "@/assets/covers/p05.asset.json";
+import cover06 from "@/assets/covers/p06.asset.json";
+import cover07 from "@/assets/covers/p07.asset.json";
+import cover08 from "@/assets/covers/p08.asset.json";
+import cover09 from "@/assets/covers/p09.asset.json";
+import cover10 from "@/assets/covers/p10.asset.json";
+import cover11 from "@/assets/covers/p11.asset.json";
+import cover12 from "@/assets/covers/p12.asset.json";
+
 
 export type Orientation = "horizontal" | "vertical";
 export type AreaId = "01" | "02" | "03" | "04" | "05";
@@ -78,7 +89,7 @@ export const areas: Area[] = [
         description:
           "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover01.url,
         youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
         area: "01",
       },
@@ -127,7 +138,7 @@ export const areas: Area[] = [
         description:
           "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover04.url,
         youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
         area: "02",
       },
@@ -141,7 +152,7 @@ export const areas: Area[] = [
         description:
           "Avatar presentadora generada con IA. Dirección visual y edición del contenido.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover05.url,
         youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
         area: "02",
       },
@@ -155,7 +166,7 @@ export const areas: Area[] = [
         description:
           "Personaje digital generado con IA. Exploración de identidad y presencia sintética.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover06.url,
         youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
         area: "02",
       },
@@ -177,7 +188,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza vertical de edición y ritmo narrativo.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover07.url,
         youtubeUrl: "https://youtube.com/shorts/Gbj851Eu-OQ",
         area: "03",
       },
@@ -190,7 +201,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Edición vertical con dirección visual y tipografía kinética.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover08.url,
         youtubeUrl: "https://youtube.com/shorts/u93f_9onQ8c",
         area: "03",
       },
@@ -203,7 +214,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Edición vertical para contenido de cosmética y entrevista.",
         orientation: "vertical",
-        cover: PENDING_V,
+        cover: cover09.url,
         youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
         area: "03",
       },
@@ -226,7 +237,7 @@ export const areas: Area[] = [
         description:
           "Pieza audiovisual de arquitectura e interiorismo para Villa Villa Normanni.",
         orientation: "horizontal",
-        cover: PENDING_H,
+        cover: cover10.url,
         youtubeUrl: "https://youtu.be/wYAE00f83bc",
         area: "04",
       },
@@ -239,7 +250,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza audiovisual del proyecto Hotel Mazanka.",
         orientation: "horizontal",
-        cover: PENDING_H,
+        cover: cover11.url,
         youtubeUrl: "https://youtu.be/YpxAUusyPiw",
         area: "04",
       },
@@ -252,7 +263,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
         orientation: "horizontal",
-        cover: PENDING_H,
+        cover: cover12.url,
         youtubeUrl: "https://youtu.be/nHoQMshg5b4",
         area: "04",
       },
