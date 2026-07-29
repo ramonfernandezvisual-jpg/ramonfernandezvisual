@@ -31,7 +31,7 @@ export function Footer() {
               Ramón Fernández
             </p>
             <p className="font-sans text-sm" style={{ color: "#ecd012" }}>
-              Visual Designer | AI Specialist | Art Direction
+              Visual Designer | AI Video Creator | Art Direction
             </p>
             <p className="mt-6 max-w-xs font-sans text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
               Disponible para colaboraciones y proyectos remotos.

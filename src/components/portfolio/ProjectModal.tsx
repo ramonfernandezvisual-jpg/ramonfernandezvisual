@@ -34,6 +34,19 @@ export function ProjectModal({
           style={{ backgroundColor: "rgba(8,8,8,0.95)" }}
           onClick={onClose}
         >
+          <button
+            onClick={onClose}
+            aria-label="Cerrar vídeo"
+            className="group fixed right-4 top-4 z-[110] flex h-12 w-12 items-center justify-center md:right-8 md:top-8 md:h-14 md:w-14"
+            style={{ color: "#f5f5f5" }}
+          >
+            <span
+              className="text-3xl font-light leading-none transition-colors group-hover:text-[#ecd012] md:text-4xl"
+            >
+              ×
+            </span>
+          </button>
+
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -42,46 +55,7 @@ export function ProjectModal({
             className="relative w-full max-w-6xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mb-4 flex items-center justify-between">
-              <span className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-                {project.category.toUpperCase()} · {project.year}
-              </span>
-              <button
-                onClick={onClose}
-                className="font-mono text-[11px] tracking-[0.2em] transition-colors hover:text-[color:var(--brand)]"
-                style={{ color: "#f5f5f5" }}
-              >
-                CERRAR ✕
-              </button>
-            </div>
-
             <ModalPlayer project={project} />
-
-
-            <div className="mt-6 grid grid-cols-12 gap-4">
-              <h3
-                className="col-span-12 font-sans font-bold leading-tight tracking-[-0.02em] md:col-span-8"
-                style={{ color: "#f5f5f5", fontSize: "clamp(1.5rem,2.4vw,2.25rem)" }}
-              >
-                {project.title}
-              </h3>
-              <div className="col-span-12 space-y-2 md:col-span-4">
-                <div className="flex justify-between font-mono text-[11px] tracking-[0.18em]" style={{ color: "#8a8a8a" }}>
-                  <span>ROL</span>
-                  <span style={{ color: "#f5f5f5" }}>{project.role}</span>
-                </div>
-                <div className="flex justify-between font-mono text-[11px] tracking-[0.18em]" style={{ color: "#8a8a8a" }}>
-                  <span>AÑO</span>
-                  <span style={{ color: "#f5f5f5" }}>{project.year}</span>
-                </div>
-              </div>
-              <p
-                className="col-span-12 font-sans text-sm leading-relaxed md:col-span-8 md:text-base"
-                style={{ color: "#8a8a8a" }}
-              >
-                {project.description}
-              </p>
-            </div>
           </motion.div>
         </motion.div>
       )}
@@ -97,14 +71,14 @@ function ModalPlayer({ project }: { project: Project }) {
       className={`relative w-full overflow-hidden ${
         isHorizontal
           ? "aspect-[16/9]"
-          : "mx-auto aspect-[9/16] max-h-[80vh] w-auto max-w-[min(100%,calc(80vh*9/16))]"
+          : "mx-auto aspect-[9/16] max-h-[85vh] w-auto max-w-[min(100%,calc(85vh*9/16))]"
       }`}
       style={{ backgroundColor: "#000" }}
     >
       {ytId ? (
         <iframe
           className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+          src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&hl=es&vq=hd1080`}
           title={project.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

@@ -45,7 +45,7 @@ export function Contact() {
                 Ramón Fernández
               </p>
               <p className="font-sans text-sm" style={{ color: "#ecd012" }}>
-                Visual Designer | AI Specialist | Art Direction
+                Visual Designer | AI Video Creator | Art Direction
               </p>
 
             </div>

@@ -10,13 +10,13 @@ import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ramón Fernández — Visual Designer & AI Specialist" },
+      { title: "Ramón Fernández — Visual Designer & AI Video Creator" },
       {
         name: "description",
         content:
           "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, avatares, narrativa, edición y comunicación técnica.",
       },
-      { property: "og:title", content: "Ramón Fernández — Visual Designer & AI Specialist" },
+      { property: "og:title", content: "Ramón Fernández — Visual Designer & AI Video Creator" },
       {
         property: "og:description",
         content:

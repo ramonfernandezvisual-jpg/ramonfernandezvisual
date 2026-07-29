@@ -50,12 +50,20 @@ export function ProjectTile({
       {showMeta && (
         <div className="mt-3 flex items-start justify-between gap-4">
           <div>
-            <h4 className="font-sans text-sm font-medium tracking-tight md:text-base" style={{ color: "#f5f5f5" }}>
-              {project.title}
-            </h4>
-            <p className="mt-1 font-mono text-[10px] tracking-[0.18em]" style={{ color: "#8a8a8a" }}>
-              {project.category.toUpperCase()} · {project.year}
-            </p>
+            {project.metaLine ? (
+              <p className="font-mono text-[11px] tracking-[0.14em]" style={{ color: "#f5f5f5" }}>
+                {project.metaLine}
+              </p>
+            ) : (
+              <>
+                <h4 className="font-sans text-sm font-medium tracking-tight md:text-base" style={{ color: "#f5f5f5" }}>
+                  {project.title}
+                </h4>
+                <p className="mt-1 font-mono text-[10px] tracking-[0.18em]" style={{ color: "#8a8a8a" }}>
+                  {project.category.toUpperCase()} · {project.year}
+                </p>
+              </>
+            )}
           </div>
           <span
             className="translate-y-1 whitespace-nowrap font-sans text-[11px] font-medium tracking-[0.18em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
@@ -65,6 +73,7 @@ export function ProjectTile({
           </span>
         </div>
       )}
+
     </motion.button>
   );
 }
