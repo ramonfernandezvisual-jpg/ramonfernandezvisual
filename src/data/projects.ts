@@ -13,6 +13,9 @@ import cover09 from "@/assets/covers/p09.asset.json";
 import cover10 from "@/assets/covers/p10.asset.json";
 import cover11 from "@/assets/covers/p11.asset.json";
 import cover12 from "@/assets/covers/p12.asset.json";
+import coverLap from "@/assets/covers/p_lap.asset.json";
+import coverLic from "@/assets/covers/p_lic.asset.json";
+
 
 
 export type Orientation = "horizontal" | "vertical";
