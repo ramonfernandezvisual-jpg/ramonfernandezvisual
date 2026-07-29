@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import ramon from "@/assets/ramon.jpg";
+import ramonAsset from "@/assets/ramon-new.asset.json";
+const ramon = ramonAsset.url;
+
 
 export function About() {
   return (
@@ -56,8 +58,9 @@ export function About() {
             style={{ color: "#f5f5f5" }}
           >
             Soy Ramón Fernández,{" "}
-            <span style={{ color: "#ecd012" }}>Visual Designer | AI Specialist | Art Direction</span>.
+            <span style={{ color: "#ecd012" }}>Visual Designer | AI Video Creator | Art Direction</span>.
             Trabajo en la intersección entre diseño visual, vídeo, inteligencia
+
             artificial y narrativa. Mi experiencia en arquitectura e interiorismo
             me ha dado una forma de entender el espacio, la luz, la composición y
             la atmósfera que hoy aplico a diferentes disciplinas y proyectos.

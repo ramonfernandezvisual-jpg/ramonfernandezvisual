@@ -33,7 +33,9 @@ export type Project = {
   cover: string; // portada personalizada (independiente de YouTube)
   youtubeUrl: string; // URL completa; vacía = pendiente
   area: AreaId;
+  metaLine?: string; // línea editorial personalizada bajo la portada
 };
+
 
 export type Area = {
   id: AreaId;
@@ -233,55 +235,59 @@ export const areas: Area[] = [
       {
         id: "p10",
         number: "10",
-        title: "Villa Villa Normanni",
+        title: "Villa Normani",
         category: "Arquitectura / Interiorismo / Producto",
-        year: DEFAULTS.year,
+        year: "2026",
         role: DEFAULTS.role,
         description:
-          "Pieza audiovisual de arquitectura e interiorismo para Villa Villa Normanni.",
+          "Pieza audiovisual de arquitectura e interiorismo para Villa Normani.",
         orientation: "horizontal",
         cover: cover10.url,
         youtubeUrl: "https://youtu.be/wYAE00f83bc",
         area: "04",
+        metaLine: "Villa Normani _ arquitectura . 2026",
       },
       {
         id: "p11",
         number: "11",
-        title: "HOTEL MAZANKA",
+        title: "Hotel Mazanka",
         category: "Arquitectura / Interiorismo / Producto",
-        year: DEFAULTS.year,
+        year: "2026",
         role: DEFAULTS.role,
         description: "Pieza audiovisual del proyecto Hotel Mazanka.",
         orientation: "horizontal",
         cover: cover11.url,
         youtubeUrl: "https://youtu.be/YpxAUusyPiw",
         area: "04",
+        metaLine: "Hotel Mazanka _ arquitectura / interiorismo . 2026",
       },
       {
         id: "p12",
         number: "12",
         title: "Duna Lounge",
         category: "Arquitectura / Interiorismo / Producto",
-        year: DEFAULTS.year,
+        year: "2026",
         role: DEFAULTS.role,
         description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
         orientation: "horizontal",
         cover: cover12.url,
         youtubeUrl: "https://youtu.be/nHoQMshg5b4",
         area: "04",
+        metaLine: "Duna Lounge_ producto/mobiliario . 2026",
       },
       {
         id: "p13",
         number: "13",
-        title: "Proyecto 13",
+        title: "Lap pool house",
         category: "Arquitectura / Interiorismo / Producto",
-        year: DEFAULTS.year,
+        year: "2026",
         role: DEFAULTS.role,
-        description: DEFAULTS.description,
+        description: "Pieza audiovisual de arquitectura — Lap pool house.",
         orientation: "horizontal",
-        cover: PENDING_H,
-        youtubeUrl: "",
+        cover: coverLap.url,
+        youtubeUrl: "https://youtu.be/iNEuEYNgd1U",
         area: "04",
+        metaLine: "Lap pool house - arquitectura . 2026",
       },
     ],
   },
@@ -295,19 +301,20 @@ export const areas: Area[] = [
       {
         id: "p14",
         number: "14",
-        title: "Proyecto 14",
+        title: "Licitación",
         category: "Licitaciones / Comunicación Técnica",
-        year: DEFAULTS.year,
+        year: "2026",
         role: DEFAULTS.role,
-        description: DEFAULTS.description,
+        description: "Pieza audiovisual de comunicación técnica para licitación.",
         orientation: "horizontal",
-        cover: PENDING_H,
-        youtubeUrl: "",
+        cover: coverLic.url,
+        youtubeUrl: "https://youtu.be/fEwPw4S3lS4",
         area: "05",
       },
     ],
   },
 ];
+
 
 export const getAllProjects = () => areas.flatMap((a) => a.projects);
 
