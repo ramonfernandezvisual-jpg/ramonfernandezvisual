@@ -1,6 +1,16 @@
 import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
 
+/** Deriva "categoría . año" respetando metaLine si existe. */
+function metaOf(project: Project) {
+  if (project.metaLine) {
+    const raw = project.metaLine;
+    const idx = raw.search(/[_-]/);
+    if (idx > -1) return raw.slice(idx + 1).trim();
+  }
+  return `${project.category.toLowerCase()} . ${project.year}`;
+}
+
 export function ProjectTile({
   project,
   onOpen,
@@ -15,53 +25,49 @@ export function ProjectTile({
   className?: string;
 }) {
   const aspect = project.orientation === "horizontal" ? "aspect-[16/9]" : "aspect-[9/16]";
-  const thumb = project.cover;
-
 
   return (
     <motion.button
       type="button"
       onClick={() => onOpen(project)}
       data-cursor="project"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: index * 0.06 }}
-      className={`group relative block w-full overflow-hidden text-left ${className}`}
+      className={`group block w-full text-left ${className}`}
     >
-      <div className={`relative w-full overflow-hidden ${aspect}`} style={{ backgroundColor: "#111" }}>
+      <div
+        className={`relative w-full overflow-hidden rounded-[20px] ${aspect}`}
+        style={{ backgroundColor: "#111111" }}
+      >
         <motion.img
-          src={thumb}
+          src={project.cover}
           alt={project.title}
           loading="lazy"
           className="h-full w-full object-cover"
           initial={{ scale: 1 }}
-          whileHover={{ scale: 1.035 }}
+          whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         />
-        <div
-          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(8,8,8,0) 55%, rgba(8,8,8,0.55) 100%)",
-          }}
-        />
       </div>
+
       {showMeta && (
-        <div className="mt-3 flex items-start justify-between gap-4">
-          <p className="font-mono text-[11px] tracking-[0.14em]" style={{ color: "#f5f5f5" }}>
-            {project.metaLine ?? `${project.title} _ ${project.category.toLowerCase()} . ${project.year}`}
-          </p>
-          <span
-            className="translate-y-1 whitespace-nowrap font-mono text-[11px] tracking-[0.18em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
-            style={{ color: "#ecd012" }}
+        <div className="mt-4">
+          <p
+            className="font-sans text-[15px] font-semibold leading-tight tracking-[-0.01em] md:text-base"
+            style={{ color: "#f5f5f5" }}
           >
-            VER →
-          </span>
+            {project.title}
+          </p>
+          <p
+            className="mt-1 font-mono text-[11px] tracking-[0.12em]"
+            style={{ color: "#8a8a8a" }}
+          >
+            {metaOf(project)}
+          </p>
         </div>
       )}
-
-
     </motion.button>
   );
 }

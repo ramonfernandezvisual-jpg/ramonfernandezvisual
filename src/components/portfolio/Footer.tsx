@@ -22,7 +22,7 @@ export function Footer() {
       className="px-5 pb-10 pt-20 md:px-10 md:pb-12 md:pt-28"
       style={{ backgroundColor: "#080808" }}
     >
-      <div className="mx-auto max-w-[1600px]">
+      <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-12 gap-8 border-t pt-12 md:pt-16" style={{ borderColor: "#161616" }}>
           {/* Marca */}
           <div className="col-span-12 md:col-span-4">

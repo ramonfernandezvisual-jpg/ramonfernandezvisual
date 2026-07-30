@@ -10,49 +10,28 @@ export function SectionHeader({
   subtitle: string;
 }) {
   return (
-    <div className="mb-10 grid grid-cols-12 gap-6 md:mb-16">
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5 }}
-        className="col-span-12 flex items-center gap-4 md:col-span-2"
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6 }}
+      className="mb-10 max-w-3xl md:mb-14"
+    >
+      <span className="font-mono text-[11px] tracking-[0.22em]" style={{ color: "#ecd012" }}>
+        {number}
+      </span>
+      <h3
+        className="mt-4 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
+        style={{ color: "#f5f5f5", fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}
       >
-        <span
-          className="font-mono text-xs tracking-[0.2em]"
-          style={{ color: "#ecd012" }}
-        >
-          {number}
-        </span>
-        <span className="h-px flex-1 md:hidden" style={{ backgroundColor: "#222" }} />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.6, delay: 0.05 }}
-        className="col-span-12 md:col-span-7"
-      >
-        <h3
-          className="font-sans font-bold leading-[1.02] tracking-[-0.02em]"
-          style={{
-            color: "#f5f5f5",
-            fontSize: "clamp(1.75rem, 3.6vw, 3.25rem)",
-          }}
-        >
-          {title}
-        </h3>
-      </motion.div>
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.6, delay: 0.15 }}
-        className="col-span-12 mt-2 font-sans text-sm leading-relaxed md:col-span-3 md:mt-4 md:text-base"
+        {title}
+      </h3>
+      <p
+        className="mt-4 max-w-xl font-sans text-sm leading-relaxed md:text-[15px]"
         style={{ color: "#8a8a8a" }}
       >
         {subtitle}
-      </motion.p>
-    </div>
+      </p>
+    </motion.div>
   );
 }
