@@ -10,7 +10,7 @@ export function About() {
       className="border-t px-5 py-28 md:px-10 md:py-40"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
-      <div className="mx-auto grid max-w-[1600px] grid-cols-12 gap-6">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <motion.span
             initial={{ opacity: 0, y: 8 }}

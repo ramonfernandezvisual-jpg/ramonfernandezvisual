@@ -54,7 +54,7 @@ export function Header() {
         transition={{ duration: 0.3 }}
         className="fixed inset-x-0 top-0 z-50 px-5 md:px-10"
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between">
           <button onClick={() => go("hero")} className="flex items-center">
             <Logo className="text-4xl md:text-5xl" />
           </button>

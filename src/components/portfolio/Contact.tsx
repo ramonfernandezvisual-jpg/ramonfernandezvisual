@@ -7,7 +7,7 @@ export function Contact() {
       className="px-5 py-28 md:px-10 md:py-40"
       style={{ backgroundColor: "#111111" }}
     >
-      <div className="mx-auto grid max-w-[1600px] grid-cols-12 gap-6">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
             07 — HABLEMOS
