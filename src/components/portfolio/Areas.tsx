@@ -11,10 +11,9 @@ type Props = { area: Area; onOpen: (p: Project) => void };
  * - móvil: 1 columna
  */
 export function AreaGrid({ area, onOpen }: Props) {
-  const allVertical = area.projects.every((p) => p.orientation === "vertical");
-  const cols = allVertical
-    ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-    : "grid-cols-1 md:grid-cols-2";
+  const horizontals = area.projects.filter((p) => p.orientation === "horizontal");
+  const verticals = area.projects.filter((p) => p.orientation === "vertical");
+  const gap = "gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16";
 
   return (
     <section
@@ -23,11 +22,24 @@ export function AreaGrid({ area, onOpen }: Props) {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <SectionHeader number={area.id} title={area.title} subtitle={area.subtitle} />
-        <div className={`grid ${cols} gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16`}>
-          {area.projects.map((p, i) => (
-            <ProjectTile key={p.id} project={p} onOpen={onOpen} index={i} />
-          ))}
-        </div>
+        {horizontals.length > 0 && (
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${gap}`}>
+            {horizontals.map((p, i) => (
+              <ProjectTile key={p.id} project={p} onOpen={onOpen} index={i} />
+            ))}
+          </div>
+        )}
+        {verticals.length > 0 && (
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${gap} ${
+              horizontals.length > 0 ? "mt-12 md:mt-16" : ""
+            }`}
+          >
+            {verticals.map((p, i) => (
+              <ProjectTile key={p.id} project={p} onOpen={onOpen} index={i} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

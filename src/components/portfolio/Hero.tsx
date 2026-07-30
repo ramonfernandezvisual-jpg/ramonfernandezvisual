@@ -47,7 +47,7 @@ export function Hero() {
       className="relative w-full overflow-hidden px-5 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32"
       style={{ backgroundColor: "#080808" }}
     >
-      <div className="mx-auto flex min-h-[88vh] w-full max-w-[1440px] flex-col justify-between md:min-h-[86vh]">
+      <div className="mx-auto flex min-h-[78vh] w-full max-w-[1440px] flex-col justify-between md:min-h-[76vh]">
         {/* Meta superior */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
