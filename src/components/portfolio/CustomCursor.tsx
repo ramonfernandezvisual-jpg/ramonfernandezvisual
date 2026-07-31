@@ -5,6 +5,7 @@ export function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
   const [hoverProject, setHoverProject] = useState(false);
   const [hoverLink, setHoverLink] = useState(false);
+  const [inField, setInField] = useState(false);
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
   const sx = useSpring(x, { stiffness: 500, damping: 40, mass: 0.3 });
@@ -24,6 +25,7 @@ export function CustomCursor() {
       const linkEl = el?.closest("a, button, [data-cursor='link']");
       setHoverProject(!!projEl);
       setHoverLink(!!linkEl && !projEl);
+      setInField(!!el?.closest("#hero") && !projEl && !linkEl);
     };
     window.addEventListener("mousemove", onMove);
     return () => {
@@ -34,7 +36,7 @@ export function CustomCursor() {
 
   if (!enabled) return null;
 
-  const size = hoverProject ? 84 : hoverLink ? 20 : 10;
+  const size = hoverProject ? 84 : hoverLink ? 20 : inField ? 16 : 10;
 
   return (
     <motion.div
@@ -58,6 +60,7 @@ export function CustomCursor() {
           VER
         </span>
       )}
+
     </motion.div>
   );
 }
