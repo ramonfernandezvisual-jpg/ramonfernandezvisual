@@ -155,14 +155,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.65 }}
             className="relative z-10 col-span-12 md:col-span-4 md:self-end md:text-right"
-          >
-            <p className="font-sans text-base font-medium leading-snug md:text-lg" style={{ color: "#f5f5f5" }}>
-              Imagen. Vídeo. IA. Narrativa.
-            </p>
-            <p className="mt-1 font-sans text-sm md:text-base" style={{ color: "#8a8a8a" }}>
-              Una misma dirección visual.
-            </p>
-          </motion.div>
+          />
         </div>
 
         {/* CTA */}
