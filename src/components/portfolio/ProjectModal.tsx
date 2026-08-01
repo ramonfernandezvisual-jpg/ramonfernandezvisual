@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { getYoutubeId, type Project } from "@/data/projects";
-import { haptic } from "@/lib/interaction";
 
 
 export function ProjectModal({
@@ -12,7 +11,6 @@ export function ProjectModal({
   onClose: () => void;
 }) {
   const onClose = useCallback(() => {
-    haptic(6);
     rawClose();
   }, [rawClose]);
 

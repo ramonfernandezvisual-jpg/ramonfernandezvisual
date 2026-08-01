@@ -1,27 +1,17 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { MagneticField } from "./MagneticField";
-import { haptic, useSound } from "@/lib/interaction";
 
 const WORDS = ["IA", "NARRATIVA", "ESPACIO", "IMAGEN", "VÍDEO"];
 
 export function Hero() {
   const [i, setI] = useState(0);
-  const { enabled: soundOn, toggle: toggleSound, click, field } = useSound();
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  // Transición elegante al hacer scroll: el contenido se desvanece y el campo
-  // se desplaza con profundidad.
   const contentOpacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-  const fieldOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0.15]);
-  const fieldY = useTransform(scrollYProgress, [0, 1], [0, 110]);
-  const fieldScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
-
-  const onIntensity = useCallback((v: number) => field(v), [field]);
 
   useEffect(() => {
     const t = setInterval(() => setI((p) => (p + 1) % WORDS.length), 2200);
@@ -29,8 +19,6 @@ export function Hero() {
   }, []);
 
   const go = (id: string) => {
-    haptic(8);
-    click("cta");
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -56,18 +44,6 @@ export function Hero() {
 
         {/* Composición principal */}
         <div className="relative mt-16 grid grid-cols-12 items-center gap-8 md:mt-0">
-          {/* Campo magnético */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.4 }}
-            style={{ opacity: fieldOpacity, y: fieldY, scale: fieldScale }}
-            className="pointer-events-none absolute inset-y-[-24%] right-[-6%] hidden w-[54%] md:block"
-            aria-hidden
-          >
-            <MagneticField onIntensity={onIntensity} />
-          </motion.div>
-
           <motion.div
             style={{ opacity: contentOpacity, y: contentY }}
             className="relative z-10 col-span-12 md:col-span-8"
@@ -146,26 +122,12 @@ export function Hero() {
             </motion.span>
           </button>
 
-          <div className="flex items-center gap-6">
-            <button
-              onClick={() => {
-                haptic(6);
-                toggleSound();
-                if (!soundOn) setTimeout(() => click("soft"), 40);
-              }}
-              aria-pressed={soundOn}
-              className="font-mono text-[11px] tracking-[0.2em] transition-colors"
-              style={{ color: soundOn ? "#ecd012" : "#8a8a8a" }}
-            >
-              SONIDO {soundOn ? "ON" : "OFF"}
-            </button>
-            <span
-              className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
-              style={{ color: "#8a8a8a" }}
-            >
-              14 PROYECTOS · 5 ÁREAS
-            </span>
-          </div>
+          <span
+            className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
+            style={{ color: "#8a8a8a" }}
+          >
+            14 PROYECTOS · 5 ÁREAS
+          </span>
         </motion.div>
       </div>
 
