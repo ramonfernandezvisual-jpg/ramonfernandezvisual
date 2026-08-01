@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { HeroDot } from "./HeroDot";
 
 const WORDS = ["IA", "NARRATIVA", "ESPACIO", "IMAGEN", "VÍDEO"];
 
 export function Hero() {
   const [i, setI] = useState(0);
+  const [ctaHover, setCtaHover] = useState(false);
+  const [dotHidden, setDotHidden] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -19,6 +22,7 @@ export function Hero() {
   }, []);
 
   const go = (id: string) => {
+    setDotHidden(true);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
