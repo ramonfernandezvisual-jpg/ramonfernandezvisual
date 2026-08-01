@@ -102,7 +102,11 @@ export function HeroDot({ containerRef, ctaHover = false, hidden = false }: Prop
   }, [containerRef, pullX, pullY]);
 
   return (
-    <div className="pointer-events-none absolute right-[8%] top-1/2 z-0 -translate-y-1/2">
+    <motion.div
+      animate={{ x: ctaHover ? -8 : 0, y: ctaHover ? 4 : 0 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="pointer-events-none absolute right-[8%] top-1/2 z-0 -translate-y-1/2"
+    >
       {/* estela: ecos tenues */}
       <motion.div
         style={{ x: x2, y: y2, backgroundColor: "#ecd012", opacity: hidden ? 0 : 0.1 }}
