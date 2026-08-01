@@ -127,6 +127,6 @@ export function HeroDot({ containerRef, ctaHover = false, hidden = false }: Prop
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative h-[7px] w-[7px] rounded-full"
       />
-    </div>
+    </motion.div>
   );
 }
