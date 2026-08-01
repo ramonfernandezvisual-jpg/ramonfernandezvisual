@@ -119,7 +119,6 @@ export function HeroDot({ containerRef, ctaHover = false, hidden = false }: Prop
         animate={{
           scale: hidden ? 0.4 : ctaHover ? 1.35 : 1,
           opacity: hidden ? 0 : 1,
-          x: undefined,
         }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative h-[7px] w-[7px] rounded-full"
