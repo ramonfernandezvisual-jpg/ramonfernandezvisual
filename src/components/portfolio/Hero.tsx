@@ -102,6 +102,7 @@ export function Hero() {
               Visual Designer | AI Video Creator | Art Direction
             </motion.p>
           </motion.div>
+          <HeroDot containerRef={sectionRef} ctaHover={ctaHover} hidden={dotHidden} />
         </div>
 
         {/* CTA */}
@@ -113,13 +114,18 @@ export function Hero() {
         >
           <button
             onClick={() => go("portfolio")}
+            onMouseEnter={() => setCtaHover(true)}
+            onMouseLeave={() => setCtaHover(false)}
             className="group flex items-center gap-3 font-sans text-[13px] font-medium tracking-[0.18em]"
             style={{ color: "#f5f5f5" }}
           >
             <span>EXPLORAR PORTFOLIO</span>
             <motion.span
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, 6, 0], x: ctaHover ? 4 : 0 }}
+              transition={{
+                y: { duration: 1.8, repeat: Infinity, ease: "easeInOut" },
+                x: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+              }}
               style={{ color: "#ecd012" }}
             >
               ↓
