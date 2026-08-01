@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
-import { haptic } from "@/lib/interaction";
 
 /** Deriva "categoría . año" respetando metaLine si existe. */
 function metaOf(project: Project) {
@@ -30,10 +29,7 @@ export function ProjectTile({
   return (
     <motion.button
       type="button"
-      onClick={() => {
-        haptic(8);
-        onOpen(project);
-      }}
+      onClick={() => onOpen(project)}
       data-cursor="project"
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
