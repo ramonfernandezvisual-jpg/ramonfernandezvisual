@@ -4,7 +4,7 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="px-5 py-28 md:px-10 md:py-40"
+      className="px-5 py-20 md:px-10 md:py-40"
       style={{ backgroundColor: "#111111" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -39,16 +39,13 @@ export function Contact() {
           <div className="mt-16 grid grid-cols-12 gap-6 md:mt-24">
             <div className="col-span-12 space-y-1 md:col-span-6">
               <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-                DIRECCIÓN
+                CONTACTO DIRECTO
               </p>
               <p className="font-sans text-2xl font-semibold md:text-3xl" style={{ color: "#f5f5f5" }}>
                 Ramón Fernández
               </p>
-              <p className="font-sans text-sm" style={{ color: "#ecd012" }}>
-                Visual Designer | AI Video Creator | Art Direction
-              </p>
-
             </div>
+
 
             <div className="col-span-12 space-y-6 md:col-span-6">
               <div>

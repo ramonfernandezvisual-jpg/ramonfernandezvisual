@@ -30,9 +30,6 @@ export function Footer() {
             <p className="mt-4 font-sans text-lg font-semibold" style={{ color: "#f5f5f5" }}>
               Ramón Fernández
             </p>
-            <p className="font-sans text-sm" style={{ color: "#ecd012" }}>
-              Visual Designer | AI Video Creator | Art Direction
-            </p>
             <p className="mt-6 max-w-xs font-sans text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
               Disponible para colaboraciones y proyectos remotos.
             </p>

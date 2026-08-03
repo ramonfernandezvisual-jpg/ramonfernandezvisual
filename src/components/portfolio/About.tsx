@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="sobre-mi"
-      className="border-t px-5 py-28 md:px-10 md:py-40"
+      className="border-t px-5 py-20 md:px-10 md:py-40"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -94,15 +94,16 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="col-span-12 mt-16 font-sans font-extrabold leading-[0.9] tracking-[-0.04em] md:mt-28"
+          className="col-span-12 mt-12 font-sans font-extrabold leading-[0.9] tracking-[-0.04em] md:mt-28"
           style={{
             color: "#f5f5f5",
             fontSize: "clamp(2.5rem, 8vw, 8rem)",
           }}
         >
           Diferentes disciplinas.<br />
-          <span style={{ color: "#8a8a8a" }}>Una misma</span> mirada visual
+          <span style={{ color: "rgba(245,245,245,0.62)" }}>Una misma</span> mirada visual
           <span style={{ color: "#ecd012" }}>.</span>
+
         </motion.h2>
       </div>
     </section>
