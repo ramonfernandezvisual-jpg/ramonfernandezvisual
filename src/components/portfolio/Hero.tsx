@@ -26,10 +26,10 @@ export function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative w-full overflow-hidden px-5 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32"
+      className="relative w-full overflow-hidden px-5 pb-10 pt-24 md:px-10 md:pb-14 md:pt-28"
       style={{ backgroundColor: "#080808" }}
     >
-      <div className="mx-auto flex min-h-[78vh] w-full max-w-[1440px] flex-col justify-between md:min-h-[76vh]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between">
         {/* Meta superior */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
@@ -43,7 +43,7 @@ export function Hero() {
         </motion.div>
 
         {/* Composición principal */}
-        <div className="relative mt-16 grid grid-cols-12 items-center gap-8 md:mt-0">
+        <div className="relative mt-10 grid grid-cols-12 items-center gap-8 md:mt-14">
           <motion.div
             style={{ opacity: contentOpacity, y: contentY }}
             className="relative z-10 col-span-12 md:col-span-8"
@@ -65,7 +65,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-6 flex items-baseline gap-3 overflow-hidden md:mt-8"
+              className="mt-5 flex items-baseline gap-3 overflow-hidden md:mt-6"
             >
               <span
                 className="font-sans text-lg font-medium md:text-2xl"
@@ -92,7 +92,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.95 }}
-              className="mt-6 font-sans text-sm font-medium tracking-[0.06em] md:text-[15px]"
+              className="mt-5 font-sans text-sm font-medium tracking-[0.06em] md:text-[15px]"
               style={{ color: "#f5f5f5" }}
             >
               Visual Designer | AI Video Creator | Art Direction
@@ -105,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.15 }}
-          className="relative z-10 mt-16 flex items-end justify-between gap-6"
+          className="relative z-10 mt-10 flex items-end justify-between gap-6 md:mt-12"
         >
           <button
             onClick={() => go("portfolio")}
@@ -131,6 +131,27 @@ export function Hero() {
             14 PROYECTOS · 5 ÁREAS
           </span>
         </motion.div>
+
+        {/* Índice sutil de áreas */}
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 1.3 }}
+          aria-label="Índice de áreas"
+          className="relative z-10 mt-6 flex flex-wrap gap-x-6 gap-y-2 md:mt-8 md:gap-x-10"
+        >
+          {AREA_INDEX.map((a) => (
+            <button
+              key={a.id}
+              onClick={() => go(`area-${a.id}`)}
+              className="group font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#f5f5f5] md:text-[11px]"
+              style={{ color: "#8a8a8a" }}
+            >
+              <span className="transition-colors group-hover:text-[#ecd012]">{a.id}</span>{" "}
+              {a.label}
+            </button>
+          ))}
+        </motion.nav>
       </div>
 
       {/* Transición suave hacia el Portfolio */}
@@ -141,3 +162,4 @@ export function Hero() {
     </section>
   );
 }
+
