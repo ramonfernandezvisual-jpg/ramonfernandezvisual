@@ -3,6 +3,14 @@ import { motion, useScroll, useTransform } from "motion/react";
 
 const WORDS = ["IA", "NARRATIVA", "ESPACIO", "IMAGEN", "VÍDEO"];
 
+const AREA_INDEX = [
+  { id: "01", label: "NARRATIVA" },
+  { id: "02", label: "AVATARES" },
+  { id: "03", label: "EDICIÓN" },
+  { id: "04", label: "ARQUITECTURA" },
+  { id: "05", label: "LICITACIONES" },
+];
+
 export function Hero() {
   const [i, setI] = useState(0);
   const sectionRef = useRef<HTMLElement | null>(null);
