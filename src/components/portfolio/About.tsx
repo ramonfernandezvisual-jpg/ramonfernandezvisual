@@ -101,8 +101,9 @@ export function About() {
           }}
         >
           Diferentes disciplinas.<br />
-          <span style={{ color: "#8a8a8a" }}>Una misma</span> mirada visual
+          <span style={{ color: "rgba(245,245,245,0.62)" }}>Una misma</span> mirada visual
           <span style={{ color: "#ecd012" }}>.</span>
+
         </motion.h2>
       </div>
     </section>

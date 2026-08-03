@@ -2,13 +2,16 @@ import { useCallback, useEffect, useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { getYoutubeId, type Project } from "@/data/projects";
 
-
 export function ProjectModal({
   project,
   onClose: rawClose,
+  onPrev,
+  onNext,
 }: {
   project: Project | null;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
 }) {
   const onClose = useCallback(() => {
     rawClose();
@@ -16,7 +19,11 @@ export function ProjectModal({
 
   useEffect(() => {
     if (!project) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev?.();
+      if (e.key === "ArrowRight") onNext?.();
+    };
     document.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -24,8 +31,7 @@ export function ProjectModal({
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
     };
-  }, [project, onClose]);
-
+  }, [project, onClose, onPrev, onNext]);
 
   return (
     <AnimatePresence>
@@ -52,6 +58,30 @@ export function ProjectModal({
             </span>
           </button>
 
+          {(onPrev || onNext) && (
+            <div
+              className="fixed inset-x-0 bottom-4 z-[110] flex items-center justify-between px-5 md:bottom-8 md:px-10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={onPrev}
+                aria-label="Proyecto anterior"
+                className="font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:text-[11px]"
+                style={{ color: "#8a8a8a" }}
+              >
+                ← ANTERIOR
+              </button>
+              <button
+                onClick={onNext}
+                aria-label="Proyecto siguiente"
+                className="font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:text-[11px]"
+                style={{ color: "#8a8a8a" }}
+              >
+                SIGUIENTE →
+              </button>
+            </div>
+          )}
+
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -60,7 +90,7 @@ export function ProjectModal({
             className="relative w-full max-w-6xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <ModalPlayer project={project} />
+            <ModalPlayer key={project.id} project={project} />
           </motion.div>
         </motion.div>
       )}
@@ -97,10 +127,10 @@ function ModalPlayer({ project }: { project: Project }) {
           />
           <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
             <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#ecd012" }}>
-              VÍDEO PENDIENTE
+              EN PREPARACIÓN
             </p>
             <p className="font-sans text-sm" style={{ color: "#f5f5f5" }}>
-              La URL de YouTube se añadirá próximamente.
+              El vídeo de este proyecto se añadirá próximamente.
             </p>
           </div>
         </>
