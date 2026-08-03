@@ -4,7 +4,7 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="px-5 py-28 md:px-10 md:py-40"
+      className="px-5 py-20 md:px-10 md:py-40"
       style={{ backgroundColor: "#111111" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
