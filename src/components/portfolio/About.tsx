@@ -60,10 +60,19 @@ export function About() {
             Soy Ramón Fernández,{" "}
             <span style={{ color: "#ecd012" }}>Visual Designer | AI Video Creator | Art Direction</span>.
             Trabajo en la intersección entre diseño visual, vídeo, inteligencia
-
             artificial y narrativa. Mi experiencia en arquitectura e interiorismo
             me ha dado una forma de entender el espacio, la luz, la composición y
             la atmósfera que hoy aplico a diferentes disciplinas y proyectos.
+          </p>
+
+          <p
+            className="mt-6 font-sans text-lg leading-relaxed md:text-2xl md:leading-snug"
+            style={{ color: "#f5f5f5" }}
+          >
+            También desarrollo contenido visual y audiovisual para marcas, campañas
+            y redes sociales. Trabajo desde el concepto y la dirección visual hasta
+            la creación de imágenes, vídeo, avatares, edición y adaptación a formatos
+            digitales.
           </p>
 
           <div className="mt-10 flex items-center gap-3">
