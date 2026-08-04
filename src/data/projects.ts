@@ -101,14 +101,15 @@ export const areas: Area[] = [
       {
         id: "p02",
         number: "02",
-        title: "Proyecto 02",
-        category: "Narrativa / Cortometrajes",
-        year: DEFAULTS.year,
+        title: "LITHOS. El ciclo de la luz",
+        category: "Cortometraje",
+        year: "2026",
         role: DEFAULTS.role,
-        description: DEFAULTS.description,
+        description:
+          "Cortometraje sobre el ciclo de la luz. Dirección visual, ritmo y edición.",
         orientation: "horizontal",
-        cover: PENDING_H,
-        youtubeUrl: "",
+        cover: cover02.url,
+        youtubeUrl: "https://youtu.be/twIRG1CKWnM",
         area: "01",
       },
       {
