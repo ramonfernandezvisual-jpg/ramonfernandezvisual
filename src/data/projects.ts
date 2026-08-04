@@ -4,6 +4,7 @@ import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
 import cover01 from "@/assets/covers/p01.asset.json";
+import cover02 from "@/assets/covers/p02.asset.json";
 import cover04 from "@/assets/covers/p04.asset.json";
 import cover05 from "@/assets/covers/p05.asset.json";
 import cover06 from "@/assets/covers/p06.asset.json";
@@ -101,14 +102,15 @@ export const areas: Area[] = [
       {
         id: "p02",
         number: "02",
-        title: "Proyecto 02",
-        category: "Narrativa / Cortometrajes",
-        year: DEFAULTS.year,
+        title: "LITHOS. El ciclo de la luz",
+        category: "Cortometraje",
+        year: "2026",
         role: DEFAULTS.role,
-        description: DEFAULTS.description,
+        description:
+          "Cortometraje sobre el ciclo de la luz. Dirección visual, ritmo y edición.",
         orientation: "horizontal",
-        cover: PENDING_H,
-        youtubeUrl: "",
+        cover: cover02.url,
+        youtubeUrl: "https://youtu.be/twIRG1CKWnM",
         area: "01",
       },
       {
