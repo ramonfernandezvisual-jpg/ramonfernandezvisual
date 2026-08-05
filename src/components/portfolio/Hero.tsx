@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
-const WORDS = ["NARRATIVAS"];
+const WORDS = ["NARRATIVAS", "IA", "VÍDEO", "ESPACIO", "IMAGEN"];
 
 const AREA_INDEX = [
   { id: "01", label: "NARRATIVA" },
