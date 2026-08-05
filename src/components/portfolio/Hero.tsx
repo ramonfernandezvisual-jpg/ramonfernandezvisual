@@ -73,7 +73,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex items-baseline gap-3 overflow-hidden md:mt-6"
+              className="mt-5 flex flex-wrap items-baseline gap-3 overflow-hidden md:mt-6"
             >
               <span
                 className="font-sans text-lg font-medium md:text-2xl"
