@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
-const WORDS = ["IA", "NARRATIVA", "ESPACIO", "IMAGEN", "VÍDEO"];
+const WORDS = ["NARRATIVAS"];
 
 const AREA_INDEX = [
   { id: "01", label: "NARRATIVA" },
@@ -79,7 +79,7 @@ export function Hero() {
                 className="font-sans text-lg font-medium md:text-2xl"
                 style={{ color: "#8a8a8a" }}
               >
-                Dirección visual en
+                Imagen y vídeo con IA para
               </span>
               <span className="relative block h-[1.35em] overflow-hidden">
                 <motion.span
@@ -103,7 +103,17 @@ export function Hero() {
               className="mt-5 font-sans text-sm font-medium tracking-[0.06em] md:text-[15px]"
               style={{ color: "#f5f5f5" }}
             >
-              Visual Designer | AI Video Creator | Art Direction
+              AI Creative Specialist | Image & Video Production
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 1.05 }}
+              className="mt-2 font-sans text-xs font-medium tracking-[0.06em] md:text-[13px]"
+              style={{ color: "#8a8a8a" }}
+            >
+              Creative Concepts · Visual Storytelling · AI Workflows
             </motion.p>
           </motion.div>
         </div>
