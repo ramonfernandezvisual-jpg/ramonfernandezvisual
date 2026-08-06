@@ -77,13 +77,13 @@ export function Hero() {
             >
               <span
                 className="font-sans font-medium leading-[1.35] whitespace-nowrap md:text-2xl"
-                style={{ color: "#8a8a8a", fontSize: "clamp(0.62rem, 3.1vw, 1.5rem)" }}
+                style={{ color: "#8a8a8a", fontSize: "clamp(0.55rem, 2.75vw, 1.5rem)" }}
               >
                 Imagen y vídeo con IA para
               </span>
               <span
                 className="relative inline-block h-[1.35em] shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
-                style={{ fontSize: "clamp(0.62rem, 3.1vw, 1.5rem)" }}
+                style={{ fontSize: "clamp(0.55rem, 2.75vw, 1.5rem)" }}
               >
                 {/* reserva de ancho para la palabra más larga */}
                 <span aria-hidden className="invisible block whitespace-nowrap">
