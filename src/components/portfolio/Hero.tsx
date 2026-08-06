@@ -73,22 +73,22 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-wrap items-baseline gap-3 md:mt-6"
+              className="mt-5 flex flex-col items-start gap-1 md:mt-6 md:flex-row md:flex-nowrap md:items-baseline md:gap-3"
             >
               <span
-                className="font-sans text-lg font-medium md:text-2xl"
+                className="font-sans text-lg font-medium leading-[1.35] whitespace-nowrap md:text-2xl"
                 style={{ color: "#8a8a8a" }}
               >
                 Imagen y vídeo con IA para
               </span>
-              <span className="relative block min-h-[1.35em] overflow-hidden">
+              <span className="relative block h-[1.35em] w-full overflow-hidden md:w-[10ch] md:shrink-0">
                 <motion.span
                   key={WORDS[i]}
                   initial={{ y: "110%", opacity: 0 }}
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-110%", opacity: 0 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="block min-w-[10ch] whitespace-nowrap font-sans text-lg font-bold uppercase tracking-[-0.01em] md:text-2xl"
+                  className="absolute inset-0 block whitespace-nowrap font-sans text-lg font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
                   style={{ color: "#ecd012" }}
                 >
                   {WORDS[i]}
@@ -96,25 +96,6 @@ export function Hero() {
               </span>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.95 }}
-              className="mt-5 font-sans text-sm font-medium tracking-[0.06em] md:text-[15px]"
-              style={{ color: "#f5f5f5" }}
-            >
-              AI Creative Specialist | Image & Video Production
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 1.05 }}
-              className="mt-2 font-sans text-xs font-medium tracking-[0.06em] md:text-[13px]"
-              style={{ color: "#8a8a8a" }}
-            >
-              Creative Concepts · Visual Storytelling · AI Workflows
-            </motion.p>
           </motion.div>
         </div>
 
