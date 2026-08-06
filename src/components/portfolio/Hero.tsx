@@ -73,17 +73,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-row flex-nowrap items-baseline gap-[0.4em] md:mt-6 md:gap-3"
+              className="mt-5 flex flex-row flex-nowrap items-baseline gap-[0.32em] md:mt-6 md:gap-3"
             >
               <span
                 className="font-sans font-medium leading-[1.35] whitespace-nowrap md:text-2xl"
-                style={{ color: "#8a8a8a", fontSize: "clamp(0.8rem, 3.5vw, 1.5rem)" }}
+                style={{ color: "#8a8a8a", fontSize: "clamp(0.62rem, 3.1vw, 1.5rem)" }}
               >
                 Imagen y vídeo con IA para
               </span>
               <span
                 className="relative inline-block h-[1.35em] shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
-                style={{ fontSize: "clamp(0.8rem, 3.5vw, 1.5rem)" }}
+                style={{ fontSize: "clamp(0.62rem, 3.1vw, 1.5rem)" }}
               >
                 {/* reserva de ancho para la palabra más larga */}
                 <span aria-hidden className="invisible block whitespace-nowrap">
