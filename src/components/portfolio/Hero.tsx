@@ -73,27 +73,35 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-col items-start gap-1 md:mt-6 md:flex-row md:flex-nowrap md:items-baseline md:gap-3"
+              className="mt-5 flex flex-row flex-nowrap items-baseline gap-[0.4em] md:mt-6 md:gap-3"
             >
               <span
-                className="font-sans text-lg font-medium leading-[1.35] whitespace-nowrap md:text-2xl"
-                style={{ color: "#8a8a8a" }}
+                className="font-sans font-medium leading-[1.35] whitespace-nowrap md:text-2xl"
+                style={{ color: "#8a8a8a", fontSize: "clamp(0.8rem, 3.5vw, 1.5rem)" }}
               >
                 Imagen y vídeo con IA para
               </span>
-              <span className="relative block h-[1.35em] w-full overflow-hidden md:w-[10ch] md:shrink-0">
+              <span
+                className="relative inline-block h-[1.35em] shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
+                style={{ fontSize: "clamp(0.8rem, 3.5vw, 1.5rem)" }}
+              >
+                {/* reserva de ancho para la palabra más larga */}
+                <span aria-hidden className="invisible block whitespace-nowrap">
+                  NARRATIVAS
+                </span>
                 <motion.span
                   key={WORDS[i]}
                   initial={{ y: "110%", opacity: 0 }}
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-110%", opacity: 0 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0 block whitespace-nowrap font-sans text-lg font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
+                  className="absolute inset-0 block whitespace-nowrap"
                   style={{ color: "#ecd012" }}
                 >
                   {WORDS[i]}
                 </motion.span>
               </span>
+
             </motion.div>
 
           </motion.div>
