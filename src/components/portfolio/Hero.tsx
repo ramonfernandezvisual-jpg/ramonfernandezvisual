@@ -73,7 +73,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-wrap items-baseline gap-3 overflow-hidden md:mt-6"
+              className="mt-5 flex flex-wrap items-baseline gap-3 md:mt-6"
             >
               <span
                 className="font-sans text-lg font-medium md:text-2xl"
@@ -81,14 +81,14 @@ export function Hero() {
               >
                 Imagen y vídeo con IA para
               </span>
-              <span className="relative block h-[1.35em] overflow-hidden">
+              <span className="relative block min-h-[1.35em] overflow-hidden">
                 <motion.span
                   key={WORDS[i]}
                   initial={{ y: "110%", opacity: 0 }}
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-110%", opacity: 0 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="block font-sans text-lg font-bold uppercase tracking-[-0.01em] md:text-2xl"
+                  className="block min-w-[10ch] whitespace-nowrap font-sans text-lg font-bold uppercase tracking-[-0.01em] md:text-2xl"
                   style={{ color: "#ecd012" }}
                 >
                   {WORDS[i]}
