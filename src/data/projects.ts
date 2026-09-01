@@ -16,6 +16,8 @@ import cover11 from "@/assets/covers/p11.asset.json";
 import cover12 from "@/assets/covers/p12.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
+import cover27 from "@/assets/covers/p27.asset.json";
+import coverSilence from "@/assets/covers/p15.asset.json";
 
 
 
@@ -112,6 +114,35 @@ export const areas: Area[] = [
         cover: cover02.url,
         youtubeUrl: "https://youtu.be/twIRG1CKWnM",
         area: "01",
+        metaLine: "cortometraje · 2026",
+      },
+      {
+        id: "p03",
+        number: "03",
+        title: "27 años más tarde",
+        category: "Cortometraje",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Cortometraje. Dirección visual, ritmo y edición.",
+        orientation: "horizontal",
+        cover: cover27.url,
+        youtubeUrl: "https://youtu.be/DU0DohYsDU0",
+        area: "01",
+        metaLine: "cortometraje · 2026",
+      },
+      {
+        id: "p15",
+        number: "15",
+        title: "THE SILENCE GUARDS",
+        category: "Pieza de campaña",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza de campaña. Dirección visual y edición.",
+        orientation: "vertical",
+        cover: coverSilence.url,
+        youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
+        area: "01",
+        metaLine: "pieza de campaña · 2026",
       },
     ],
   },
