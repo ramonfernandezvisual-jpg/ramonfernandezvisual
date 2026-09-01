@@ -46,7 +46,7 @@ export function AreaGrid({ area, onOpen }: Props) {
             )}
             {verticals.length > 0 && (
               <div
-                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${gap} ${
+                className={`grid grid-cols-1 sm:grid-cols-2 ${verticals.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2 lg:max-w-[66%]"} ${gap} ${
                   horizontals.length > 0 ? "mt-10 md:mt-16" : ""
                 }`}
               >
