@@ -7,6 +7,7 @@ function metaOf(project: Project) {
     const raw = project.metaLine;
     const idx = raw.search(/[_-]/);
     if (idx > -1) return raw.slice(idx + 1).trim();
+    return raw;
   }
   return `${project.category.toLowerCase()} . ${project.year}`;
 }
