@@ -128,7 +128,7 @@ export const areas: Area[] = [
         cover: cover27.url,
         youtubeUrl: "https://youtu.be/DU0DohYsDU0",
         area: "01",
-        metaLine: "cortometraje · 2026",
+        metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
       },
       {
         id: "p15",
