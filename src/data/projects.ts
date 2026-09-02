@@ -3,6 +3,8 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
+import cover01 from "@/assets/covers/p01.asset.json";
+import coverSilence from "@/assets/covers/p15.asset.json";
 import coverNico from "@/assets/covers/nico.asset.json";
 import cover04 from "@/assets/covers/p04.asset.json";
 import cover05 from "@/assets/covers/p05.asset.json";
@@ -113,6 +115,34 @@ export const areas: Area[] = [
         youtubeUrl: "https://youtu.be/DU0DohYsDU0",
         area: "01",
         metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
+      },
+      {
+        id: "p01",
+        number: "03",
+        title: "Síndrome del impostor",
+        category: "Narrativa / Cortometrajes",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
+        orientation: "vertical",
+        cover: cover01.url,
+        youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
+        area: "01",
+      },
+      {
+        id: "p15",
+        number: "04",
+        title: "THE SILENCE GUARDS",
+        category: "Pieza de campaña",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza de campaña. Dirección visual y edición.",
+        orientation: "vertical",
+        cover: coverSilence.url,
+        youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
+        area: "01",
+        metaLine: "pieza de campaña · 2026",
       },
     ],
   },
