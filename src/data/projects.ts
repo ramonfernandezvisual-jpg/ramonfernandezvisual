@@ -16,7 +16,7 @@ import cover12 from "@/assets/covers/p12.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
-import coverSilence from "@/assets/covers/p15.asset.json";
+
 
 
 
