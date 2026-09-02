@@ -3,8 +3,7 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
-import cover01 from "@/assets/covers/p01.asset.json";
-import cover02 from "@/assets/covers/p02.asset.json";
+import coverNico from "@/assets/covers/nico.asset.json";
 import cover04 from "@/assets/covers/p04.asset.json";
 import cover05 from "@/assets/covers/p05.asset.json";
 import cover06 from "@/assets/covers/p06.asset.json";
@@ -17,7 +16,7 @@ import cover12 from "@/assets/covers/p12.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
-import coverSilence from "@/assets/covers/p15.asset.json";
+
 
 
 
@@ -88,37 +87,22 @@ export const areas: Area[] = [
       "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
       {
-        id: "p01",
+        id: "pnico",
         number: "01",
-        title: "Síndrome del impostor",
-        category: "Narrativa / Cortometrajes",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description:
-          "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
-        orientation: "vertical",
-        cover: cover01.url,
-        youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
-        area: "01",
-      },
-      {
-        id: "p02",
-        number: "02",
-        title: "LITHOS. El ciclo de la luz",
+        title: "NICO Y EL MONSTRUO DEL TEJADO",
         category: "Cortometraje",
         year: "2026",
         role: DEFAULTS.role,
-        description:
-          "Cortometraje sobre el ciclo de la luz. Dirección visual, ritmo y edición.",
+        description: "Cortometraje. Dirección visual, ritmo y edición.",
         orientation: "horizontal",
-        cover: cover02.url,
-        youtubeUrl: "https://youtu.be/twIRG1CKWnM",
+        cover: coverNico.url,
+        youtubeUrl: "https://youtu.be/U_q0BeayoVE",
         area: "01",
         metaLine: "cortometraje · 2026",
       },
       {
         id: "p03",
-        number: "03",
+        number: "02",
         title: "27 años más tarde",
         category: "Cortometraje",
         year: "2026",
@@ -129,20 +113,6 @@ export const areas: Area[] = [
         youtubeUrl: "https://youtu.be/DU0DohYsDU0",
         area: "01",
         metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
-      },
-      {
-        id: "p15",
-        number: "15",
-        title: "THE SILENCE GUARDS",
-        category: "Pieza de campaña",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza de campaña. Dirección visual y edición.",
-        orientation: "vertical",
-        cover: coverSilence.url,
-        youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
-        area: "01",
-        metaLine: "pieza de campaña · 2026",
       },
     ],
   },
