@@ -3,6 +3,8 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
+import cover01 from "@/assets/covers/p01.asset.json";
+import coverSilence from "@/assets/covers/p15.asset.json";
 import coverNico from "@/assets/covers/nico.asset.json";
 import cover04 from "@/assets/covers/p04.asset.json";
 import cover05 from "@/assets/covers/p05.asset.json";
