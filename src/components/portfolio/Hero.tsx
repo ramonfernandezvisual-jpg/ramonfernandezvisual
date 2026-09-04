@@ -94,7 +94,7 @@ export function Hero() {
               >
                 {/* reserva de ancho para la palabra más larga */}
                 <span aria-hidden className="invisible block whitespace-nowrap">
-                  NARRATIVAS
+                  CAMPAÑA DE PRODUCTO
                 </span>
                 <motion.span
                   key={WORDS[i]}
