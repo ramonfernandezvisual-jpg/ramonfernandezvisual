@@ -86,7 +86,7 @@ export function Hero() {
                 className="font-sans font-medium leading-[1.35] tracking-[-0.02em] whitespace-nowrap md:tracking-normal md:text-2xl"
                 style={{ color: "#8a8a8a", fontSize: "clamp(0.68rem, 3.35vw, 1.5rem)" }}
               >
-                Imagen y vídeo con IA para
+                DIRECCIÓN VISUAL EN
               </span>
               <span
                 className="relative inline-block h-[1.35em] shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
