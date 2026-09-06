@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const WORDS = [
+  "CAMPAÑA DE PRODUCTO",
   "VÍDEO CON IA",
   "IMAGEN CON IA",
   "INFLUENCER CON IA",
-  "CAMPAÑA DE PRODUCTO",
-  "CREATIVIDAD",
   "STORYTELLING",
+  "DIRECCIÓN CREATIVA",
 ];
 
 const AREA_INDEX = [
