@@ -12,13 +12,16 @@ import cover06 from "@/assets/covers/p06.asset.json";
 import cover07 from "@/assets/covers/p07.asset.json";
 import cover08 from "@/assets/covers/p08.asset.json";
 import cover09 from "@/assets/covers/p09.asset.json";
+import cover10 from "@/assets/covers/p10.asset.json";
+import cover11 from "@/assets/covers/p11.asset.json";
+import coverLic from "@/assets/covers/p_lic.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 
 
 
 
 export type Orientation = "horizontal" | "vertical";
-export type AreaId = "01" | "02" | "03" | "04";
+export type AreaId = "01" | "02" | "03" | "04" | "05";
 
 export type Project = {
   id: string;
@@ -78,80 +81,6 @@ const DEFAULTS = {
 export const areas: Area[] = [
   {
     id: "01",
-    slug: "campanas",
-    title: "CAMPAÑAS DE PRODUCTO",
-    subtitle:
-      "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
-    projects: [
-      {
-        id: "p04",
-        number: "01",
-        title: "Cerveza Calaca Viva",
-        category: "Avatares / Inteligencia Artificial",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description:
-          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
-        orientation: "vertical",
-        cover: cover04.url,
-        youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
-        area: "01",
-      },
-      {
-        id: "p15",
-        number: "02",
-        title: "THE SILENCE GUARDS",
-        category: "Pieza de campaña",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza de campaña. Dirección visual y edición.",
-        orientation: "vertical",
-        cover: coverSilence.url,
-        youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
-        area: "01",
-        metaLine: "pieza de campaña · 2026",
-      },
-    ],
-  },
-  {
-    id: "02",
-    slug: "avatares",
-    title: "AVATARES / INTELIGENCIA ARTIFICIAL",
-    subtitle:
-      "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
-    projects: [
-      {
-        id: "p05",
-        number: "03",
-        title: "El tiempo es oro",
-        category: "Avatares / Inteligencia Artificial",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description:
-          "Avatar presentadora generada con IA. Dirección visual y edición del contenido.",
-        orientation: "vertical",
-        cover: cover05.url,
-        youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
-        area: "02",
-      },
-      {
-        id: "p06",
-        number: "04",
-        title: "Yo no soy real",
-        category: "Avatares / Inteligencia Artificial",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description:
-          "Personaje digital generado con IA. Exploración de identidad y presencia sintética.",
-        orientation: "vertical",
-        cover: cover06.url,
-        youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
-        area: "02",
-      },
-    ],
-  },
-  {
-    id: "03",
     slug: "narrativa",
     title: "NARRATIVA / CORTOMETRAJES",
     subtitle:
@@ -159,7 +88,7 @@ export const areas: Area[] = [
     projects: [
       {
         id: "pnico",
-        number: "05",
+        number: "01",
         title: "NICO Y EL MONSTRUO DEL TEJADO",
         category: "Cortometraje",
         year: "2026",
@@ -168,12 +97,12 @@ export const areas: Area[] = [
         orientation: "horizontal",
         cover: coverNico.url,
         youtubeUrl: "https://youtu.be/U_q0BeayoVE",
-        area: "03",
+        area: "01",
         metaLine: "cortometraje · 2026",
       },
       {
         id: "p03",
-        number: "06",
+        number: "02",
         title: "27 años más tarde",
         category: "Cortometraje",
         year: "2026",
@@ -182,12 +111,12 @@ export const areas: Area[] = [
         orientation: "horizontal",
         cover: cover27.url,
         youtubeUrl: "https://youtu.be/DU0DohYsDU0",
-        area: "03",
+        area: "01",
         metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
       },
       {
         id: "p01",
-        number: "07",
+        number: "03",
         title: "Síndrome del impostor",
         category: "Narrativa / Cortometrajes",
         year: DEFAULTS.year,
@@ -197,6 +126,80 @@ export const areas: Area[] = [
         orientation: "vertical",
         cover: cover01.url,
         youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
+        area: "01",
+      },
+    ],
+  },
+  {
+    id: "02",
+    slug: "campanas",
+    title: "CAMPAÑAS DE PRODUCTO",
+    subtitle:
+      "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
+    projects: [
+      {
+        id: "p04",
+        number: "04",
+        title: "Cerveza Calaca Viva",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
+        orientation: "vertical",
+        cover: cover04.url,
+        youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
+        area: "02",
+      },
+      {
+        id: "p15",
+        number: "05",
+        title: "THE SILENCE GUARDS",
+        category: "Pieza de campaña",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza de campaña. Dirección visual y edición.",
+        orientation: "vertical",
+        cover: coverSilence.url,
+        youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
+        area: "02",
+        metaLine: "pieza de campaña · 2026",
+      },
+    ],
+  },
+  {
+    id: "03",
+    slug: "avatares",
+    title: "AVATARES / INTELIGENCIA ARTIFICIAL",
+    subtitle:
+      "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
+    projects: [
+      {
+        id: "p05",
+        number: "06",
+        title: "El tiempo es oro",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Avatar presentadora generada con IA. Dirección visual y edición del contenido.",
+        orientation: "vertical",
+        cover: cover05.url,
+        youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
+        area: "03",
+      },
+      {
+        id: "p06",
+        number: "07",
+        title: "Yo no soy real",
+        category: "Avatares / Inteligencia Artificial",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Personaje digital generado con IA. Exploración de identidad y presencia sintética.",
+        orientation: "vertical",
+        cover: cover06.url,
+        youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
         area: "03",
       },
     ],
@@ -246,6 +249,57 @@ export const areas: Area[] = [
         cover: cover09.url,
         youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
         area: "04",
+      },
+    ],
+  },
+  {
+    id: "05",
+    slug: "arquitectura",
+    title: "ARQUITECTURA / LICITACIONES",
+    subtitle:
+      "Imagen, espacio y materia convertidos en experiencias visuales, y proyectos complejos comunicados de forma clara.",
+    projects: [
+      {
+        id: "p10",
+        number: "11",
+        title: "Villa Normani",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: "2026",
+        role: DEFAULTS.role,
+        description:
+          "Pieza audiovisual de arquitectura e interiorismo para Villa Normani.",
+        orientation: "horizontal",
+        cover: cover10.url,
+        youtubeUrl: "https://youtu.be/wYAE00f83bc",
+        area: "05",
+        metaLine: "Villa Normani _ arquitectura . 2026",
+      },
+      {
+        id: "p11",
+        number: "12",
+        title: "Hotel Mazanka",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual del proyecto Hotel Mazanka.",
+        orientation: "horizontal",
+        cover: cover11.url,
+        youtubeUrl: "https://youtu.be/YpxAUusyPiw",
+        area: "05",
+        metaLine: "Hotel Mazanka _ arquitectura / interiorismo . 2026",
+      },
+      {
+        id: "p14",
+        number: "13",
+        title: "Licitación",
+        category: "Licitaciones / Comunicación Técnica",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual de comunicación técnica para licitación.",
+        orientation: "horizontal",
+        cover: coverLic.url,
+        youtubeUrl: "https://youtu.be/fEwPw4S3lS4",
+        area: "05",
       },
     ],
   },
