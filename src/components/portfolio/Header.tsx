@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { id: "portfolio", label: "PORTFOLIO" },
+  { id: "portfolio", label: "PROYECTOS" },
   { id: "sobre-mi", label: "SOBRE MÍ" },
   { id: "contacto", label: "CONTACTO" },
 ];

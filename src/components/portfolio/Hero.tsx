@@ -11,11 +11,9 @@ const WORDS = [
 ];
 
 const AREA_INDEX = [
-  { id: "01", label: "NARRATIVA" },
-  { id: "02", label: "AVATARES" },
-  { id: "03", label: "EDICIÓN" },
-  { id: "04", label: "ARQUITECTURA" },
-  { id: "05", label: "LICITACIONES" },
+  { id: "01", label: "CAMPAÑAS DE PRODUCTO" },
+  { id: "02", label: "PERSONAJES Y AVATARES" },
+  { id: "03", label: "NARRATIVA Y EDICIÓN" },
 ];
 
 export function Hero() {
@@ -53,7 +51,7 @@ export function Hero() {
           className="relative z-10 flex items-center justify-between font-mono text-[11px] tracking-[0.22em]"
           style={{ color: "#8a8a8a" }}
         >
-          <span style={{ color: "#ecd012" }}>PORTFOLIO VISUAL — 2026</span>
+          <span style={{ color: "#ecd012" }}>PROYECTOS — 2026</span>
           <span>REMOTO</span>
         </motion.div>
 
@@ -126,7 +124,7 @@ export function Hero() {
             className="group flex items-center gap-3 font-sans text-[13px] font-medium tracking-[0.18em]"
             style={{ color: "#f5f5f5" }}
           >
-            <span>EXPLORAR PORTFOLIO</span>
+            <span>VER PROYECTOS</span>
             <motion.span
               animate={{ y: [0, 6, 0] }}
               transition={{
@@ -142,7 +140,7 @@ export function Hero() {
             className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
             style={{ color: "#8a8a8a" }}
           >
-            14 PROYECTOS · 5 ÁREAS
+            11 PROYECTOS · 3 ÁREAS
           </span>
         </motion.div>
 
