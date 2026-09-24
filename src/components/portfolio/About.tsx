@@ -20,7 +20,7 @@ export function About() {
             className="font-mono text-xs tracking-[0.2em]"
             style={{ color: "#ecd012" }}
           >
-            06 — SOBRE MÍ
+            05 — SOBRE MÍ
           </motion.span>
         </div>
 
@@ -57,7 +57,7 @@ export function About() {
             className="font-sans text-lg leading-relaxed md:text-2xl md:leading-snug"
             style={{ color: "#f5f5f5" }}
           >
-            Soy Ramón Fernández, AI Creative Specialist especializado en producción de imagen y vídeo. Soy un profesional del diseño con 15 años de experiencia, titulado como Diseñador Profesional de Interiores y con un posgrado de Experto en Realidad Virtual, Realidad Aumentada y Realidad Mixta.
+            Soy Ramón Fernández, especialista creativo en inteligencia artificial especializado en producción de imagen y vídeo. Soy un profesional del diseño con 15 años de experiencia, titulado como Diseñador Profesional de Interiores y con un posgrado de Experto en Realidad Virtual, Realidad Aumentada y Realidad Mixta.
             <br /><br />
             Desde 2019 trabajo de forma independiente en comunicación y producción visual para empresas y profesionales. Desde 2024 integro IA en la creación de conceptos, imágenes, vídeos y contenido digital. Mi experiencia en interiorismo, visualización 3D y dirección de proyectos ha desarrollado mi criterio sobre el espacio, la luz, la composición y la narrativa visual.
           </p>

@@ -6,11 +6,6 @@ const socials = [
     handle: "@ramonfernandez.visual",
     href: "https://www.instagram.com/ramonfernandez.visual",
   },
-  {
-    label: "INSTAGRAM — ARQUITECTURA / INTERIORISMO",
-    handle: "@ramonfernandez.archviz",
-    href: "https://www.instagram.com/ramonfernandez.archviz",
-  },
 ];
 
 export function Footer() {
@@ -42,7 +37,7 @@ export function Footer() {
             </p>
             <ul className="space-y-2">
               {[
-                { id: "portfolio", label: "PORTFOLIO" },
+                { id: "portfolio", label: "PROYECTOS" },
                 { id: "sobre-mi", label: "SOBRE MÍ" },
                 { id: "contacto", label: "CONTACTO" },
               ].map((n) => (

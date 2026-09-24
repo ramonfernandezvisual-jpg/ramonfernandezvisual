@@ -12,18 +12,14 @@ import cover06 from "@/assets/covers/p06.asset.json";
 import cover07 from "@/assets/covers/p07.asset.json";
 import cover08 from "@/assets/covers/p08.asset.json";
 import cover09 from "@/assets/covers/p09.asset.json";
-import cover10 from "@/assets/covers/p10.asset.json";
-import cover11 from "@/assets/covers/p11.asset.json";
 import cover12 from "@/assets/covers/p12.asset.json";
-import coverLap from "@/assets/covers/p_lap.asset.json";
-import coverLic from "@/assets/covers/p_lic.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 
 
 
 
 export type Orientation = "horizontal" | "vertical";
-export type AreaId = "01" | "02" | "03" | "04" | "05";
+export type AreaId = "01" | "02" | "03";
 
 export type Project = {
   id: string;
@@ -83,52 +79,51 @@ const DEFAULTS = {
 export const areas: Area[] = [
   {
     id: "01",
-    slug: "narrativa",
-    title: "NARRATIVA / CORTOMETRAJES",
+    slug: "campanas",
+    title: "CAMPAÑAS DE PRODUCTO",
     subtitle:
-      "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
+      "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
     projects: [
       {
-        id: "pnico",
+        id: "p09",
         number: "01",
-        title: "NICO Y EL MONSTRUO DEL TEJADO",
-        category: "Cortometraje",
-        year: "2026",
+        title: "Cosmética",
+        category: "Edición / Contenido Audiovisual",
+        year: DEFAULTS.year,
         role: DEFAULTS.role,
-        description: "Cortometraje. Dirección visual, ritmo y edición.",
-        orientation: "horizontal",
-        cover: coverNico.url,
-        youtubeUrl: "https://youtu.be/U_q0BeayoVE",
+        description: "Edición vertical para contenido de cosmética y entrevista.",
+        orientation: "vertical",
+        cover: cover09.url,
+        youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
         area: "01",
-        metaLine: "cortometraje · 2026",
       },
       {
-        id: "p03",
+        id: "p04",
         number: "02",
-        title: "27 años más tarde",
-        category: "Cortometraje",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Cortometraje. Dirección visual, ritmo y edición.",
-        orientation: "horizontal",
-        cover: cover27.url,
-        youtubeUrl: "https://youtu.be/DU0DohYsDU0",
-        area: "01",
-        metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
-      },
-      {
-        id: "p01",
-        number: "03",
-        title: "Síndrome del impostor",
-        category: "Narrativa / Cortometrajes",
+        title: "Cerveza Calaca Viva",
+        category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
-          "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
+          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
         orientation: "vertical",
-        cover: cover01.url,
-        youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
+        cover: cover04.url,
+        youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
         area: "01",
+      },
+      {
+        id: "p12",
+        number: "03",
+        title: "Duna Lounge",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
+        orientation: "horizontal",
+        cover: cover12.url,
+        youtubeUrl: "https://youtu.be/nHoQMshg5b4",
+        area: "01",
+        metaLine: "Duna Lounge_ producto/mobiliario . 2026",
       },
       {
         id: "p15",
@@ -148,25 +143,11 @@ export const areas: Area[] = [
   },
   {
     id: "02",
-    slug: "avatares",
-    title: "AVATARES / INTELIGENCIA ARTIFICIAL",
+    slug: "personajes",
+    title: "PERSONAJES Y AVATARES",
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
-      {
-        id: "p04",
-        number: "04",
-        title: "Cerveza Calaca Viva",
-        category: "Avatares / Inteligencia Artificial",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description:
-          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
-        orientation: "vertical",
-        cover: cover04.url,
-        youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
-        area: "02",
-      },
       {
         id: "p05",
         number: "05",
@@ -199,14 +180,56 @@ export const areas: Area[] = [
   },
   {
     id: "03",
-    slug: "edicion",
-    title: "EDICIÓN / CONTENIDO AUDIOVISUAL",
+    slug: "narrativa",
+    title: "NARRATIVA Y EDICIÓN",
     subtitle:
-      "Edición, ritmo y dirección visual para transformar ideas en contenido que conecta.",
+      "Historias construidas a través de la imagen, el ritmo y la emoción.",
     projects: [
       {
-        id: "p07",
+        id: "pnico",
         number: "07",
+        title: "NICO Y EL MONSTRUO DEL TEJADO",
+        category: "Cortometraje",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Cortometraje. Dirección visual, ritmo y edición.",
+        orientation: "horizontal",
+        cover: coverNico.url,
+        youtubeUrl: "https://youtu.be/U_q0BeayoVE",
+        area: "03",
+        metaLine: "cortometraje · 2026",
+      },
+      {
+        id: "p03",
+        number: "08",
+        title: "27 años más tarde",
+        category: "Cortometraje",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Cortometraje. Dirección visual, ritmo y edición.",
+        orientation: "horizontal",
+        cover: cover27.url,
+        youtubeUrl: "https://youtu.be/DU0DohYsDU0",
+        area: "03",
+        metaLine: "cortometraje · inspirado en Wes Anderson · 2026",
+      },
+      {
+        id: "p01",
+        number: "09",
+        title: "Síndrome del impostor",
+        category: "Narrativa / Cortometrajes",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description:
+          "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
+        orientation: "vertical",
+        cover: cover01.url,
+        youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
+        area: "03",
+      },
+      {
+        id: "p07",
+        number: "10",
         title: "El surfista",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -219,7 +242,7 @@ export const areas: Area[] = [
       },
       {
         id: "p08",
-        number: "08",
+        number: "11",
         title: "La realidad",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -229,107 +252,6 @@ export const areas: Area[] = [
         cover: cover08.url,
         youtubeUrl: "https://youtube.com/shorts/u93f_9onQ8c",
         area: "03",
-      },
-      {
-        id: "p09",
-        number: "09",
-        title: "Cosmética",
-        category: "Edición / Contenido Audiovisual",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description: "Edición vertical para contenido de cosmética y entrevista.",
-        orientation: "vertical",
-        cover: cover09.url,
-        youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
-        area: "03",
-      },
-    ],
-  },
-  {
-    id: "04",
-    slug: "arquitectura",
-    title: "ARQUITECTURA / INTERIORISMO / PRODUCTO",
-    subtitle:
-      "Imagen, espacio y materia convertidos en experiencias visuales.",
-    projects: [
-      {
-        id: "p10",
-        number: "10",
-        title: "Villa Normani",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description:
-          "Pieza audiovisual de arquitectura e interiorismo para Villa Normani.",
-        orientation: "horizontal",
-        cover: cover10.url,
-        youtubeUrl: "https://youtu.be/wYAE00f83bc",
-        area: "04",
-        metaLine: "Villa Normani _ arquitectura . 2026",
-      },
-      {
-        id: "p11",
-        number: "11",
-        title: "Hotel Mazanka",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual del proyecto Hotel Mazanka.",
-        orientation: "horizontal",
-        cover: cover11.url,
-        youtubeUrl: "https://youtu.be/YpxAUusyPiw",
-        area: "04",
-        metaLine: "Hotel Mazanka _ arquitectura / interiorismo . 2026",
-      },
-      {
-        id: "p12",
-        number: "12",
-        title: "Duna Lounge",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
-        orientation: "horizontal",
-        cover: cover12.url,
-        youtubeUrl: "https://youtu.be/nHoQMshg5b4",
-        area: "04",
-        metaLine: "Duna Lounge_ producto/mobiliario . 2026",
-      },
-      {
-        id: "p13",
-        number: "13",
-        title: "Lap pool house",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual de arquitectura — Lap pool house.",
-        orientation: "horizontal",
-        cover: coverLap.url,
-        youtubeUrl: "https://youtu.be/iNEuEYNgd1U",
-        area: "04",
-        metaLine: "Lap pool house - arquitectura . 2026",
-      },
-    ],
-  },
-  {
-    id: "05",
-    slug: "licitaciones",
-    title: "LICITACIONES / COMUNICACIÓN TÉCNICA",
-    subtitle:
-      "Comunicar proyectos complejos de forma clara, visual y profesional.",
-    projects: [
-      {
-        id: "p14",
-        number: "14",
-        title: "Licitación",
-        category: "Licitaciones / Comunicación Técnica",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual de comunicación técnica para licitación.",
-        orientation: "horizontal",
-        cover: coverLic.url,
-        youtubeUrl: "https://youtu.be/fEwPw4S3lS4",
-        area: "05",
       },
     ],
   },

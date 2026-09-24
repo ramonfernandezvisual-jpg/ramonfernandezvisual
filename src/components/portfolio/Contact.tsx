@@ -10,7 +10,7 @@ export function Contact() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
-            07 — HABLEMOS
+            06 — HABLEMOS
           </span>
         </div>
 
