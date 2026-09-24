@@ -12,14 +12,13 @@ import cover06 from "@/assets/covers/p06.asset.json";
 import cover07 from "@/assets/covers/p07.asset.json";
 import cover08 from "@/assets/covers/p08.asset.json";
 import cover09 from "@/assets/covers/p09.asset.json";
-import cover12 from "@/assets/covers/p12.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 
 
 
 
 export type Orientation = "horizontal" | "vertical";
-export type AreaId = "01" | "02" | "03";
+export type AreaId = "01" | "02" | "03" | "04";
 
 export type Project = {
   id: string;
@@ -85,21 +84,8 @@ export const areas: Area[] = [
       "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
     projects: [
       {
-        id: "p09",
-        number: "01",
-        title: "Cosmética",
-        category: "Edición / Contenido Audiovisual",
-        year: DEFAULTS.year,
-        role: DEFAULTS.role,
-        description: "Edición vertical para contenido de cosmética y entrevista.",
-        orientation: "vertical",
-        cover: cover09.url,
-        youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
-        area: "01",
-      },
-      {
         id: "p04",
-        number: "02",
+        number: "01",
         title: "Cerveza Calaca Viva",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -112,22 +98,8 @@ export const areas: Area[] = [
         area: "01",
       },
       {
-        id: "p12",
-        number: "03",
-        title: "Duna Lounge",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual de producto e interiorismo — Duna Lounge.",
-        orientation: "horizontal",
-        cover: cover12.url,
-        youtubeUrl: "https://youtu.be/nHoQMshg5b4",
-        area: "01",
-        metaLine: "Duna Lounge_ producto/mobiliario . 2026",
-      },
-      {
         id: "p15",
-        number: "04",
+        number: "02",
         title: "THE SILENCE GUARDS",
         category: "Pieza de campaña",
         year: "2026",
@@ -143,14 +115,14 @@ export const areas: Area[] = [
   },
   {
     id: "02",
-    slug: "personajes",
-    title: "PERSONAJES Y AVATARES",
+    slug: "avatares",
+    title: "AVATARES / INTELIGENCIA ARTIFICIAL",
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
       {
         id: "p05",
-        number: "05",
+        number: "03",
         title: "El tiempo es oro",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -164,7 +136,7 @@ export const areas: Area[] = [
       },
       {
         id: "p06",
-        number: "06",
+        number: "04",
         title: "Yo no soy real",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -181,13 +153,13 @@ export const areas: Area[] = [
   {
     id: "03",
     slug: "narrativa",
-    title: "NARRATIVA Y EDICIÓN",
+    title: "NARRATIVA / CORTOMETRAJES",
     subtitle:
-      "Historias construidas a través de la imagen, el ritmo y la emoción.",
+      "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
       {
         id: "pnico",
-        number: "07",
+        number: "05",
         title: "NICO Y EL MONSTRUO DEL TEJADO",
         category: "Cortometraje",
         year: "2026",
@@ -201,7 +173,7 @@ export const areas: Area[] = [
       },
       {
         id: "p03",
-        number: "08",
+        number: "06",
         title: "27 años más tarde",
         category: "Cortometraje",
         year: "2026",
@@ -215,7 +187,7 @@ export const areas: Area[] = [
       },
       {
         id: "p01",
-        number: "09",
+        number: "07",
         title: "Síndrome del impostor",
         category: "Narrativa / Cortometrajes",
         year: DEFAULTS.year,
@@ -227,9 +199,18 @@ export const areas: Area[] = [
         youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
         area: "03",
       },
+    ],
+  },
+  {
+    id: "04",
+    slug: "edicion",
+    title: "EDICIÓN / CONTENIDO AUDIOVISUAL",
+    subtitle:
+      "Edición, ritmo y dirección visual para transformar ideas en contenido que conecta.",
+    projects: [
       {
         id: "p07",
-        number: "10",
+        number: "08",
         title: "El surfista",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -238,11 +219,11 @@ export const areas: Area[] = [
         orientation: "vertical",
         cover: cover07.url,
         youtubeUrl: "https://youtube.com/shorts/Gbj851Eu-OQ",
-        area: "03",
+        area: "04",
       },
       {
         id: "p08",
-        number: "11",
+        number: "09",
         title: "La realidad",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -251,7 +232,20 @@ export const areas: Area[] = [
         orientation: "vertical",
         cover: cover08.url,
         youtubeUrl: "https://youtube.com/shorts/u93f_9onQ8c",
-        area: "03",
+        area: "04",
+      },
+      {
+        id: "p09",
+        number: "10",
+        title: "Cosmética",
+        category: "Edición / Contenido Audiovisual",
+        year: DEFAULTS.year,
+        role: DEFAULTS.role,
+        description: "Edición vertical para contenido de cosmética y entrevista.",
+        orientation: "vertical",
+        cover: cover09.url,
+        youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
+        area: "04",
       },
     ],
   },
