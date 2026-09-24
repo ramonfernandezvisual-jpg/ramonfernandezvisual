@@ -11,10 +11,11 @@ const WORDS = [
 ];
 
 const AREA_INDEX = [
-  { id: "01", label: "CAMPAÑAS" },
-  { id: "02", label: "AVATARES" },
-  { id: "03", label: "NARRATIVA" },
+  { id: "01", label: "NARRATIVA" },
+  { id: "02", label: "CAMPAÑAS" },
+  { id: "03", label: "AVATARES" },
   { id: "04", label: "EDICIÓN" },
+  { id: "05", label: "ARQUITECTURA" },
 ];
 
 export function Hero() {
@@ -141,7 +142,7 @@ export function Hero() {
             className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
             style={{ color: "#8a8a8a" }}
           >
-            10 PROYECTOS · 4 ÁREAS
+            13 PROYECTOS · 5 ÁREAS
           </span>
         </motion.div>
 

@@ -25,7 +25,7 @@ export function Collaborate() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
-            05 — CÓMO COLABORO
+            06 — CÓMO COLABORO
           </span>
         </div>
         <div className="col-span-12 md:col-span-10">
