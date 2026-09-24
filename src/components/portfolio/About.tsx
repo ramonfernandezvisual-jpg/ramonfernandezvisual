@@ -20,7 +20,7 @@ export function About() {
             className="font-mono text-xs tracking-[0.2em]"
             style={{ color: "#ecd012" }}
           >
-            05 — SOBRE MÍ
+            06 — SOBRE MÍ
           </motion.span>
         </div>
 

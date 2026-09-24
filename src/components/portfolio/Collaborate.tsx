@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const blocks = [
   {
     title: "Agencias y productoras",
-    text: "Me incorporo a vuestros proyectos como parte del equipo, también en marca blanca si lo necesitáis: bajo vuestro nombre y sin contacto directo con vuestro cliente.",
+    text: "Me incorporo a vuestros proyectos como parte del equipo, en producción con IA o en edición. También en marca blanca si lo necesitáis: bajo vuestro nombre y sin contacto directo con vuestro cliente.",
   },
   {
     title: "Colaboración estable",
@@ -25,7 +25,7 @@ export function Collaborate() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
-            04 — CÓMO COLABORO
+            05 — CÓMO COLABORO
           </span>
         </div>
         <div className="col-span-12 md:col-span-10">
