@@ -142,7 +142,7 @@ export function Hero() {
             className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
             style={{ color: "#8a8a8a" }}
           >
-            13 PROYECTOS · 5 ÁREAS
+            14 PROYECTOS · 5 ÁREAS
           </span>
         </motion.div>
 
