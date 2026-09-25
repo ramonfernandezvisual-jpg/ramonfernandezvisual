@@ -118,7 +118,7 @@ export function Footer() {
           style={{ borderColor: "#161616", color: "#8a8a8a" }}
         >
           <span>© 2026 RAMÓN FERNÁNDEZ</span>
-          <span>PORTFOLIO · MMXXVI</span>
+          <span>PROYECTOS · MMXXVI</span>
         </div>
       </div>
     </footer>

@@ -1,15 +1,9 @@
 import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
 
-/** Deriva "categoría . año" respetando metaLine si existe. */
+/** Etiqueta bajo la portada: usa metaLine si existe. */
 function metaOf(project: Project) {
-  if (project.metaLine) {
-    const raw = project.metaLine;
-    const idx = raw.search(/[_-]/);
-    if (idx > -1) return raw.slice(idx + 1).trim();
-    return raw;
-  }
-  return `${project.category.toLowerCase()} . ${project.year}`;
+  return project.metaLine ?? `${project.category.toLowerCase()} · ${project.year}`;
 }
 
 export function ProjectTile({
