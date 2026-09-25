@@ -50,10 +50,12 @@ export function Contact() {
             <div className="col-span-12 space-y-6 md:col-span-6">
               <div>
                 <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-                  TELÉFONO
+                  WHATSAPP
                 </p>
                 <a
-                  href="tel:+34669250343"
+                  href="https://wa.me/34669250343"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-1 block font-sans text-xl font-medium transition-colors hover:text-[color:var(--brand)] md:text-2xl"
                   style={{ color: "#f5f5f5" }}
                 >
