@@ -15,6 +15,7 @@ import cover09 from "@/assets/covers/p09.asset.json";
 import cover10 from "@/assets/covers/p10.asset.json";
 import cover11 from "@/assets/covers/p11.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
+import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 
 
@@ -289,8 +290,22 @@ export const areas: Area[] = [
         metaLine: "Hotel Mazanka _ arquitectura / interiorismo . 2026",
       },
       {
-        id: "p14",
+        id: "p13",
         number: "13",
+        title: "Lap pool house",
+        category: "Arquitectura / Interiorismo / Producto",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Pieza audiovisual de arquitectura — Lap pool house.",
+        orientation: "horizontal",
+        cover: coverLap.url,
+        youtubeUrl: "https://youtu.be/iNEuEYNgd1U",
+        area: "05",
+        metaLine: "Lap pool house - arquitectura . 2026",
+      },
+      {
+        id: "p14",
+        number: "14",
         title: "Licitación",
         category: "Licitaciones / Comunicación Técnica",
         year: "2026",
