@@ -26,7 +26,7 @@ export function Footer() {
               Ramón Fernández
             </p>
             <p className="mt-6 max-w-xs font-sans text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
-              Disponible para colaboraciones y proyectos remotos.
+              Cortometrajes, campañas y personajes con IA para agencias, productoras y marcas. Disponible en remoto.
             </p>
           </div>
 

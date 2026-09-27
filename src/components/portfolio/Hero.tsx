@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { CountUp } from "./Extras";
 
 const WORDS = [
   "CAMPAÑA DE PRODUCTO",
@@ -54,7 +55,7 @@ export function Hero() {
           style={{ color: "#8a8a8a" }}
         >
           <span style={{ color: "#ecd012" }}>PROYECTOS — 2026</span>
-          <span>REMOTO</span>
+          <span className="flex items-center gap-2">REMOTO<span className="rf-blink inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#ecd012" }} /></span>
         </motion.div>
 
         {/* Composición principal */}
@@ -142,7 +143,7 @@ export function Hero() {
             className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
             style={{ color: "#8a8a8a" }}
           >
-            14 PROYECTOS · 5 ÁREAS
+            <CountUp to={14} /> PROYECTOS · <CountUp to={5} /> ÁREAS
           </span>
         </motion.div>
 

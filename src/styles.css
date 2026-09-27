@@ -93,3 +93,17 @@
     cursor: none !important;
   }
 }
+
+@keyframes rf-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.rf-marquee { animation: rf-marquee 60s linear infinite; }
+@keyframes rf-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.rf-blink { animation: rf-blink 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .rf-marquee, .rf-blink { animation: none; }
+}
