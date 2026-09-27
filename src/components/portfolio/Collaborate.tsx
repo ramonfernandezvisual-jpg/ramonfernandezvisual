@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const blocks = [
   {
     title: "Agencias y productoras",
-    text: "Me incorporo a vuestros proyectos como parte del equipo, en producción con IA o en edición. También en marca blanca si lo necesitáis: bajo vuestro nombre y sin contacto directo con vuestro cliente.",
+    text: "Me incorporo a vuestros proyectos como parte del equipo, en producción con IA o en edición. También en marca blanca si lo necesitáis, bajo vuestro nombre y sin contacto directo con vuestro cliente.",
   },
   {
     title: "Colaboración estable",

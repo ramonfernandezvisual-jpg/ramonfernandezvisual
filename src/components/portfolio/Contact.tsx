@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { motion } from "motion/react";
+import { BrushTrail, ContactModal } from "./Extras";
 
 export function Contact() {
+  const [modal, setModal] = useState(false);
   return (
     <section
       id="contacto"
-      className="px-5 py-20 md:px-10 md:py-40"
+      className="relative px-5 py-20 md:px-10 md:py-40"
       style={{ backgroundColor: "#111111" }}
     >
-      <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
+      <BrushTrail />
+      <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
             08 — HABLEMOS
@@ -77,8 +81,9 @@ export function Contact() {
             </div>
           </div>
 
-          <a
-            href="mailto:ramonfernandezvisual@gmail.com"
+          <button
+            type="button"
+            onClick={() => setModal(true)}
             className="group mt-16 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:mt-24 md:text-2xl"
             style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
           >
@@ -89,9 +94,10 @@ export function Contact() {
             >
               →
             </span>
-          </a>
+          </button>
         </motion.div>
       </div>
+      <ContactModal open={modal} onClose={() => setModal(false)} />
     </section>
   );
 }
