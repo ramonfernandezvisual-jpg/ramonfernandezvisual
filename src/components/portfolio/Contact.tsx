@@ -39,6 +39,9 @@ export function Contact() {
             ¿Tienes un proyecto, una colaboración o una oportunidad en la que
             pueda aportar?
           </p>
+          <p className="mt-3 max-w-2xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a" }}>
+            Cuéntame la idea en dos frases. Te respondo en menos de 24 horas
+          </p>
 
           <div className="mt-16 grid grid-cols-12 gap-6 md:mt-24">
             <div className="col-span-12 space-y-1 md:col-span-6">

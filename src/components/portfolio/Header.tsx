@@ -3,21 +3,40 @@ import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { id: "portfolio", label: "PROYECTOS" },
-  { id: "sobre-mi", label: "SOBRE MÍ" },
-  { id: "contacto", label: "CONTACTO" },
+  { id: "portfolio", label: "PROYECTOS", description: "14 trabajos en 5 áreas" },
+  { id: "sobre-mi", label: "SOBRE MÍ", description: "Quién está detrás" },
+  { id: "contacto", label: "CONTACTO", description: "Correo y WhatsApp" },
 ];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("portfolio");
+  const [overAbout, setOverAbout] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkOverlap = () => {
+      const about = document.getElementById("sobre-mi");
+      const header = document.querySelector("header");
+      if (!about || !header) return;
+      const section = about.getBoundingClientRect();
+      const bar = header.getBoundingClientRect();
+      setOverAbout(section.top < bar.bottom && section.bottom > bar.top);
+    };
+    checkOverlap();
+    window.addEventListener("scroll", checkOverlap, { passive: true });
+    window.addEventListener("resize", checkOverlap);
+    return () => {
+      window.removeEventListener("scroll", checkOverlap);
+      window.removeEventListener("resize", checkOverlap);
+    };
   }, []);
 
   useEffect(() => {
@@ -48,8 +67,8 @@ export function Header() {
         animate={{
           paddingTop: scrolled ? 12 : 22,
           paddingBottom: scrolled ? 12 : 22,
-          backgroundColor: scrolled ? "rgba(8,8,8,0.72)" : "rgba(8,8,8,0)",
-          backdropFilter: scrolled ? "blur(8px)" : "blur(0px)",
+          backgroundColor: overAbout ? "var(--bg)" : scrolled ? "rgba(8,8,8,0.72)" : "rgba(8,8,8,0)",
+          backdropFilter: overAbout ? "blur(0px)" : scrolled ? "blur(8px)" : "blur(0px)",
         }}
         transition={{ duration: 0.3 }}
         className="fixed inset-x-0 top-0 z-50 px-5 md:px-10"
@@ -66,8 +85,12 @@ export function Header() {
                 onClick={() => go(n.id)}
                 className="group relative font-sans text-[13px] font-medium tracking-[0.14em] transition-colors"
                 style={{ color: active === n.id ? "#ecd012" : "#f5f5f5" }}
+                aria-label={`${n.label} — ${n.description}`}
               >
                 {n.label}
+                <span className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap bg-surface px-3 py-2 font-mono text-[10px] tracking-normal text-text opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden>
+                  {n.description}
+                </span>
                 <span
                   className="absolute -bottom-1 left-0 h-px transition-all duration-300"
                   style={{
@@ -119,10 +142,11 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.08, duration: 0.4 }}
                   onClick={() => go(n.id)}
-                  className="text-left font-sans text-4xl font-bold tracking-tight"
+                  className="flex flex-col items-start gap-1 text-left font-sans text-4xl font-bold tracking-tight"
                   style={{ color: active === n.id ? "#ecd012" : "#f5f5f5" }}
                 >
-                  {n.label}
+                  <span>{n.label}</span>
+                  <span className="font-mono text-xs font-normal tracking-normal text-mute">{n.description}</span>
                 </motion.button>
               ))}
             </nav>

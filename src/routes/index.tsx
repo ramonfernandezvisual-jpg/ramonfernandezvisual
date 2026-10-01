@@ -3,6 +3,7 @@ import { About } from "@/components/portfolio/About";
 import { Collaborate } from "@/components/portfolio/Collaborate";
 import { Contact } from "@/components/portfolio/Contact";
 import { CustomCursor } from "@/components/portfolio/CustomCursor";
+import { FAQ, Manifesto, Marquee, Process, Reveal } from "@/components/portfolio/Extras";
 import { Footer } from "@/components/portfolio/Footer";
 import { Header } from "@/components/portfolio/Header";
 import { Hero } from "@/components/portfolio/Hero";
@@ -36,10 +37,14 @@ function Index() {
       <CustomCursor />
       <Header />
       <Hero />
+      <Marquee />
+      <Reveal><Manifesto /></Reveal>
       <PortfolioSection />
-      <Collaborate />
-      <About />
-      <Contact />
+      <Reveal><Collaborate /></Reveal>
+      <Reveal><Process /></Reveal>
+      <Reveal><About /></Reveal>
+      <Reveal><FAQ /></Reveal>
+      <Reveal><Contact /></Reveal>
       <Footer />
     </main>
   );
