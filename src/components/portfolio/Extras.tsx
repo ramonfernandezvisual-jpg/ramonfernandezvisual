@@ -59,8 +59,8 @@ const MANIFESTO = [
 
 export function Manifesto() {
   return (
-    <section className="px-5 py-24 md:px-10 md:py-40" style={{ backgroundColor: "#080808" }}>
-      <div className="mx-auto max-w-[1440px] space-y-6 md:space-y-10">
+    <section className="px-5 py-20 md:px-10 md:py-32" style={{ backgroundColor: "#080808" }}>
+      <div className="mx-auto max-w-[1440px] space-y-10 md:space-y-16">
         {MANIFESTO.map((l, i) => (
           <motion.p
             key={l}
@@ -68,8 +68,8 @@ export function Manifesto() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: i * 0.08 }}
-            className="font-sans font-bold leading-[1.05] tracking-[-0.03em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(1.6rem, 4.6vw, 4.25rem)" }}
+            className="max-w-3xl font-sans text-lg font-normal leading-relaxed md:text-2xl md:leading-snug"
+            style={{ color: "#f5f5f5", textWrap: "balance" }}
           >
             {l}
           </motion.p>

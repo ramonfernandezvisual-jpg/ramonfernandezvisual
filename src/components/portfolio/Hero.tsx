@@ -3,12 +3,11 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { CountUp } from "./Extras";
 
 const WORDS = [
-  "CAMPAÑA DE PRODUCTO",
-  "VÍDEO CON IA",
-  "IMAGEN CON IA",
-  "INFLUENCER CON IA",
-  "STORYTELLING",
-  "DIRECCIÓN CREATIVA",
+  "CORTOMETRAJES",
+  "CAMPAÑAS DE PRODUCTO",
+  "PERSONAJES Y AVATARES",
+  "MARCA BLANCA",
+  "EN REMOTO",
 ];
 
 const AREA_INDEX = [
@@ -95,7 +94,7 @@ export function Hero() {
               >
                 {/* reserva de ancho para la palabra más larga */}
                 <span aria-hidden className="invisible block whitespace-nowrap">
-                  CAMPAÑA DE PRODUCTO
+                  PERSONAJES Y AVATARES
                 </span>
                 <motion.span
                   key={WORDS[i]}
