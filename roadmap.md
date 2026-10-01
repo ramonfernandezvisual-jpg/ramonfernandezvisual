@@ -1,0 +1,4 @@
+- [ ] Colocar las secciones ya preparadas y sus apariciones suaves.
+- [ ] Añadir la frase de contacto y las descripciones del menú.
+- [ ] Hacer sólida la barra y negro el cursor sobre «Sobre mí».
+- [ ] Comprobar ordenador, móvil, ventana de contacto y contador.
