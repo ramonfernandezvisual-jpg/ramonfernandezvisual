@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Compose the portfolio's ordered page sections in the index route and keep reusable visual sections in the portfolio components; this preserves one source of truth for section order.
