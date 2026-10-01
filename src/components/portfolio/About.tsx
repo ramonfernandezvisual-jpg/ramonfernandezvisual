@@ -8,7 +8,7 @@ export function About() {
     <section
       id="sobre-mi"
       className="px-5 py-20 md:px-10 md:py-40"
-      style={{ backgroundColor: "#ecd012" }}
+      style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2">
@@ -18,7 +18,7 @@ export function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
             className="font-mono text-xs tracking-[0.2em]"
-            style={{ color: "#080808" }}
+            style={{ color: "#f5f5f5" }}
           >
             07 — SOBRE MÍ
           </motion.span>
@@ -40,7 +40,7 @@ export function About() {
               style={{ filter: "grayscale(100%) contrast(1.05)" }}
             />
           </div>
-          <div className="mt-3 flex items-center justify-between font-mono text-[10px] tracking-[0.2em]" style={{ color: "#080808" }}>
+          <div className="mt-3 flex items-center justify-between font-mono text-[10px] tracking-[0.2em]" style={{ color: "#f5f5f5" }}>
             <span>RAMÓN FERNÁNDEZ</span>
             <span>MMXXVI</span>
           </div>
@@ -55,7 +55,7 @@ export function About() {
         >
           <p
             className="font-sans text-lg leading-relaxed md:text-2xl md:leading-snug"
-            style={{ color: "#080808" }}
+            style={{ color: "#f5f5f5" }}
           >
             Soy Ramón Fernández y produzco cortometrajes, campañas y personajes con inteligencia artificial para agencias, productoras y marcas. Me ocupo de las piezas de principio a fin, de la idea y la estética al ritmo y el montaje.
             <br /><br />
@@ -67,11 +67,11 @@ export function About() {
           <div className="mt-10 flex items-center gap-3">
             <span
               className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: "#080808" }}
+              style={{ backgroundColor: "#ecd012" }}
             />
             <span
               className="font-mono text-[11px] tracking-[0.22em]"
-              style={{ color: "#080808" }}
+              style={{ color: "#f5f5f5" }}
             >
               DISPONIBLE PARA COLABORACIONES Y PROYECTOS REMOTOS
             </span>
@@ -85,13 +85,13 @@ export function About() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="col-span-12 mt-12 font-sans font-extrabold leading-[0.9] tracking-[-0.04em] md:mt-28"
           style={{
-            color: "#080808",
+            color: "#f5f5f5",
             fontSize: "clamp(2.5rem, 8vw, 8rem)",
           }}
         >
           Diferentes disciplinas.<br />
-          <span style={{ color: "#080808" }}>Una misma</span> mirada visual
-          <span style={{ color: "#080808" }}>.</span>
+          <span style={{ color: "#f5f5f5" }}>Una misma</span> mirada visual
+          <span style={{ color: "#f5f5f5" }}>.</span>
 
         </motion.h2>
       </div>

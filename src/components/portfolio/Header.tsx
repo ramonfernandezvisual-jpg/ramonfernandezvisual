@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { id: "portfolio", label: "PROYECTOS", description: "14 trabajos en 5 áreas" },
+  { id: "portfolio", label: "PROYECTOS", description: "" },
   { id: "sobre-mi", label: "SOBRE MÍ", description: "Quién está detrás" },
   { id: "contacto", label: "CONTACTO", description: "Correo y WhatsApp" },
 ];
@@ -85,12 +85,12 @@ export function Header() {
                 onClick={() => go(n.id)}
                 className="group relative font-sans text-[13px] font-medium tracking-[0.14em] transition-colors"
                 style={{ color: active === n.id ? "#ecd012" : "#f5f5f5" }}
-                aria-label={`${n.label} — ${n.description}`}
+                aria-label={n.description ? `${n.label} — ${n.description}` : n.label}
               >
                 {n.label}
-                <span className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap bg-surface px-3 py-2 font-mono text-[10px] tracking-normal text-text opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden>
+                {n.description && <span className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap bg-surface px-3 py-2 font-mono text-[10px] tracking-normal text-text opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden>
                   {n.description}
-                </span>
+                </span>}
                 <span
                   className="absolute -bottom-1 left-0 h-px transition-all duration-300"
                   style={{
@@ -146,7 +146,7 @@ export function Header() {
                   style={{ color: active === n.id ? "#ecd012" : "#f5f5f5" }}
                 >
                   <span>{n.label}</span>
-                  <span className="font-mono text-xs font-normal tracking-normal text-mute">{n.description}</span>
+                  {n.description && <span className="font-mono text-xs font-normal tracking-normal text-mute">{n.description}</span>}
                 </motion.button>
               ))}
             </nav>
