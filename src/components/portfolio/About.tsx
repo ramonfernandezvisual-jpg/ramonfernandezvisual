@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="sobre-mi"
-      className="px-5 py-20 md:px-10 md:py-40"
+      className="px-5 py-20 md:px-10 md:py-32"
       style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -83,15 +83,15 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="col-span-12 mt-12 font-sans font-extrabold leading-[0.9] tracking-[-0.04em] md:mt-28"
+          className="col-span-12 mt-12 font-sans font-extrabold leading-[0.95] tracking-[-0.04em] md:col-span-10 md:col-start-3 md:mt-20"
           style={{
             color: "#f5f5f5",
-            fontSize: "clamp(2.5rem, 8vw, 8rem)",
+            fontSize: "clamp(2.25rem, 6vw, 5.5rem)",
           }}
         >
           Diferentes disciplinas.<br />
           <span style={{ color: "#f5f5f5" }}>Una misma</span> mirada visual
-          <span style={{ color: "#f5f5f5" }}>.</span>
+          <span style={{ color: "#ecd012" }}>.</span>
 
         </motion.h2>
       </div>

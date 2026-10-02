@@ -60,7 +60,9 @@ const MANIFESTO = [
 export function Manifesto() {
   return (
     <section className="px-5 py-20 md:px-10 md:py-32" style={{ backgroundColor: "#080808" }}>
-      <div className="mx-auto max-w-[1440px] space-y-10 md:space-y-16">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
+        <div className="col-span-12 md:col-span-2" />
+        <div className="col-span-12 space-y-1 md:col-span-10 md:space-y-2">
         {MANIFESTO.map((l, i) => (
           <motion.p
             key={l}
@@ -68,12 +70,13 @@ export function Manifesto() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: i * 0.08 }}
-            className="max-w-3xl font-sans text-lg font-normal leading-relaxed md:text-2xl md:leading-snug"
-            style={{ color: "#f5f5f5", textWrap: "balance" }}
+            className="font-sans font-semibold leading-[1.15] tracking-[-0.02em]"
+            style={{ color: "#f5f5f5", textWrap: "balance", fontSize: "clamp(1.2rem, 2.8vw, 2.4rem)" }}
           >
-            {l}
+            {i === MANIFESTO.length - 1 ? <>{l.slice(0, -1)}<span style={{ color: "#ecd012" }}>.</span></> : l}
           </motion.p>
         ))}
+        </div>
       </div>
     </section>
   );
@@ -131,7 +134,7 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="px-5 py-20 md:px-10 md:py-32" style={{ backgroundColor: "#080808" }}>
+    <section id="faq" className="px-5 pb-20 md:px-10 md:pb-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2" />
         <div className="col-span-12 md:col-span-10">

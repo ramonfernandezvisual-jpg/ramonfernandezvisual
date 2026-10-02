@@ -43,13 +43,13 @@ export function Header() {
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
+          if (e.isIntersecting) setActive(e.target.id === "faq" ? "contacto" : e.target.id);
         });
       },
       { rootMargin: "-40% 0px -55% 0px" },
     );
-    nav.forEach((n) => {
-      const el = document.getElementById(n.id);
+    [...nav.map((n) => n.id), "faq"].forEach((id) => {
+      const el = document.getElementById(id);
       if (el) obs.observe(el);
     });
     return () => obs.disconnect();
