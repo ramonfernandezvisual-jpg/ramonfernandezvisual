@@ -83,14 +83,14 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="col-span-12 mt-12 font-sans font-extrabold leading-[0.95] tracking-[-0.04em] md:col-span-10 md:col-start-3 md:mt-20"
+          className="col-span-12 mt-12 font-sans font-semibold leading-[1.15] tracking-[-0.02em] md:col-span-10 md:col-start-3 md:mt-20"
           style={{
             color: "#f5f5f5",
-            fontSize: "clamp(2.25rem, 6vw, 5.5rem)",
+            fontSize: "clamp(1.2rem, 2.8vw, 2.4rem)",
           }}
         >
           Diferentes disciplinas.<br />
-          <span style={{ color: "#f5f5f5" }}>Una misma</span> mirada visual
+          Una misma mirada visual
           <span style={{ color: "#ecd012" }}>.</span>
 
         </motion.h2>

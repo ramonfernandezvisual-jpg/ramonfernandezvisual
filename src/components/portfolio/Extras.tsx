@@ -92,14 +92,13 @@ export function Process() {
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2" />
-        <div className="col-span-12 md:col-span-10">
           <h2
-            className="font-sans font-extrabold leading-[0.95] tracking-[-0.04em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(2.25rem, 6vw, 5.5rem)" }}
+            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
+            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
           >
-            Detrás de cada pieza<span style={{ color: "#ecd012" }}>.</span>
+            DETRÁS DE CADA PIEZA
           </h2>
+        <div className="col-span-12 md:col-span-10 md:col-start-3">
           <p className="mt-8 max-w-3xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a" }}>
             La IA no trabaja sola. Antes del primer plano hay una idea, un guion y unos fotogramas de estilo que marcan el tono. Después llegan el montaje y el sonido, que llevan más tiempo del que parece. Generar es solo una parte del proceso.
           </p>
@@ -136,14 +135,13 @@ export function FAQ() {
   return (
     <section id="faq" className="px-5 pb-20 md:px-10 md:pb-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2" />
-        <div className="col-span-12 md:col-span-10">
           <h2
-            className="font-sans font-extrabold leading-[0.95] tracking-[-0.04em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(2.25rem, 6vw, 5.5rem)" }}
+            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
+            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
           >
-            Preguntas frecuentes<span style={{ color: "#ecd012" }}>.</span>
+            PREGUNTAS FRECUENTES
           </h2>
+        <div className="col-span-12 md:col-span-10 md:col-start-3">
           <div className="mt-12 border-b md:mt-20" style={{ borderColor: "#161616" }}>
             {FAQS.map(([q, a], i) => {
               const isOpen = open === i;
