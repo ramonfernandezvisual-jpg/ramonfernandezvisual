@@ -80,7 +80,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-row flex-wrap items-baseline gap-[0.32em] md:mt-6 md:gap-3"
+              className="mt-5 flex flex-row flex-wrap items-start gap-x-[0.32em] gap-y-0 md:mt-6 md:gap-x-3"
             >
               <span
                 className="font-sans font-medium leading-[1.35] tracking-[-0.02em] whitespace-nowrap md:tracking-normal md:text-2xl"
@@ -89,15 +89,10 @@ export function Hero() {
                 DIRECCIÓN VISUAL EN
               </span>
               <span
-                className="relative inline-block h-[1.35em] shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
+                className="relative inline-block max-w-full shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
                 style={{ fontSize: "clamp(0.68rem, 4.3vw, 1.5rem)" }}
               >
-                {/* reserva de ancho para la palabra más larga */}
-                {WORDS.map((w) => (
-                  <span key={w} aria-hidden className="invisible block h-0 overflow-hidden whitespace-nowrap">
-                    {w}
-                  </span>
-                ))}
+                <span aria-hidden className="invisible block whitespace-nowrap">{WORDS[i]}</span>
                 <motion.span
                   key={WORDS[i]}
                   initial={{ y: "110%", opacity: 0 }}

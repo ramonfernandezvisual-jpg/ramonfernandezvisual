@@ -23,22 +23,22 @@ export function Collaborate() {
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2">
+        <div className="col-span-12">
           <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
             06 — CÓMO COLABORO
           </span>
         </div>
-        <div className="col-span-12 md:col-span-10">
-          <motion.h2
+        <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="font-sans font-extrabold leading-[0.95] tracking-[-0.04em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(2.25rem, 6vw, 5.5rem)" }}
+            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
+            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
           >
-            Cómo colaboro<span style={{ color: "#ecd012" }}>.</span>
+            CÓMO COLABORO
           </motion.h2>
+        <div className="col-span-12 md:col-span-10 md:col-start-3">
 
           <div className="mt-12 grid grid-cols-1 gap-10 md:mt-20 md:grid-cols-3 md:gap-8">
             {blocks.map((b, i) => (
