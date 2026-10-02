@@ -134,7 +134,7 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="faq" className="px-5 py-20 md:px-10 md:py-32" style={{ backgroundColor: "#080808" }}>
+    <section id="faq" className="px-5 pb-20 md:px-10 md:pb-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2" />
         <div className="col-span-12 md:col-span-10">

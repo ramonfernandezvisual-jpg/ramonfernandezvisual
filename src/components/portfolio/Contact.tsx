@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="relative px-5 py-20 md:px-10 md:py-32"
+      className="relative px-5 pb-12 pt-20 md:px-10 md:pb-16 md:pt-32"
       style={{ backgroundColor: "#111111" }}
     >
       <BrushTrail />
@@ -39,7 +39,7 @@ export function Contact() {
             ¿Tienes un proyecto, una colaboración o una oportunidad en la que
             pueda aportar?
           </p>
-          <p className="mt-3 max-w-2xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a", textWrap: "balance" }}>
+          <p className="mt-3 max-w-2xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a" }}>
             Cuéntame la idea en dos frases. Te respondo en menos de 24 horas
           </p>
 
