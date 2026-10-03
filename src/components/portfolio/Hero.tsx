@@ -120,7 +120,7 @@ export function Hero() {
         >
           <button
             onClick={() => go("portfolio")}
-            className="group flex items-center gap-3 font-sans text-[13px] font-medium tracking-[0.18em]"
+             className="group flex min-h-11 items-center gap-3 font-sans text-[13px] font-medium tracking-[0.18em] md:min-h-0"
             style={{ color: "#f5f5f5" }}
           >
             <span>VER PROYECTOS</span>
@@ -155,7 +155,7 @@ export function Hero() {
             <button
               key={a.id}
               onClick={() => go(`area-${a.id}`)}
-              className="group font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#f5f5f5] md:text-[11px]"
+               className="group flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#f5f5f5] md:min-h-0 md:text-[11px]"
               style={{ color: "#8a8a8a" }}
             >
               <span className="transition-colors group-hover:text-[#ecd012]">{a.id}</span>{" "}

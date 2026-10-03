@@ -74,7 +74,7 @@ export function Header() {
         className="fixed inset-x-0 top-0 z-50 px-5 md:px-10"
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between">
-          <button onClick={() => go("hero")} className="flex items-center">
+           <button onClick={() => go("hero")} className="flex min-h-11 items-center md:min-h-0">
             <Logo className="text-4xl md:text-5xl" />
           </button>
 
@@ -105,7 +105,7 @@ export function Header() {
           <button
             onClick={() => setOpen(true)}
             aria-label="Abrir menú"
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+             className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
           >
             <span className="h-px w-6" style={{ backgroundColor: "#f5f5f5" }} />
             <span className="h-px w-6" style={{ backgroundColor: "#f5f5f5" }} />
@@ -128,7 +128,7 @@ export function Header() {
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Cerrar menú"
-                className="font-mono text-xs tracking-[0.2em]"
+                 className="flex min-h-11 items-center font-mono text-xs tracking-[0.2em]"
                 style={{ color: "#f5f5f5" }}
               >
                 CERRAR
@@ -142,7 +142,7 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.08, duration: 0.4 }}
                   onClick={() => go(n.id)}
-                  className="flex flex-col items-start gap-1 text-left font-sans text-4xl font-bold tracking-tight"
+                   className="flex min-h-11 flex-col items-start justify-center gap-1 text-left font-sans text-4xl font-bold tracking-tight"
                   style={{ color: active === n.id ? "#ecd012" : "#f5f5f5" }}
                 >
                   <span>{n.label}</span>

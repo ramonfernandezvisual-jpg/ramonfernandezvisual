@@ -66,7 +66,7 @@ export function ProjectModal({
               <button
                 onClick={onPrev}
                 aria-label="Proyecto anterior"
-                className="font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:text-[11px]"
+                 className="flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:min-h-0 md:text-[11px]"
                 style={{ color: "#8a8a8a" }}
               >
                 ← ANTERIOR
@@ -74,7 +74,7 @@ export function ProjectModal({
               <button
                 onClick={onNext}
                 aria-label="Proyecto siguiente"
-                className="font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:text-[11px]"
+                 className="flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:min-h-0 md:text-[11px]"
                 style={{ color: "#8a8a8a" }}
               >
                 SIGUIENTE →

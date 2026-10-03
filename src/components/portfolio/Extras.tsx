@@ -59,10 +59,10 @@ const MANIFESTO = [
 
 export function Manifesto() {
   return (
-    <section className="px-5 py-14 md:px-10 md:py-24 lg:py-32" style={{ backgroundColor: "#080808" }}>
+    <section className="px-5 py-6 md:px-10 md:py-24 lg:py-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="hidden lg:col-span-2 lg:block" />
-        <div className="col-span-12 space-y-1 md:space-y-2 lg:col-span-10">
+        <div className="col-span-12 space-y-[18px] md:space-y-2 lg:col-span-10">
         {MANIFESTO.map((l, i) => (
           <motion.p
             key={l}
@@ -70,8 +70,8 @@ export function Manifesto() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: i * 0.08 }}
-            className="font-sans font-semibold leading-[1.15] tracking-[-0.02em]"
-            style={{ color: "#f5f5f5", textWrap: "balance", fontSize: "clamp(1.2rem, 2.8vw, 2.4rem)" }}
+            className="w-full font-sans text-[21px] font-semibold leading-[1.3] tracking-[-0.02em] md:text-[clamp(1.2rem,2.8vw,2.4rem)] md:leading-[1.15]"
+            style={{ color: "#f5f5f5", textWrap: "balance" }}
           >
             {i === MANIFESTO.length - 1 ? <>{l.slice(0, -1)}<span style={{ color: "#ecd012" }}>.</span></> : l}
           </motion.p>
@@ -88,18 +88,18 @@ const STEPS = ["Idea y guion", "Fotogramas de estilo", "Generación", "Montaje",
 export function Process() {
   return (
     <section
-      className="border-t px-5 py-14 md:px-10 md:py-24 lg:py-32"
+      className="border-t px-5 py-10 md:px-10 md:py-24 lg:py-32"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
           <h2
-            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
+            className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
+            style={{ color: "#f5f5f5" }}
           >
             DETRÁS DE CADA PIEZA
           </h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
-          <p className="mt-6 max-w-3xl font-sans text-lg leading-relaxed md:text-xl lg:mt-8" style={{ color: "#8a8a8a" }}>
+          <p className="mt-6 max-w-3xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:mt-8" style={{ color: "#8a8a8a" }}>
             La IA no trabaja sola. Antes del primer plano hay una idea, un guion y unos fotogramas de estilo que marcan el tono. Después llegan el montaje y el sonido, que llevan más tiempo del que parece. Generar es solo una parte del proceso.
           </p>
           <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 md:mt-14 md:grid-cols-3 md:gap-8 lg:mt-20 lg:grid-cols-5">
@@ -133,11 +133,11 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="faq" className="px-5 pb-14 md:px-10 md:pb-24 lg:pb-32" style={{ backgroundColor: "#080808" }}>
+    <section id="faq" className="px-5 pb-8 pt-6 md:px-10 md:pb-24 md:pt-0 lg:pb-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
           <h2
-            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
+            className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
+            style={{ color: "#f5f5f5" }}
           >
             PREGUNTAS FRECUENTES
           </h2>
@@ -150,7 +150,7 @@ export function FAQ() {
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-6 py-5 text-left font-sans text-base font-semibold sm:text-lg md:py-6 md:text-xl lg:text-2xl"
+                    className="flex w-full min-h-11 items-center justify-between gap-6 py-5 text-left font-sans text-base font-semibold sm:text-lg md:py-6 md:text-xl lg:text-2xl"
                     style={{ color: "#f5f5f5" }}
                   >
                     <span>{q}</span>
@@ -170,7 +170,7 @@ export function FAQ() {
                         transition={{ duration: 0.35 }}
                         className="overflow-hidden"
                       >
-                        <p className="max-w-3xl pb-6 font-sans text-base leading-relaxed md:text-lg" style={{ color: "#8a8a8a" }}>
+                        <p className="max-w-3xl pb-6 font-sans text-[16px] leading-[1.55] md:text-lg md:leading-relaxed" style={{ color: "#8a8a8a" }}>
                           {a}
                         </p>
                       </motion.div>
@@ -318,7 +318,7 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
             <button
               onClick={onClose}
               aria-label="Cerrar"
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center font-sans text-2xl"
+               className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center font-sans text-2xl md:h-10 md:w-10"
               style={{ color: "#f5f5f5" }}
             >
               ×

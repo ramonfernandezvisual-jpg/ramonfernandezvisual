@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer
-      className="px-5 pb-10 pt-14 md:px-10 md:pb-12 md:pt-20 lg:pt-28"
+       className="px-5 pb-10 pt-10 md:px-10 md:pb-12 md:pt-20 lg:pt-28"
       style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto max-w-[1440px]">
@@ -25,7 +25,7 @@ export function Footer() {
             <p className="mt-4 font-sans text-lg font-semibold" style={{ color: "#f5f5f5" }}>
               Ramón Fernández
             </p>
-            <p className="mt-6 max-w-xs font-sans text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
+             <p className="mt-6 max-w-xs font-sans text-[16px] leading-[1.55] md:text-sm md:leading-relaxed" style={{ color: "#8a8a8a" }}>
               Cortometrajes, campañas y personajes con IA para agencias, productoras y marcas. Disponible en remoto.
             </p>
           </div>
@@ -44,7 +44,7 @@ export function Footer() {
                 <li key={n.id}>
                   <button
                     onClick={() => go(n.id)}
-                    className="group inline-flex items-center gap-2 whitespace-nowrap font-sans text-sm font-medium tracking-[0.1em] transition-colors hover:text-[color:var(--brand)]"
+                     className="group inline-flex min-h-11 items-center gap-2 whitespace-nowrap font-sans text-sm font-medium tracking-[0.1em] transition-colors hover:text-[color:var(--brand)] md:min-h-0"
                     style={{ color: "#f5f5f5" }}
                   >
                     {n.label}
@@ -69,7 +69,7 @@ export function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group block"
+                     className="group flex min-h-11 flex-col justify-center md:block md:min-h-0"
                   >
                     <span className="block font-mono text-[10px] tracking-[0.18em]" style={{ color: "#8a8a8a" }}>
                       {s.label}
@@ -99,7 +99,7 @@ export function Footer() {
             </p>
             <a
               href="mailto:ramonfernandezvisual@gmail.com"
-              className="group inline-flex items-center gap-2 font-sans text-[clamp(0.8rem,3.8vw,0.875rem)] lg:text-sm font-medium transition-colors hover:text-[color:var(--brand)]"
+               className="group inline-flex min-h-11 items-center gap-2 font-sans text-[clamp(0.8rem,3.8vw,0.875rem)] font-medium transition-colors hover:text-[color:var(--brand)] md:min-h-0 lg:text-sm"
               style={{ color: "#f5f5f5" }}
             >
               <span>ramonfernandezvisual<wbr />@gmail.com</span>

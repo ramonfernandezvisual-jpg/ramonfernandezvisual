@@ -19,7 +19,7 @@ export function Collaborate() {
   return (
     <section
       id="colaboro"
-      className="border-t px-5 py-14 md:px-10 md:py-24 lg:py-32"
+      className="border-t px-5 py-10 md:px-10 md:py-24 lg:py-32"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -33,8 +33,8 @@ export function Collaborate() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
+            className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
+            style={{ color: "#f5f5f5" }}
           >
             CÓMO COLABORO
           </motion.h2>
@@ -57,14 +57,14 @@ export function Collaborate() {
                 <h3 className="mt-3 font-sans text-xl font-semibold md:text-2xl" style={{ color: "#f5f5f5" }}>
                   {b.title}
                 </h3>
-                <p className="mt-4 font-sans text-sm leading-relaxed md:text-[15px]" style={{ color: "#8a8a8a" }}>
+                 <p className="mt-4 font-sans text-[16px] leading-[1.55] md:text-[15px] md:leading-relaxed" style={{ color: "#8a8a8a" }}>
                   {b.text}
                 </p>
               </motion.div>
             ))}
           </div>
 
-          <p className="mt-14 font-sans text-lg md:mt-20 md:text-2xl" style={{ color: "#f5f5f5" }}>
+           <p className="mt-14 font-sans text-[17px] leading-[1.5] md:mt-20 md:text-2xl md:leading-normal" style={{ color: "#f5f5f5" }}>
             Cada encargo empieza por entender qué necesitáis contar y a quién
             <span style={{ color: "#ecd012" }}>.</span>
           </p>
