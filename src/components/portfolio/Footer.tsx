@@ -14,13 +14,13 @@ export function Footer() {
 
   return (
     <footer
-      className="px-5 pb-10 pt-20 md:px-10 md:pb-12 md:pt-28"
+      className="px-5 pb-10 pt-14 md:px-10 md:pb-12 md:pt-20 lg:pt-28"
       style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-12 gap-8 border-t pt-12 md:pt-16" style={{ borderColor: "#161616" }}>
           {/* Marca */}
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Logo className="text-5xl" />
             <p className="mt-4 font-sans text-lg font-semibold" style={{ color: "#f5f5f5" }}>
               Ramón Fernández
@@ -31,7 +31,7 @@ export function Footer() {
           </div>
 
           {/* Navegación */}
-          <div className="col-span-6 md:col-span-2">
+          <div className="col-span-12 md:col-span-6 lg:col-span-2">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
               NAVEGACIÓN
             </p>
@@ -44,7 +44,7 @@ export function Footer() {
                 <li key={n.id}>
                   <button
                     onClick={() => go(n.id)}
-                    className="group inline-flex items-center gap-2 font-sans text-sm font-medium tracking-[0.1em] transition-colors hover:text-[color:var(--brand)]"
+                    className="group inline-flex items-center gap-2 whitespace-nowrap font-sans text-sm font-medium tracking-[0.1em] transition-colors hover:text-[color:var(--brand)]"
                     style={{ color: "#f5f5f5" }}
                   >
                     {n.label}
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           {/* Redes */}
-          <div className="col-span-12 md:col-span-3">
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
               PERFILES
             </p>
@@ -93,16 +93,16 @@ export function Footer() {
           </div>
 
           {/* Contacto */}
-          <div className="col-span-12 md:col-span-3">
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
               CONTACTO
             </p>
             <a
               href="mailto:ramonfernandezvisual@gmail.com"
-              className="group inline-flex items-center gap-2 break-all font-sans text-sm font-medium transition-colors hover:text-[color:var(--brand)]"
+              className="group inline-flex items-center gap-2 font-sans text-[clamp(0.8rem,3.8vw,0.875rem)] lg:text-sm font-medium transition-colors hover:text-[color:var(--brand)]"
               style={{ color: "#f5f5f5" }}
             >
-              ramonfernandezvisual@gmail.com
+              <span>ramonfernandezvisual<wbr />@gmail.com</span>
               <span
                 className="opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
                 style={{ color: "#ecd012" }}

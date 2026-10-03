@@ -20,7 +20,7 @@ export function AreaGrid({ area, onOpen }: Props) {
   return (
     <section
       id={`area-${area.id}`}
-      className="scroll-mt-24 border-t px-5 py-14 md:px-10 md:py-28"
+      className="scroll-mt-24 border-t px-5 py-14 md:px-10 md:py-20 lg:py-28"
       style={{ borderColor: "#161616" }}
     >
       <div className="mx-auto w-full max-w-[1440px]">
@@ -46,7 +46,7 @@ export function AreaGrid({ area, onOpen }: Props) {
             )}
             {verticals.length > 0 && (
               <div
-                className={`grid grid-cols-1 sm:grid-cols-2 ${verticals.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2 lg:max-w-[66%]"} ${gap} ${
+                className={`grid grid-cols-1 md:grid-cols-2 ${verticals.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2 lg:max-w-[66%]"} ${gap} ${
                   horizontals.length > 0 ? "mt-10 md:mt-16" : ""
                 }`}
               >

@@ -68,7 +68,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="font-sans font-extrabold uppercase leading-[0.92] tracking-[-0.045em]"
-              style={{ color: "#f5f5f5", fontSize: "clamp(2.5rem, 8vw, 7rem)" }}
+              style={{ color: "#f5f5f5", fontSize: "clamp(2.25rem, 11vw, 7rem)" }}
             >
               Ramón
               <br />
@@ -80,7 +80,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-row flex-wrap items-start gap-x-[0.32em] gap-y-0 md:mt-6 md:gap-x-3"
+              className="mt-5 flex flex-col items-start gap-y-0 md:mt-6 lg:flex-row lg:flex-wrap lg:gap-x-3"
             >
               <span
                 className="font-sans font-medium leading-[1.35] tracking-[-0.02em] whitespace-nowrap md:tracking-normal md:text-2xl"

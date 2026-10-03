@@ -19,12 +19,12 @@ export function Collaborate() {
   return (
     <section
       id="colaboro"
-      className="border-t px-5 py-20 md:px-10 md:py-32"
+      className="border-t px-5 py-14 md:px-10 md:py-24 lg:py-32"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12">
-          <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
+          <span className="whitespace-nowrap font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
             06 — CÓMO COLABORO
           </span>
         </div>
@@ -38,9 +38,9 @@ export function Collaborate() {
           >
             CÓMO COLABORO
           </motion.h2>
-        <div className="col-span-12 md:col-span-10 md:col-start-3">
+        <div className="col-span-12 lg:col-span-10 lg:col-start-3">
 
-          <div className="mt-12 grid grid-cols-1 gap-10 md:mt-20 md:grid-cols-3 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-10 md:mt-14 lg:mt-20 lg:grid-cols-3 lg:gap-8">
             {blocks.map((b, i) => (
               <motion.div
                 key={b.title}

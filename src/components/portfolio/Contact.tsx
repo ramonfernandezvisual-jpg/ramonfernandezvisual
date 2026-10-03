@@ -7,13 +7,13 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="relative px-5 pb-12 pt-20 md:px-10 md:pb-16 md:pt-32"
+      className="relative px-5 pb-10 pt-14 md:px-10 md:pb-12 md:pt-24 lg:pb-16 lg:pt-32"
       style={{ backgroundColor: "#111111" }}
     >
       <BrushTrail />
       <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2">
-          <span className="font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
+        <div className="col-span-12 lg:col-span-2">
+          <span className="whitespace-nowrap font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
             08 — HABLEMOS
           </span>
         </div>
@@ -23,7 +23,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="col-span-12 md:col-span-10"
+          className="col-span-12 lg:col-span-10"
         >
           <h2
             className="font-sans font-extrabold leading-[0.9] tracking-[-0.04em]"
@@ -75,10 +75,10 @@ export function Contact() {
                 </p>
                 <a
                   href="mailto:ramonfernandezvisual@gmail.com"
-                  className="mt-1 block break-all font-sans text-xl font-medium transition-colors hover:text-[color:var(--brand)] md:text-2xl"
+                  className="mt-1 block font-sans text-[clamp(0.95rem,4.6vw,1.25rem)] [overflow-wrap:normal] [word-break:normal] font-medium transition-colors hover:text-[color:var(--brand)] md:text-2xl"
                   style={{ color: "#f5f5f5" }}
                 >
-                  ramonfernandezvisual@gmail.com
+                  ramonfernandezvisual<wbr />@gmail.com
                 </a>
               </div>
             </div>
