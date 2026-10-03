@@ -18,7 +18,7 @@ export function Footer() {
       style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid grid-cols-12 gap-8 border-t pt-12 md:pt-16" style={{ borderColor: "#161616" }}>
+        <div className="grid grid-cols-12 gap-x-2 gap-y-8 border-t md:gap-8 pt-12 md:pt-16" style={{ borderColor: "#161616" }}>
           {/* Marca */}
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Logo className="text-5xl" />

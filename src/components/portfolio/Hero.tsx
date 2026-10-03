@@ -58,7 +58,7 @@ export function Hero() {
         </motion.div>
 
         {/* Composición principal */}
-        <div className="relative mt-10 grid grid-cols-12 items-center gap-8 md:mt-14">
+        <div className="relative mt-10 grid grid-cols-12 items-center gap-x-2 gap-y-8 md:mt-14 md:gap-8">
           <motion.div
             style={{ opacity: contentOpacity, y: contentY }}
             className="relative z-10 col-span-12 md:col-span-8"
