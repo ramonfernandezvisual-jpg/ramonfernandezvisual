@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="relative px-5 pb-10 pt-14 md:px-10 md:pb-12 md:pt-24 lg:pb-16 lg:pt-32"
+       className="relative px-5 pb-10 pt-10 md:px-10 md:pb-12 md:pt-24 lg:pb-16 lg:pt-32"
       style={{ backgroundColor: "#111111" }}
     >
       <BrushTrail />
@@ -26,20 +26,20 @@ export function Contact() {
           className="col-span-12 lg:col-span-10"
         >
           <h2
-            className="font-sans font-extrabold leading-[0.9] tracking-[-0.04em]"
-            style={{ color: "#f5f5f5", fontSize: "clamp(3rem, 10vw, 9rem)" }}
+             className="font-sans text-[clamp(2.5rem,10vw,3rem)] font-extrabold leading-[0.9] tracking-[-0.04em] md:text-[clamp(3rem,10vw,9rem)]"
+             style={{ color: "#f5f5f5" }}
           >
             HABLEMOS<span style={{ color: "#ecd012" }}>.</span>
           </h2>
 
           <p
-            className="mt-8 max-w-2xl font-sans text-lg leading-relaxed md:text-xl"
+             className="mt-8 max-w-2xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed"
             style={{ color: "#8a8a8a" }}
           >
             ¿Tienes un proyecto, una colaboración o una oportunidad en la que
             pueda aportar?
           </p>
-          <p className="mt-3 max-w-2xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a" }}>
+           <p className="mt-3 max-w-2xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed" style={{ color: "#8a8a8a" }}>
             Cuéntame la idea en dos frases. Te respondo en menos de 24 horas
           </p>
 
@@ -63,7 +63,7 @@ export function Contact() {
                   href="https://wa.me/34669250343"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-1 block font-sans text-xl font-medium transition-colors hover:text-[color:var(--brand)] md:text-2xl"
+                   className="mt-1 flex min-h-11 items-center font-sans text-xl font-medium transition-colors hover:text-[color:var(--brand)] md:mt-1 md:block md:min-h-0 md:text-2xl"
                   style={{ color: "#f5f5f5" }}
                 >
                   +34 669 25 03 43
@@ -75,7 +75,7 @@ export function Contact() {
                 </p>
                 <a
                   href="mailto:ramonfernandezvisual@gmail.com"
-                  className="mt-1 block font-sans text-[clamp(0.95rem,4.6vw,1.25rem)] [overflow-wrap:normal] [word-break:normal] font-medium transition-colors hover:text-[color:var(--brand)] md:text-2xl"
+                   className="mt-1 flex min-h-11 items-center font-sans text-[clamp(0.95rem,4.6vw,1.25rem)] [overflow-wrap:normal] [word-break:normal] font-medium transition-colors hover:text-[color:var(--brand)] md:mt-1 md:block md:min-h-0 md:text-2xl"
                   style={{ color: "#f5f5f5" }}
                 >
                   ramonfernandezvisual<wbr />@gmail.com

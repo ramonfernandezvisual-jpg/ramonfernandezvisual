@@ -16,7 +16,7 @@ export function PortfolioSection() {
   };
 
   return (
-    <section id="portfolio" className="pt-6 md:pt-12" style={{ backgroundColor: "#080808" }}>
+    <section id="portfolio" className="pt-0 md:pt-12" style={{ backgroundColor: "#080808" }}>
       {areas.map((area) => (
         <Reveal key={area.id}><AreaGrid area={area} onOpen={setOpen} /></Reveal>
       ))}

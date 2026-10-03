@@ -30,13 +30,13 @@ export function SectionHeader({
         )}
       </div>
       <h3
-        className="mt-3 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:mt-4"
-        style={{ color: "#f5f5f5", fontSize: "clamp(1.375rem, 3vw, 2.5rem)" }}
+        className="mt-3 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] [overflow-wrap:normal] md:mt-4 md:text-[clamp(1.375rem,3vw,2.5rem)]"
+        style={{ color: "#f5f5f5" }}
       >
         {title}
       </h3>
       <p
-        className="mt-3 max-w-xl font-sans text-sm leading-relaxed md:mt-4 md:text-[15px]"
+        className="mt-3 max-w-xl font-sans text-[16px] leading-[1.55] md:mt-4 md:text-[15px] md:leading-relaxed"
         style={{ color: "#8a8a8a" }}
       >
         {subtitle}

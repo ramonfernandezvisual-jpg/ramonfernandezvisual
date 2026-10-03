@@ -20,7 +20,7 @@ export function AreaGrid({ area, onOpen }: Props) {
   return (
     <section
       id={`area-${area.id}`}
-      className="scroll-mt-24 border-t px-5 py-14 md:px-10 md:py-20 lg:py-28"
+       className="scroll-mt-24 border-t px-5 py-10 md:px-10 md:py-20 lg:py-28"
       style={{ borderColor: "#161616" }}
     >
       <div className="mx-auto w-full max-w-[1440px]">
