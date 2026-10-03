@@ -58,7 +58,7 @@ export function Hero() {
         </motion.div>
 
         {/* Composición principal */}
-        <div className="relative mt-10 grid grid-cols-12 items-center gap-8 md:mt-14">
+        <div className="relative mt-10 grid grid-cols-12 items-center gap-x-2 gap-y-8 md:mt-14 md:gap-8">
           <motion.div
             style={{ opacity: contentOpacity, y: contentY }}
             className="relative z-10 col-span-12 md:col-span-8"
@@ -80,7 +80,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-5 flex flex-row flex-wrap items-start gap-x-[0.32em] gap-y-0 md:mt-6 md:gap-x-3"
+              className="mt-5 flex flex-col items-start gap-y-0 md:mt-6 lg:flex-row lg:flex-wrap lg:gap-x-3"
             >
               <span
                 className="font-sans font-medium leading-[1.35] tracking-[-0.02em] whitespace-nowrap md:tracking-normal md:text-2xl"

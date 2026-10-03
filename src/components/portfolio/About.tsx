@@ -7,17 +7,17 @@ export function About() {
   return (
     <section
       id="sobre-mi"
-      className="px-5 py-20 md:px-10 md:py-32"
+      className="px-5 py-14 md:px-10 md:py-24 lg:py-32"
       style={{ backgroundColor: "#080808" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2">
+        <div className="col-span-12 lg:col-span-2">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="font-mono text-xs tracking-[0.2em]"
+            className="whitespace-nowrap font-mono text-xs tracking-[0.2em]"
             style={{ color: "#f5f5f5" }}
           >
             07 — SOBRE MÍ
@@ -30,7 +30,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="col-span-12 md:col-span-4"
+          className="col-span-12 md:max-w-md lg:col-span-4 lg:max-w-none"
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden" style={{ backgroundColor: "#111" }}>
             <img
@@ -51,10 +51,10 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="col-span-12 md:col-span-6"
+          className="col-span-12 lg:col-span-6"
         >
           <p
-            className="font-sans text-lg leading-relaxed md:text-2xl md:leading-snug"
+            className="font-sans text-lg leading-relaxed md:text-xl lg:text-2xl lg:leading-snug"
             style={{ color: "#f5f5f5" }}
           >
             Soy Ramón Fernández y produzco cortometrajes, campañas y personajes con inteligencia artificial para agencias, productoras y marcas. Me ocupo de las piezas de principio a fin, de la idea y la estética al ritmo y el montaje.
@@ -83,7 +83,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="col-span-12 mt-12 font-sans font-semibold leading-[1.15] tracking-[-0.02em] md:col-span-10 md:col-start-3 md:mt-20"
+          className="col-span-12 mt-12 font-sans font-semibold leading-[1.15] tracking-[-0.02em] lg:col-span-10 lg:col-start-3 lg:mt-20"
           style={{
             color: "#f5f5f5",
             fontSize: "clamp(1.2rem, 2.8vw, 2.4rem)",

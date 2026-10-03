@@ -59,10 +59,10 @@ const MANIFESTO = [
 
 export function Manifesto() {
   return (
-    <section className="px-5 py-20 md:px-10 md:py-32" style={{ backgroundColor: "#080808" }}>
+    <section className="px-5 py-14 md:px-10 md:py-24 lg:py-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2" />
-        <div className="col-span-12 space-y-1 md:col-span-10 md:space-y-2">
+        <div className="hidden lg:col-span-2 lg:block" />
+        <div className="col-span-12 space-y-1 md:space-y-2 lg:col-span-10">
         {MANIFESTO.map((l, i) => (
           <motion.p
             key={l}
@@ -88,7 +88,7 @@ const STEPS = ["Idea y guion", "Fotogramas de estilo", "Generación", "Montaje",
 export function Process() {
   return (
     <section
-      className="border-t px-5 py-20 md:px-10 md:py-32"
+      className="border-t px-5 py-14 md:px-10 md:py-24 lg:py-32"
       style={{ backgroundColor: "#080808", borderColor: "#161616" }}
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -98,17 +98,17 @@ export function Process() {
           >
             DETRÁS DE CADA PIEZA
           </h2>
-        <div className="col-span-12 md:col-span-10 md:col-start-3">
-          <p className="mt-8 max-w-3xl font-sans text-lg leading-relaxed md:text-xl" style={{ color: "#8a8a8a" }}>
+        <div className="col-span-12 lg:col-span-10 lg:col-start-3">
+          <p className="mt-6 max-w-3xl font-sans text-lg leading-relaxed md:text-xl lg:mt-8" style={{ color: "#8a8a8a" }}>
             La IA no trabaja sola. Antes del primer plano hay una idea, un guion y unos fotogramas de estilo que marcan el tono. Después llegan el montaje y el sonido, que llevan más tiempo del que parece. Generar es solo una parte del proceso.
           </p>
-          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-20 md:grid-cols-5 md:gap-8">
+          <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 md:mt-14 md:grid-cols-3 md:gap-8 lg:mt-20 lg:grid-cols-5">
             {STEPS.map((s, i) => (
               <div key={s} className="border-t pt-6" style={{ borderColor: "#161616" }}>
                 <span className="font-mono text-[11px] tracking-[0.22em]" style={{ color: "#8a8a8a" }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-3 font-sans text-xl font-semibold md:text-2xl" style={{ color: "#f5f5f5" }}>
+                <h3 className="mt-3 font-sans text-base font-semibold [overflow-wrap:anywhere] [hyphens:none] sm:text-xl lg:text-2xl" style={{ color: "#f5f5f5" }}>
                   {s}
                 </h3>
               </div>
@@ -133,7 +133,7 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="faq" className="px-5 pb-20 md:px-10 md:pb-32" style={{ backgroundColor: "#080808" }}>
+    <section id="faq" className="px-5 pb-14 md:px-10 md:pb-24 lg:pb-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
           <h2
             className="col-span-12 font-sans font-semibold uppercase leading-[1.08] tracking-[-0.02em]"
@@ -141,8 +141,8 @@ export function FAQ() {
           >
             PREGUNTAS FRECUENTES
           </h2>
-        <div className="col-span-12 md:col-span-10 md:col-start-3">
-          <div className="mt-12 border-b md:mt-20" style={{ borderColor: "#161616" }}>
+        <div className="col-span-12 lg:col-span-10 lg:col-start-3">
+          <div className="mt-10 border-b md:mt-14 lg:mt-20" style={{ borderColor: "#161616" }}>
             {FAQS.map(([q, a], i) => {
               const isOpen = open === i;
               return (
@@ -150,7 +150,7 @@ export function FAQ() {
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-6 py-6 text-left font-sans text-lg font-semibold md:text-2xl"
+                    className="flex w-full items-center justify-between gap-6 py-5 text-left font-sans text-base font-semibold sm:text-lg md:py-6 md:text-xl lg:text-2xl"
                     style={{ color: "#f5f5f5" }}
                   >
                     <span>{q}</span>

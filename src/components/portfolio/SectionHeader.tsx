@@ -19,7 +19,7 @@ export function SectionHeader({
       transition={{ duration: 0.6 }}
       className="mb-8 max-w-3xl md:mb-14"
     >
-      <div className="flex items-baseline gap-4">
+      <div className="flex items-baseline gap-4 whitespace-nowrap">
         <span className="font-mono text-[11px] tracking-[0.22em]" style={{ color: "#ecd012" }}>
           {number}
         </span>
