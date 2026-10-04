@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { CountUp } from "./Extras";
 
 const WORDS = [
   "CORTOMETRAJES",
@@ -135,12 +134,6 @@ export function Hero() {
             </motion.span>
           </button>
 
-          <span
-            className="hidden font-mono text-[11px] tracking-[0.2em] md:inline"
-            style={{ color: "#8a8a8a" }}
-          >
-            <CountUp to={14} /> PROYECTOS · <CountUp to={5} /> ÁREAS
-          </span>
         </motion.div>
 
         {/* Índice sutil de áreas */}
