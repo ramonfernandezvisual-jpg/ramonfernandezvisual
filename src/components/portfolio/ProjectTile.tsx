@@ -26,7 +26,6 @@ export function ProjectTile({
     <motion.button
       type="button"
       onClick={() => onOpen(project)}
-      data-cursor="project"
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -34,6 +33,7 @@ export function ProjectTile({
       className={`group block w-full text-left ${className}`}
     >
       <div
+        data-cursor="project"
         className={`relative w-full overflow-hidden rounded-[20px] ${aspect}`}
         style={{ backgroundColor: "#111111" }}
       >
