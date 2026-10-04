@@ -157,7 +157,7 @@ export const areas: Area[] = [
       {
         id: "p15",
         number: "05",
-        title: "The Silence Guards",
+        title: "The Silent Guards",
         category: "Pieza de campaña",
         year: "2026",
         role: DEFAULTS.role,
