@@ -148,11 +148,11 @@ export function Hero() {
             <button
               key={a.id}
               onClick={() => go(`area-${a.id}`)}
-               className="group flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#f5f5f5] md:min-h-0 md:text-[11px]"
+              className="group flex min-h-11 items-center gap-2 font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#f5f5f5] md:min-h-0 md:text-[11px]"
               style={{ color: "#8a8a8a" }}
             >
-              <span className="transition-colors group-hover:text-[#ecd012]">{a.id}</span>{" "}
-              {a.label}
+              <span className="transition-colors group-hover:text-[#ecd012]">{a.id}</span>
+              <span>{a.label}</span>
             </button>
           ))}
         </motion.nav>

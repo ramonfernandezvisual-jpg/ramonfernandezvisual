@@ -20,7 +20,7 @@ export function CustomCursor() {
     const onMove = (e: MouseEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
-      const el = e.target as HTMLElement | null;
+      const el = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement | null;
       const projEl = el?.closest("[data-cursor='project']");
       const linkEl = el?.closest("a, button, [data-cursor='link']");
       setOverAbout(!!el?.closest("#sobre-mi"));
