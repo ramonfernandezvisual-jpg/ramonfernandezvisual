@@ -8,6 +8,9 @@ import { Footer } from "@/components/portfolio/Footer";
 import { Header } from "@/components/portfolio/Header";
 import { Hero } from "@/components/portfolio/Hero";
 import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
+import shareCover from "@/assets/social/portada-actual.png.asset.json";
+
+const shareCoverUrl = `https://ramonfernandezvisual.lovable.app${shareCover.url}`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,6 +29,11 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: shareCoverUrl },
+      { name: "twitter:image", content: shareCoverUrl },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Portada actual de Ramón Fernández — Dirección visual" },
     ],
   }),
   component: Index,

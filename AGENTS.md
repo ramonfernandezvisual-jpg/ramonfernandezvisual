@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Compose the portfolio's ordered page sections in the index route and keep reusable visual sections in the portfolio components; this preserves one source of truth for section order.
+- Keep the shared-link cover metadata in the index route using an absolute public URL derived from its asset pointer; this avoids inherited stale cover images.
