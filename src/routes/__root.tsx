@@ -95,8 +95,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Ramón Fernández — Dirección visual y producción audiovisual con IA" },
       { name: "twitter:description", content: "Dirección visual, producción audiovisual con IA y edición para agencias, productoras y estudios creativos." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/656cff49-581e-4256-830e-7568ec3d0e4b/id-preview-c2deab01--f0542285-cb11-40ca-b7b5-a066104d9686.lovable.app-1785099139018.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/656cff49-581e-4256-830e-7568ec3d0e4b/id-preview-c2deab01--f0542285-cb11-40ca-b7b5-a066104d9686.lovable.app-1785099139018.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
