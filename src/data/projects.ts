@@ -17,6 +17,7 @@ import cover11 from "@/assets/covers/p11.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
+import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
 
 
 
@@ -88,8 +89,23 @@ export const areas: Area[] = [
       "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
       {
-        id: "pnico",
+        id: "plevis",
         number: "01",
+        title: "Levi's «Drugstore»",
+        category: "Homenaje / Recreación con IA",
+        year: "2026",
+        role: DEFAULTS.role,
+        description:
+          "Homenaje y recreación con IA del anuncio Levi's «Drugstore».",
+        orientation: "horizontal",
+        cover: coverLevis.url,
+        youtubeUrl: "https://youtu.be/96AXqZ53r2k",
+        area: "01",
+        metaLine: "homenaje · recreación con IA · 2026",
+      },
+      {
+        id: "pnico",
+        number: "02",
         title: "Nico y el monstruo del tejado",
         category: "Cortometraje",
         year: "2026",
@@ -103,7 +119,7 @@ export const areas: Area[] = [
       },
       {
         id: "p03",
-        number: "02",
+        number: "03",
         title: "27 años más tarde",
         category: "Cortometraje",
         year: "2026",
@@ -117,7 +133,7 @@ export const areas: Area[] = [
       },
       {
         id: "p01",
-        number: "03",
+        number: "04",
         title: "Síndrome del impostor",
         category: "Narrativa / Cortometrajes",
         year: DEFAULTS.year,
@@ -141,7 +157,7 @@ export const areas: Area[] = [
     projects: [
       {
         id: "p04",
-        number: "04",
+        number: "05",
         title: "Cerveza Calaca Viva",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -156,7 +172,7 @@ export const areas: Area[] = [
       },
       {
         id: "p15",
-        number: "05",
+        number: "06",
         title: "The Silent Guards",
         category: "Pieza de campaña",
         year: "2026",
@@ -179,7 +195,7 @@ export const areas: Area[] = [
     projects: [
       {
         id: "p05",
-        number: "06",
+        number: "07",
         title: "El tiempo es oro",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -194,7 +210,7 @@ export const areas: Area[] = [
       },
       {
         id: "p06",
-        number: "07",
+        number: "08",
         title: "Yo no soy real",
         category: "Avatares / Inteligencia Artificial",
         year: DEFAULTS.year,
@@ -218,7 +234,7 @@ export const areas: Area[] = [
     projects: [
       {
         id: "p07",
-        number: "08",
+        number: "09",
         title: "El surfista",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -232,7 +248,7 @@ export const areas: Area[] = [
       },
       {
         id: "p08",
-        number: "09",
+        number: "10",
         title: "La realidad",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -246,7 +262,7 @@ export const areas: Area[] = [
       },
       {
         id: "p09",
-        number: "10",
+        number: "11",
         title: "Cosmética",
         category: "Edición / Contenido Audiovisual",
         year: DEFAULTS.year,
@@ -269,7 +285,7 @@ export const areas: Area[] = [
     projects: [
       {
         id: "p10",
-        number: "11",
+        number: "12",
         title: "Villa Normani",
         category: "Arquitectura / Interiorismo / Producto",
         year: "2026",
@@ -284,7 +300,7 @@ export const areas: Area[] = [
       },
       {
         id: "p11",
-        number: "12",
+        number: "13",
         title: "Hotel Mazanka",
         category: "Arquitectura / Interiorismo / Producto",
         year: "2026",
@@ -298,7 +314,7 @@ export const areas: Area[] = [
       },
       {
         id: "p13",
-        number: "13",
+        number: "14",
         title: "Lap pool house",
         category: "Arquitectura / Interiorismo / Producto",
         year: "2026",
@@ -312,7 +328,7 @@ export const areas: Area[] = [
       },
       {
         id: "p14",
-        number: "14",
+        number: "15",
         title: "Licitación",
         category: "Licitaciones / Comunicación Técnica",
         year: "2026",
