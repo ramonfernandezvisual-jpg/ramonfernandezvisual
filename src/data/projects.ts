@@ -17,6 +17,7 @@ import cover11 from "@/assets/covers/p11.asset.json";
 import coverLic from "@/assets/covers/p_lic.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
+import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
 
 
 
@@ -88,8 +89,23 @@ export const areas: Area[] = [
       "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
       {
-        id: "pnico",
+        id: "plevis",
         number: "01",
+        title: "Levi's «Drugstore»",
+        category: "Homenaje / Recreación con IA",
+        year: "2026",
+        role: DEFAULTS.role,
+        description:
+          "Homenaje y recreación con IA del anuncio Levi's «Drugstore».",
+        orientation: "horizontal",
+        cover: coverLevis.url,
+        youtubeUrl: "https://youtu.be/96AXqZ53r2k",
+        area: "01",
+        metaLine: "homenaje · recreación con IA · 2026",
+      },
+      {
+        id: "pnico",
+        number: "02",
         title: "Nico y el monstruo del tejado",
         category: "Cortometraje",
         year: "2026",
