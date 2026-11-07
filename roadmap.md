@@ -2,3 +2,4 @@
 - [x] Añadir la frase de contacto y las descripciones del menú.
 - [x] Hacer sólida la barra y negro el cursor sobre «Sobre mí».
 - [x] Comprobar ordenador, móvil, ventana de contacto y contador.
+- [ ] Añadir el proyecto del vídeo 7RtihyC0ZGo primero en Campañas de producto con la portada del frasco y comprobar su apertura.
