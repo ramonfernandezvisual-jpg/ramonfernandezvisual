@@ -18,6 +18,7 @@ import coverLic from "@/assets/covers/p_lic.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
+import coverBarcino from "@/assets/covers/perfume-frasco.webp.asset.json";
 
 
 
@@ -155,6 +156,20 @@ export const areas: Area[] = [
     subtitle:
       "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
     projects: [
+      {
+        id: "pbarcino",
+        number: "16",
+        title: "Barcino N 29",
+        category: "Campaña de perfume",
+        year: "2026",
+        role: DEFAULTS.role,
+        description: "Campaña de perfume Barcino N 29.",
+        orientation: "horizontal",
+        cover: coverBarcino.url,
+        youtubeUrl: "https://youtu.be/7RtihyC0ZGo",
+        area: "02",
+        metaLine: "campaña de perfume · 2026",
+      },
       {
         id: "p04",
         number: "05",
