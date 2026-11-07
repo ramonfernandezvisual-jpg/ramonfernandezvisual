@@ -92,6 +92,23 @@
   html.rf-cursor * {
     cursor: none !important;
   }
+
+  /* Reversible cover-only preview: remove these rules to restore full color. */
+  [data-cursor="project"] > img {
+    filter: grayscale(1);
+    transition: filter 450ms ease;
+  }
+
+  [data-cursor="project"]:hover > img,
+  button:focus-visible [data-cursor="project"] > img {
+    filter: grayscale(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-cursor="project"] > img {
+    transition: none;
+  }
 }
 
 @keyframes rf-marquee {
