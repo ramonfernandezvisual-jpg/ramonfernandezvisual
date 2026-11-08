@@ -220,7 +220,7 @@ export const areas: Area[] = [
           "Pieza con avatares generados con IA. Dirección visual y edición.",
         orientation: "horizontal",
         cover: coverPerfect.url,
-        youtubeUrl: "https://youtu.be/X00DYS3kCuQ",
+        youtubeUrl: "https://youtu.be/MBEnYJdS78I",
         area: "03",
         metaLine: "avatares · inteligencia artificial · 2026",
       },
