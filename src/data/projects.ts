@@ -19,6 +19,7 @@ import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
 import coverBarcino from "@/assets/covers/perfume-frasco.webp.asset.json";
+import coverPerfect from "@/assets/covers/perfect-plan.jpg.asset.json";
 
 
 
@@ -208,6 +209,21 @@ export const areas: Area[] = [
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
+      {
+        id: "pperfect",
+        number: "17",
+        title: "The perfect plan",
+        category: "Avatares / Inteligencia Artificial",
+        year: "2026",
+        role: DEFAULTS.role,
+        description:
+          "Pieza con avatares generados con IA. Dirección visual y edición.",
+        orientation: "horizontal",
+        cover: coverPerfect.url,
+        youtubeUrl: "https://youtu.be/X00DYS3kCuQ",
+        area: "03",
+        metaLine: "avatares · inteligencia artificial · 2026",
+      },
       {
         id: "p05",
         number: "07",
