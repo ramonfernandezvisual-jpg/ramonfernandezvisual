@@ -57,11 +57,11 @@ export function About() {
              className="font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:text-2xl lg:leading-snug"
             style={{ color: "#f5f5f5" }}
           >
-            Soy Ramón Fernández y produzco cortometrajes, campañas y personajes para agencias, productoras y marcas. Me ocupo de las piezas de principio a fin, de la idea y la estética al ritmo y el montaje.
+            Soy Ramón Fernández. Creo cortometrajes, campañas y personajes para agencias, productoras y marcas, y cuido cada pieza desde la primera idea hasta el último detalle del montaje.
             <br /><br />
-            Aprendí a construir imágenes mucho antes de que existiera la IA. Durante más de 15 años he levantado espacios y atmósferas de la nada, y desde 2019 trabajo de forma independiente para empresas y profesionales. Ese oficio es el que aplico hoy en cada plano. Sé cómo se comporta la luz, cómo se compone un encuadre y qué hace que una escena resulte creíble.
+            Aprendí a construir imágenes mucho antes de que existiera la IA. Durante más de quince años levanté espacios y atmósferas desde cero, y desde 2019 trabajo por mi cuenta para empresas y profesionales. Esa experiencia es la que hoy me guía en cada plano, porque sé cómo se comporta la luz, cómo se compone un encuadre y qué hace creíble una escena.
             <br /><br />
-            Por eso, para mí, la tecnología nunca es un atajo, sino una herramienta al servicio de la dirección visual. Lo que importa es que la historia llegue.
+            Para mí la tecnología nunca es un atajo, sino una herramienta al servicio de la dirección visual. Lo que de verdad importa es que la historia llegue.
           </p>
 
           <div className="mt-10 flex items-center gap-3">
