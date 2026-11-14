@@ -9,7 +9,10 @@ const services = [
   { title: "Campañas de marca", text: "Varias piezas conectadas entre sí para una misma marca." },
   { title: "Contenido mensual para redes", text: "Un número fijo de piezas al mes para tus redes." },
   { title: "Personajes", text: "Personajes que dan una cara reconocible a tu marca." },
-  { title: "Convertir una escena normal en escena cinematográfica", text: "" },
+  {
+    title: "Convertir una escena normal en escena cinematográfica",
+    text: "Tu grabación de siempre, llevada a una escena de cine con su atmósfera, sus planos y sus cambios de cámara.",
+  },
 ];
 
 export function Services() {
