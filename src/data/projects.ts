@@ -18,8 +18,6 @@ import coverLic from "@/assets/covers/p_lic.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
-import coverBarcino from "@/assets/covers/perfume-frasco.webp.asset.json";
-import coverPerfect from "@/assets/covers/perfect-plan.jpg.asset.json";
 
 
 
@@ -158,20 +156,6 @@ export const areas: Area[] = [
       "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
     projects: [
       {
-        id: "pbarcino",
-        number: "16",
-        title: "Barcino N 29",
-        category: "Campaña de perfume",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Campaña de perfume Barcino N 29.",
-        orientation: "horizontal",
-        cover: coverBarcino.url,
-        youtubeUrl: "https://youtu.be/7RtihyC0ZGo",
-        area: "02",
-        metaLine: "campaña de perfume · 2026",
-      },
-      {
         id: "p04",
         number: "05",
         title: "Cerveza Calaca Viva",
@@ -209,21 +193,6 @@ export const areas: Area[] = [
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
-      {
-        id: "pperfect",
-        number: "17",
-        title: "The perfect plan",
-        category: "Avatares / Inteligencia Artificial",
-        year: "2026",
-        role: DEFAULTS.role,
-        description:
-          "Pieza con avatares generados con IA. Dirección visual y edición.",
-        orientation: "horizontal",
-        cover: coverPerfect.url,
-        youtubeUrl: "https://youtu.be/MBEnYJdS78I",
-        area: "03",
-        metaLine: "avatares · inteligencia artificial · 2026",
-      },
       {
         id: "p05",
         number: "07",
