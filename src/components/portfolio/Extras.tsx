@@ -52,7 +52,7 @@ export function Marquee() {
 /* Manifiesto */
 const MANIFESTO = [
   "Primero, qué se quiere contar. Después, cómo.",
-  "La IA ejecuta. Las decisiones son mías.",
+  "Cada decisión la tomo yo.",
   "Un plano bonito no basta si no dice algo.",
   "Si se nota el truco, algo ha fallado.",
 ];
