@@ -3,13 +3,13 @@ import { motion } from "motion/react";
 const services = [
   {
     title: "Cortometrajes y piezas narrativas",
-    examples: "Nico y el monstruo del tejado · 27 años más tarde · Síndrome del impostor",
+    text: "Historias cortas, desde la idea hasta el montaje final.",
   },
-  { title: "Spots", examples: "Levi's «Drugstore» · Cerveza Calaca Viva · The Silent Guards" },
-  { title: "Campañas de marca", examples: "" },
-  { title: "Contenido mensual para redes", examples: "" },
-  { title: "Personajes", examples: "El tiempo es oro · Yo no soy real" },
-  { title: "Convertir una escena normal en escena cinematográfica", examples: "" },
+  { title: "Spots", text: "Anuncios cortos que cuentan la historia de tu marca." },
+  { title: "Campañas de marca", text: "Varias piezas conectadas entre sí para una misma marca." },
+  { title: "Contenido mensual para redes", text: "Un número fijo de piezas al mes para tus redes." },
+  { title: "Personajes", text: "Personajes que dan una cara reconocible a tu marca." },
+  { title: "Convertir una escena normal en escena cinematográfica", text: "" },
 ];
 
 export function Services() {
@@ -59,12 +59,12 @@ export function Services() {
                 >
                   {s.title}
                 </h3>
-                {s.examples && (
+                {s.text && (
                   <p
                     className="col-span-10 col-start-3 font-sans text-[16px] leading-[1.55] md:col-span-5 md:col-start-auto md:text-[15px] md:leading-relaxed"
                     style={{ color: "#8a8a8a" }}
                   >
-                    {s.examples}
+                    {s.text}
                   </p>
                 )}
               </motion.div>
