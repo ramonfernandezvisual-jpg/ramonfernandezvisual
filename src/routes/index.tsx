@@ -8,6 +8,7 @@ import { Footer } from "@/components/portfolio/Footer";
 import { Header } from "@/components/portfolio/Header";
 import { Hero } from "@/components/portfolio/Hero";
 import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
+import { Services } from "@/components/portfolio/Services";
 import shareCover from "@/assets/social/portada-actual.png.asset.json";
 
 const shareCoverUrl = `https://ramonfernandezvisual.lovable.app${shareCover.url}`;
@@ -47,6 +48,7 @@ function Index() {
       <Hero />
       <Reveal><Manifesto /></Reveal>
       <PortfolioSection />
+      <Reveal><Services /></Reveal>
       <Reveal><Collaborate /></Reveal>
       <Reveal><Process /></Reveal>
       <Reveal><About /></Reveal>
