@@ -83,7 +83,7 @@ export function Manifesto() {
 }
 
 /* Detrás de cada pieza */
-const STEPS = ["Idea y guion", "Fotogramas de estilo", "Generación", "Montaje", "Sonido y entrega"];
+const STEPS = ["Idea y guion", "Personajes y entornos", "Generación e iteración", "Montaje", "Sonido y entrega"];
 
 export function Process() {
   return (
@@ -100,7 +100,7 @@ export function Process() {
           </h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
           <p className="mt-6 max-w-3xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:mt-8" style={{ color: "#8a8a8a" }}>
-            La IA no trabaja sola. Antes del primer plano hay una idea, un guion y unos fotogramas de estilo que marcan el tono. Después llegan el montaje y el sonido, que llevan más tiempo del que parece. Generar es solo una parte del proceso.
+            Todo se decide mucho antes del primer plano. Empieza con una idea clara y un buen guion. Después se diseñan los personajes y los entornos, con unas referencias que fijan la luz, el color y el tono. Entonces se genera, se prueba y se vuelve a probar hasta que cada plano dice lo que tiene que decir. Lo que marca la diferencia es lo que lo rodea, el ritmo del montaje, el sonido y el cuidado hasta la entrega.
           </p>
           <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 md:mt-14 md:grid-cols-3 md:gap-8 lg:mt-20 lg:grid-cols-5">
             {STEPS.map((s, i) => (
