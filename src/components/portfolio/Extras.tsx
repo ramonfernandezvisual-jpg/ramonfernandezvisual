@@ -16,7 +16,7 @@ export function Reveal({ children }: { children: ReactNode }) {
 }
 
 /* Franja en movimiento */
-const MARQUEE = ["Cortometrajes", "Spots", "Personajes de marca", "Marca blanca", "En remoto"];
+const MARQUEE = ["Cortometrajes", "Spots", "Personajes", "Marca blanca", "En remoto"];
 
 export function Marquee() {
   const Row = () => (

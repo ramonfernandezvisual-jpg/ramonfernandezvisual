@@ -187,15 +187,15 @@ export const areas: Area[] = [
   {
     id: "03",
     slug: "avatares",
-    title: "PERSONAJES DE MARCA",
+    title: "PERSONAJES",
     subtitle:
-      "Personajes de marca y nuevas formas de identidad visual creadas con IA.",
+      "Personajes y nuevas formas de identidad visual creadas con IA.",
     projects: [
       {
         id: "p05",
         number: "07",
         title: "El tiempo es oro",
-        category: "Personajes de marca / Inteligencia Artificial",
+        category: "Personajes / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
@@ -204,13 +204,13 @@ export const areas: Area[] = [
         cover: cover05.url,
         youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
         area: "03",
-        metaLine: "personajes de marca · inteligencia artificial · 2025",
+        metaLine: "personajes · inteligencia artificial · 2025",
       },
       {
         id: "p06",
         number: "08",
         title: "Yo no soy real",
-        category: "Personajes de marca / Inteligencia Artificial",
+        category: "Personajes / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
@@ -219,7 +219,7 @@ export const areas: Area[] = [
         cover: cover06.url,
         youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
         area: "03",
-        metaLine: "personajes de marca · inteligencia artificial · 2025",
+        metaLine: "personajes · inteligencia artificial · 2025",
       },
     ],
   },

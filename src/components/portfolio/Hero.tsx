@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 const WORDS = [
   "CORTOMETRAJES",
   "SPOTS",
-  "PERSONAJES DE MARCA",
+  "PERSONAJES",
   "MARCA BLANCA",
   "EN REMOTO",
 ];
@@ -12,7 +12,7 @@ const WORDS = [
 const AREA_INDEX = [
   { id: "01", label: "CORTOMETRAJES" },
   { id: "02", label: "SPOTS" },
-  { id: "03", label: "PERSONAJES DE MARCA" },
+  { id: "03", label: "PERSONAJES" },
   { id: "04", label: "EDICIÓN" },
   { id: "05", label: "ARQUITECTURA E INTERIORISMO" },
 ];

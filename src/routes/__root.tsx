@@ -82,14 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, personajes de marca, narrativa y edición.",
+          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, personajes, narrativa y edición.",
       },
       { name: "author", content: "Ramón Fernández" },
       { property: "og:title", content: "Ramón Fernández — Visual Designer & AI Video Creator" },
       {
         property: "og:description",
         content:
-          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, personajes de marca, narrativa y edición.",
+          "Portfolio visual multidisciplinar de Ramón Fernández: arquitectura, IA, personajes, narrativa y edición.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
