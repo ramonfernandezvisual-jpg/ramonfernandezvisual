@@ -13,8 +13,6 @@ import cover07 from "@/assets/covers/p07.asset.json";
 import cover08 from "@/assets/covers/p08.asset.json";
 import cover09 from "@/assets/covers/p09.asset.json";
 import cover10 from "@/assets/covers/p10.asset.json";
-import cover11 from "@/assets/covers/p11.asset.json";
-import coverLic from "@/assets/covers/p_lic.asset.json";
 import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
 import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
@@ -153,22 +151,22 @@ export const areas: Area[] = [
     slug: "campanas",
     title: "CAMPAÑAS DE MARCA",
     subtitle:
-      "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
+      "Piezas de campaña en horizontal y vertical, pensadas para que la marca se entienda y se recuerde.",
     projects: [
       {
         id: "p04",
         number: "05",
         title: "Cerveza Calaca Viva",
-        category: "Avatares / Inteligencia Artificial",
+        category: "Campañas de marca / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
-          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y avatar.",
+          "Pieza vertical creada con IA para la marca Calaca Viva. Identidad visual y personaje.",
         orientation: "vertical",
         cover: cover04.url,
         youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
         area: "02",
-        metaLine: "campaña con avatares · 2025",
+        metaLine: "campaña con personajes · 2025",
       },
       {
         id: "p15",
@@ -191,28 +189,28 @@ export const areas: Area[] = [
     slug: "avatares",
     title: "PERSONAJES DE MARCA",
     subtitle:
-      "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
+      "Personajes de marca y nuevas formas de identidad visual creadas con IA.",
     projects: [
       {
         id: "p05",
         number: "07",
         title: "El tiempo es oro",
-        category: "Avatares / Inteligencia Artificial",
+        category: "Personajes de marca / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
-          "Avatar presentadora generada con IA. Dirección visual y edición del contenido.",
+          "Personaje presentadora generada con IA. Dirección visual y edición del contenido.",
         orientation: "vertical",
         cover: cover05.url,
         youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
         area: "03",
-        metaLine: "avatares · inteligencia artificial · 2025",
+        metaLine: "personajes de marca · inteligencia artificial · 2025",
       },
       {
         id: "p06",
         number: "08",
         title: "Yo no soy real",
-        category: "Avatares / Inteligencia Artificial",
+        category: "Personajes de marca / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
@@ -221,7 +219,7 @@ export const areas: Area[] = [
         cover: cover06.url,
         youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
         area: "03",
-        metaLine: "avatares · inteligencia artificial · 2025",
+        metaLine: "personajes de marca · inteligencia artificial · 2025",
       },
     ],
   },
@@ -281,7 +279,7 @@ export const areas: Area[] = [
     slug: "arquitectura",
     title: "ARQUITECTURA E INTERIORISMO",
     subtitle:
-      "Imagen, espacio y materia convertidos en experiencias visuales, y proyectos complejos comunicados de forma clara.",
+      "Imagen, espacio y materia convertidos en experiencias visuales.",
     projects: [
       {
         id: "p10",
@@ -299,20 +297,6 @@ export const areas: Area[] = [
         metaLine: "arquitectura · 2026",
       },
       {
-        id: "p11",
-        number: "13",
-        title: "Hotel Mazanka",
-        category: "Arquitectura / Interiorismo / Producto",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual del proyecto Hotel Mazanka.",
-        orientation: "horizontal",
-        cover: cover11.url,
-        youtubeUrl: "https://youtu.be/YpxAUusyPiw",
-        area: "05",
-        metaLine: "arquitectura · interiorismo · 2026",
-      },
-      {
         id: "p13",
         number: "14",
         title: "Lap pool house",
@@ -325,20 +309,6 @@ export const areas: Area[] = [
         youtubeUrl: "https://youtu.be/iNEuEYNgd1U",
         area: "05",
         metaLine: "arquitectura · 2026",
-      },
-      {
-        id: "p14",
-        number: "15",
-        title: "Licitación",
-        category: "Licitaciones / Comunicación Técnica",
-        year: "2026",
-        role: DEFAULTS.role,
-        description: "Pieza audiovisual de comunicación técnica para licitación.",
-        orientation: "horizontal",
-        cover: coverLic.url,
-        youtubeUrl: "https://youtu.be/fEwPw4S3lS4",
-        area: "05",
-        metaLine: "licitaciones · comunicación técnica · 2026",
       },
     ],
   },

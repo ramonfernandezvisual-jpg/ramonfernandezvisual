@@ -3,8 +3,8 @@ import { motion, useScroll, useTransform } from "motion/react";
 
 const WORDS = [
   "CORTOMETRAJES",
-  "CAMPAÑAS DE PRODUCTO",
-  "PERSONAJES Y AVATARES",
+  "CAMPAÑAS DE MARCA",
+  "PERSONAJES DE MARCA",
   "MARCA BLANCA",
   "EN REMOTO",
 ];
