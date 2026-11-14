@@ -149,15 +149,15 @@ export const areas: Area[] = [
   {
     id: "02",
     slug: "campanas",
-    title: "CAMPAÑAS DE MARCA",
+    title: "SPOTS",
     subtitle:
-      "Piezas de campaña en horizontal y vertical, pensadas para que la marca se entienda y se recuerde.",
+      "Spots en horizontal y vertical, pensados para que la marca se entienda y se recuerde.",
     projects: [
       {
         id: "p04",
         number: "05",
         title: "Cerveza Calaca Viva",
-        category: "Campañas de marca / Inteligencia Artificial",
+        category: "Spots / Inteligencia Artificial",
         year: DEFAULTS.year,
         role: DEFAULTS.role,
         description:
@@ -166,13 +166,13 @@ export const areas: Area[] = [
         cover: cover04.url,
         youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
         area: "02",
-        metaLine: "campaña con personajes · 2025",
+        metaLine: "spot con personajes · 2025",
       },
       {
         id: "p15",
         number: "06",
         title: "The Silent Guards",
-        category: "Pieza de campaña",
+        category: "Spot",
         year: "2026",
         role: DEFAULTS.role,
         description: "Pieza de campaña. Dirección visual y edición.",
@@ -180,7 +180,7 @@ export const areas: Area[] = [
         cover: coverSilence.url,
         youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
         area: "02",
-        metaLine: "pieza de campaña · 2026",
+        metaLine: "spot · 2026",
       },
     ],
   },
