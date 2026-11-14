@@ -26,7 +26,7 @@ export function Footer() {
               Ramón Fernández
             </p>
              <p className="mt-6 max-w-xs font-sans text-[16px] leading-[1.55] md:text-sm md:leading-relaxed" style={{ color: "#8a8a8a" }}>
-              Cortometrajes, campañas y personajes con IA para agencias, productoras y marcas. Disponible en remoto.
+              Cortometrajes, campañas y personajes para agencias, productoras y marcas. Disponible en remoto.
             </p>
           </div>
 

@@ -57,7 +57,7 @@ export function About() {
              className="font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:text-2xl lg:leading-snug"
             style={{ color: "#f5f5f5" }}
           >
-            Soy Ramón Fernández y produzco cortometrajes, campañas y personajes con inteligencia artificial para agencias, productoras y marcas. Me ocupo de las piezas de principio a fin, de la idea y la estética al ritmo y el montaje.
+            Soy Ramón Fernández y produzco cortometrajes, campañas y personajes para agencias, productoras y marcas. Me ocupo de las piezas de principio a fin, de la idea y la estética al ritmo y el montaje.
             <br /><br />
             Aprendí a construir imágenes mucho antes de que existiera la IA. Durante más de 15 años he levantado espacios y atmósferas de la nada, y desde 2019 trabajo de forma independiente para empresas y profesionales. Ese oficio es el que aplico hoy en cada plano. Sé cómo se comporta la luz, cómo se compone un encuadre y qué hace que una escena resulte creíble.
             <br /><br />
