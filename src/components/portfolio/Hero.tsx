@@ -10,11 +10,11 @@ const WORDS = [
 ];
 
 const AREA_INDEX = [
-  { id: "01", label: "NARRATIVA" },
-  { id: "02", label: "CAMPAÑAS" },
-  { id: "03", label: "AVATARES" },
+  { id: "01", label: "CORTOMETRAJES" },
+  { id: "02", label: "CAMPAÑAS DE MARCA" },
+  { id: "03", label: "PERSONAJES DE MARCA" },
   { id: "04", label: "EDICIÓN" },
-  { id: "05", label: "ARQUITECTURA" },
+  { id: "05", label: "ARQUITECTURA E INTERIORISMO" },
 ];
 
 export function Hero() {

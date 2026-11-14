@@ -6,11 +6,9 @@ const services = [
     title: "Cortometrajes y piezas narrativas",
     examples: "Nico y el monstruo del tejado · 27 años más tarde · Síndrome del impostor",
   },
-  { title: "Campañas de marca con personajes", examples: "Cerveza Calaca Viva · The Silent Guards" },
+  { title: "Campañas de marca", examples: "Cerveza Calaca Viva · The Silent Guards" },
   { title: "Personajes de marca", examples: "El tiempo es oro · Yo no soy real" },
   { title: "Convertir una escena normal en escena cinematográfica", examples: "" },
-  { title: "Edición", examples: "El surfista · La realidad · Cosmética" },
-  { title: "Arquitectura", examples: "Villa Normani · Hotel Mazanka · Lap pool house · Licitación" },
 ];
 
 export function Services() {

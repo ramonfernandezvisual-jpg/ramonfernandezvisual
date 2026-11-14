@@ -84,7 +84,7 @@ export const areas: Area[] = [
   {
     id: "01",
     slug: "narrativa",
-    title: "NARRATIVA / CORTOMETRAJES",
+    title: "CORTOMETRAJES Y PIEZAS NARRATIVAS",
     subtitle:
       "Historias construidas a través de la imagen, el movimiento, el ritmo y la emoción.",
     projects: [
@@ -151,7 +151,7 @@ export const areas: Area[] = [
   {
     id: "02",
     slug: "campanas",
-    title: "CAMPAÑAS DE PRODUCTO",
+    title: "CAMPAÑAS DE MARCA",
     subtitle:
       "Piezas de campaña en horizontal y vertical, pensadas para que el producto se entienda y se recuerde.",
     projects: [
@@ -189,7 +189,7 @@ export const areas: Area[] = [
   {
     id: "03",
     slug: "avatares",
-    title: "AVATARES / INTELIGENCIA ARTIFICIAL",
+    title: "PERSONAJES DE MARCA",
     subtitle:
       "Personajes, avatares y nuevas formas de identidad visual creadas con IA.",
     projects: [
@@ -279,7 +279,7 @@ export const areas: Area[] = [
   {
     id: "05",
     slug: "arquitectura",
-    title: "ARQUITECTURA / LICITACIONES",
+    title: "ARQUITECTURA E INTERIORISMO",
     subtitle:
       "Imagen, espacio y materia convertidos en experiencias visuales, y proyectos complejos comunicados de forma clara.",
     projects: [
