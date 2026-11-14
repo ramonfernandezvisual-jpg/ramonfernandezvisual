@@ -3,7 +3,7 @@ import area02 from "@/assets/area-02.jpg";
 import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
-import cover01 from "@/assets/covers/p01.asset.json";
+import cover01 from "@/assets/covers/p01-horizontal.jpg";
 import coverSilence from "@/assets/covers/p15.asset.json";
 import coverNico from "@/assets/covers/nico.asset.json";
 import cover04 from "@/assets/covers/p04.asset.json";
@@ -31,7 +31,8 @@ export type Project = {
   year: string;
   role: string;
   description: string;
-  orientation: Orientation; // 16:9 vs 9:16
+  orientation: Orientation; // 16:9 vs 9:16 (formato del vídeo)
+  tileOrientation?: Orientation; // formato de la portada en la galería, si difiere del vídeo
   cover: string; // portada personalizada (independiente de YouTube)
   youtubeUrl: string; // URL completa; vacía = pendiente
   area: AreaId;
@@ -139,7 +140,8 @@ export const areas: Area[] = [
         description:
           "Cortometraje vertical sobre el síndrome del impostor. Dirección visual, ritmo y edición.",
         orientation: "vertical",
-        cover: cover01.url,
+        tileOrientation: "horizontal",
+        cover: cover01,
         youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
         area: "01",
         metaLine: "cortometraje · 2025",

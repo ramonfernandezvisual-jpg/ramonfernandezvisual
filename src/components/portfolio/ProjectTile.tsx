@@ -19,7 +19,7 @@ export function ProjectTile({
   showMeta?: boolean;
   className?: string;
 }) {
-  const aspect = project.orientation === "horizontal" ? "aspect-[16/9]" : "aspect-[9/16]";
+  const aspect = (project.tileOrientation ?? project.orientation) === "horizontal" ? "aspect-[16/9]" : "aspect-[9/16]";
   const pending = !project.youtubeUrl;
 
   return (

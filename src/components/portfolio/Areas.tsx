@@ -12,8 +12,8 @@ type Props = { area: Area; onOpen: (p: Project) => void };
  * Excepción: un área con una única pieza se presenta a ancho completo.
  */
 export function AreaGrid({ area, onOpen }: Props) {
-  const horizontals = area.projects.filter((p) => p.orientation === "horizontal");
-  const verticals = area.projects.filter((p) => p.orientation === "vertical");
+  const horizontals = area.projects.filter((p) => (p.tileOrientation ?? p.orientation) === "horizontal");
+  const verticals = area.projects.filter((p) => (p.tileOrientation ?? p.orientation) === "vertical");
   const gap = "gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-16";
   const single = area.projects.length === 1 ? area.projects[0] : null;
 
