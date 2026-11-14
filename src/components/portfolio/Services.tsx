@@ -7,6 +7,7 @@ const services = [
   },
   { title: "Spots", examples: "Levi's «Drugstore» · Cerveza Calaca Viva · The Silent Guards" },
   { title: "Campañas de marca", examples: "" },
+  { title: "Contenido mensual para redes", examples: "" },
   { title: "Personajes", examples: "El tiempo es oro · Yo no soy real" },
   { title: "Convertir una escena normal en escena cinematográfica", examples: "" },
 ];
