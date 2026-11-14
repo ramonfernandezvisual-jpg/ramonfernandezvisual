@@ -10,6 +10,8 @@ type Props = { area: Area; onOpen: (p: Project) => void };
  * - verticales: 3 columnas iguales en desktop (2 en tablet)
  * - móvil: 1 columna
  * Excepción: un área con una única pieza se presenta a ancho completo.
+ * Las piezas sueltas (una horizontal impar o una o dos verticales) se centran
+ * con el mismo tamaño que el resto, para que no queden huecos a un lado.
  */
 export function AreaGrid({ area, onOpen }: Props) {
   const horizontals = area.projects.filter((p) => p.orientation === "horizontal");
@@ -39,14 +41,28 @@ export function AreaGrid({ area, onOpen }: Props) {
           <>
             {horizontals.length > 0 && (
               <div className={`grid grid-cols-1 md:grid-cols-2 ${gap}`}>
-                {horizontals.map((p, i) => (
-                  <ProjectTile key={p.id} project={p} onOpen={onOpen} index={i} />
-                ))}
+                {horizontals.map((p, i) => {
+                  const orphan = horizontals.length % 2 === 1 && i === horizontals.length - 1;
+                  return (
+                    <div
+                      key={p.id}
+                      className={orphan ? "md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)]" : ""}
+                    >
+                      <ProjectTile project={p} onOpen={onOpen} index={i} />
+                    </div>
+                  );
+                })}
               </div>
             )}
             {verticals.length > 0 && (
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 ${verticals.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2 lg:max-w-[66%]"} ${gap} ${
+                className={`grid ${
+                  verticals.length >= 3
+                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                    : verticals.length === 2
+                      ? "mx-auto grid-cols-1 md:grid-cols-2 lg:max-w-[66%]"
+                      : "mx-auto grid-cols-1 md:max-w-[calc(50%-1rem)] lg:max-w-[calc((100%-4rem)/3)]"
+                } ${gap} ${
                   horizontals.length > 0 ? "mt-10 md:mt-16" : ""
                 }`}
               >
