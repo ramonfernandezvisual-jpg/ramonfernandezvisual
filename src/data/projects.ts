@@ -128,7 +128,7 @@ export const areas: Area[] = [
         cover: coverNico.url,
         youtubeUrl: "https://youtu.be/U_q0BeayoVE",
         area: "01",
-        metaLine: "cortometraje · 2026",
+        metaLine: "cortometraje de animación · 2026",
       },
       {
         id: "p01",
@@ -144,7 +144,7 @@ export const areas: Area[] = [
         cover: cover01,
         youtubeUrl: "https://youtube.com/shorts/lsCB3We153E",
         area: "01",
-        metaLine: "cortometraje · 2025",
+        metaLine: "cortometraje de animación · 2025",
       },
     ],
   },
