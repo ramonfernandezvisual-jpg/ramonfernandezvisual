@@ -102,7 +102,9 @@ export function Header() {
             <Logo className="text-4xl md:text-5xl" />
           </button>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-10 md:flex">
+          <LangSwitch />
+          <nav className="flex items-center gap-8">
             {nav.map((n) => (
               <button
                 key={n.id}
@@ -125,8 +127,7 @@ export function Header() {
               </button>
             ))}
           </nav>
-
-          <LangSwitch className="hidden md:flex" />
+          </div>
 
           <button
             onClick={() => setOpen(true)}
