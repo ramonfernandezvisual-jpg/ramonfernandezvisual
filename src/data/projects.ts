@@ -4,18 +4,7 @@ import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
 import cover01 from "@/assets/covers/p01-horizontal.jpg";
-import coverSilence from "@/assets/covers/p15.asset.json";
-import coverNico from "@/assets/covers/nico.asset.json";
-import cover04 from "@/assets/covers/p04.asset.json";
-import cover05 from "@/assets/covers/p05.asset.json";
-import cover06 from "@/assets/covers/p06.asset.json";
-import cover07 from "@/assets/covers/p07.asset.json";
-import cover08 from "@/assets/covers/p08.asset.json";
-import cover09 from "@/assets/covers/p09.asset.json";
-import cover10 from "@/assets/covers/p10.asset.json";
-import coverLap from "@/assets/covers/p_lap.asset.json";
 import cover27 from "@/assets/covers/p27-nueva.asset.json";
-import coverLevis from "@/assets/covers/levis-drugstore.png.asset.json";
 
 
 
@@ -97,7 +86,7 @@ export const areas: Area[] = [
         description:
           "Homenaje y recreación del anuncio Levi's «Drugstore».",
         orientation: "horizontal",
-        cover: coverLevis.url,
+        cover: "/covers/levis.jpg",
         youtubeUrl: "https://youtu.be/96AXqZ53r2k",
         area: "01",
         metaLine: "homenaje · recreación · 2026",
@@ -125,7 +114,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Cortometraje. Dirección visual, ritmo y edición.",
         orientation: "horizontal",
-        cover: coverNico.url,
+        cover: "/covers/nico.jpg",
         youtubeUrl: "https://youtu.be/U_q0BeayoVE",
         area: "01",
         metaLine: "cortometraje de animación · 2026",
@@ -164,7 +153,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza de campaña. Dirección visual y edición.",
         orientation: "vertical",
-        cover: coverSilence.url,
+        cover: "/covers/silent-guards.jpg",
         youtubeUrl: "https://youtube.com/shorts/as4Z-7-t94I",
         area: "02",
         metaLine: "spot · 2026",
@@ -179,7 +168,7 @@ export const areas: Area[] = [
         description:
           "Pieza vertical creada para la marca Calaca Viva. Identidad visual y personaje.",
         orientation: "vertical",
-        cover: cover04.url,
+        cover: "/covers/calaca.jpg",
         youtubeUrl: "https://youtube.com/shorts/F9TLlVFuOLg",
         area: "02",
         metaLine: "spot con personajes · 2025",
@@ -203,7 +192,7 @@ export const areas: Area[] = [
         description:
           "Personaje presentadora digital. Dirección visual y edición del contenido.",
         orientation: "vertical",
-        cover: cover05.url,
+        cover: "/covers/tiempo.jpg",
         youtubeUrl: "https://youtube.com/shorts/pLqiUlg8BW8",
         area: "03",
         metaLine: "personajes · 2025",
@@ -218,7 +207,7 @@ export const areas: Area[] = [
         description:
           "Personaje digital. Exploración de identidad y presencia sintética.",
         orientation: "vertical",
-        cover: cover06.url,
+        cover: "/covers/yo-no-soy-real.jpg",
         youtubeUrl: "https://youtube.com/shorts/vRguPdSd-eY",
         area: "03",
         metaLine: "personajes · 2025",
@@ -241,7 +230,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza vertical de edición y ritmo narrativo.",
         orientation: "vertical",
-        cover: cover07.url,
+        cover: "/covers/surfista.jpg",
         youtubeUrl: "https://youtube.com/shorts/Gbj851Eu-OQ",
         area: "04",
         metaLine: "edición · contenido audiovisual · 2025",
@@ -255,7 +244,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Edición vertical con dirección visual y tipografía kinética.",
         orientation: "vertical",
-        cover: cover08.url,
+        cover: "/covers/realidad.jpg",
         youtubeUrl: "https://youtube.com/shorts/u93f_9onQ8c",
         area: "04",
         metaLine: "edición · contenido audiovisual · 2025",
@@ -269,7 +258,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Edición vertical para contenido de cosmética y entrevista.",
         orientation: "vertical",
-        cover: cover09.url,
+        cover: "/covers/cosmetica.jpg",
         youtubeUrl: "https://youtube.com/shorts/yzW28Y0z3Uw",
         area: "04",
         metaLine: "edición · contenido audiovisual · 2025",
@@ -293,7 +282,7 @@ export const areas: Area[] = [
         description:
           "Pieza audiovisual de arquitectura e interiorismo para Villa Normani.",
         orientation: "horizontal",
-        cover: cover10.url,
+        cover: "/covers/villa-normani.jpg",
         youtubeUrl: "https://youtu.be/wYAE00f83bc",
         area: "05",
         metaLine: "arquitectura · 2026",
@@ -307,7 +296,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Pieza audiovisual de arquitectura — Lap pool house.",
         orientation: "horizontal",
-        cover: coverLap.url,
+        cover: "/covers/lap-pool-house.jpg",
         youtubeUrl: "https://youtu.be/iNEuEYNgd1U",
         area: "05",
         metaLine: "arquitectura · 2026",

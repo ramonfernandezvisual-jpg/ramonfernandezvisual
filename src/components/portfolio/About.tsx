@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import ramonAsset from "@/assets/ramon-new.asset.json";
-const ramon = ramonAsset.url;
+const ramon = "/ramon.jpg";
 
 
 export function About() {
