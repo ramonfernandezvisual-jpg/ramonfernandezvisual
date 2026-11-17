@@ -103,7 +103,6 @@ export function Header() {
           </button>
 
           <div className="hidden items-center gap-10 md:flex">
-          <LangSwitch />
           <nav className="flex items-center gap-8">
             {nav.map((n) => (
               <button
@@ -127,6 +126,7 @@ export function Header() {
               </button>
             ))}
           </nav>
+          <LangSwitch />
           </div>
 
           <button
