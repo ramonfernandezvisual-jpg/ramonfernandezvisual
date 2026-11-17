@@ -4,7 +4,6 @@ import area03 from "@/assets/area-03.jpg";
 import area04 from "@/assets/area-04.jpg";
 import area05 from "@/assets/area-05.jpg";
 import cover01 from "@/assets/covers/p01-horizontal.jpg";
-import cover27 from "@/assets/covers/p27-nueva.asset.json";
 
 
 
@@ -100,7 +99,7 @@ export const areas: Area[] = [
         role: DEFAULTS.role,
         description: "Cortometraje. Dirección visual, ritmo y edición.",
         orientation: "horizontal",
-        cover: cover27.url,
+        cover: "/covers/27-anos-mas-tarde.jpg",
         youtubeUrl: "https://youtu.be/DU0DohYsDU0",
         area: "01",
         metaLine: "cortometraje · inspirado en Wes Anderson · 2026",

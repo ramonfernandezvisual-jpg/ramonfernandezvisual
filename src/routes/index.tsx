@@ -9,9 +9,8 @@ import { Header } from "@/components/portfolio/Header";
 import { Hero } from "@/components/portfolio/Hero";
 import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
 import { Services } from "@/components/portfolio/Services";
-import shareCover from "@/assets/social/portada-actual.png.asset.json";
 
-const shareCoverUrl = `https://ramonfernandezvisual.lovable.app${shareCover.url}`;
+const shareCoverUrl = "https://ramonfernandezvisual.com/share-cover.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
