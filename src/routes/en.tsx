@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { personLd } from "@/lib/seo";
 import { PortfolioPage } from "@/components/portfolio/Page";
 
 const shareCoverUrl = "https://ramonfernandezvisual.com/share-cover.jpg";
@@ -24,6 +25,7 @@ export const Route = createFileRoute("/en")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
     ],
+    scripts: [{ type: "application/ld+json", children: personLd("en") }],
     links: [
       { rel: "canonical", href: "https://ramonfernandezvisual.com/en" },
       { rel: "alternate", hrefLang: "es", href: "https://ramonfernandezvisual.com/" },

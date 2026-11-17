@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { personLd } from "@/lib/seo";
 import { PortfolioPage } from "@/components/portfolio/Page";
 
 const shareCoverUrl = "https://ramonfernandezvisual.com/share-cover.jpg";
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Portada actual de Ramón Fernández — Dirección visual" },
     ],
+    scripts: [{ type: "application/ld+json", children: personLd("es") }],
     links: [
       { rel: "canonical", href: "https://ramonfernandezvisual.com/" },
       { rel: "alternate", hrefLang: "es", href: "https://ramonfernandezvisual.com/" },
