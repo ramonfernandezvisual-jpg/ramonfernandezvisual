@@ -25,8 +25,8 @@ export function Footer() {
             </p>
              <p className="mt-6 max-w-xs font-sans text-[16px] leading-[1.55] md:text-sm md:leading-relaxed" style={{ color: "#8a8a8a" }}>
               {t(
-                "Cortometrajes, campañas y personajes para agencias, productoras y marcas. Disponible en remoto.",
-                "Short films, campaigns and characters for agencies, production companies and brands. Available remotely.",
+                "Cortometrajes, spots, personajes, edición y arquitectura para agencias, productoras y marcas. Disponible en remoto.",
+                "Short films, spots, characters, editing and architecture for agencies, production companies and brands. Available remotely.",
               )}
             </p>
           </div>
