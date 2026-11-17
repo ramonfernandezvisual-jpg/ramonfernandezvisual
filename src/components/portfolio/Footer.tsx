@@ -59,7 +59,8 @@ export function Footer() {
           </div>
 
           {/* Redes */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-3">
+          <div className="col-span-12 flex flex-col items-start md:col-span-6 lg:col-span-3">
+            <div className="flex flex-col items-center">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
               {t("PERFILES", "PROFILES")}
             </p>
@@ -82,6 +83,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
 
           {/* Contacto */}
