@@ -7,9 +7,16 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // En GitHub Pages la web se publica como HTML estático (dist/client), así que no hace falta
+  // el paquete de nitro. Desactivarlo solo allí deja que TanStack Start genere su bundle SSR
+  // para el prerenderizado. En Lovable se mantiene el comportamiento por defecto.
+  nitro: process.env.NETLIFY || process.env.GITHUB_ACTIONS ? false : undefined,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Web 100 % estática: cada página se genera como HTML durante la construcción.
+    pages: [{ path: "/" }],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
 });
