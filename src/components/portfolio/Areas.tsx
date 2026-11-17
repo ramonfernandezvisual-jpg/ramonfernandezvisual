@@ -1,6 +1,7 @@
 import type { Area, Project } from "@/data/projects";
 import { ProjectTile } from "./ProjectTile";
 import { SectionHeader } from "./SectionHeader";
+import { AREAS_EN, useLang } from "@/lib/i18n";
 
 type Props = { area: Area; onOpen: (p: Project) => void };
 
@@ -12,6 +13,8 @@ type Props = { area: Area; onOpen: (p: Project) => void };
  * Excepción: un área con una única pieza se presenta a ancho completo.
  */
 export function AreaGrid({ area, onOpen }: Props) {
+  const lang = useLang();
+  const en = lang === "en" ? AREAS_EN[area.id] : undefined;
   const horizontals = area.projects.filter((p) => (p.tileOrientation ?? p.orientation) === "horizontal");
   const verticals = area.projects.filter((p) => (p.tileOrientation ?? p.orientation) === "vertical");
   const gap = "gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-16";
@@ -26,8 +29,8 @@ export function AreaGrid({ area, onOpen }: Props) {
       <div className="mx-auto w-full max-w-[1440px]">
         <SectionHeader
           number={area.id}
-          title={area.title}
-          subtitle={area.subtitle}
+          title={en?.title ?? area.title}
+          subtitle={en?.subtitle ?? area.subtitle}
           count={area.projects.length}
         />
 

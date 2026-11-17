@@ -1,14 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { About } from "@/components/portfolio/About";
-import { Collaborate } from "@/components/portfolio/Collaborate";
-import { Contact } from "@/components/portfolio/Contact";
-import { CustomCursor } from "@/components/portfolio/CustomCursor";
-import { FAQ, Manifesto, Process, Reveal } from "@/components/portfolio/Extras";
-import { Footer } from "@/components/portfolio/Footer";
-import { Header } from "@/components/portfolio/Header";
-import { Hero } from "@/components/portfolio/Hero";
-import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
-import { Services } from "@/components/portfolio/Services";
+import { PortfolioPage } from "@/components/portfolio/Page";
 
 const shareCoverUrl = "https://ramonfernandezvisual.com/share-cover.jpg";
 
@@ -37,26 +28,16 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Portada actual de Ramón Fernández — Dirección visual" },
     ],
-    links: [{ rel: "canonical", href: "https://ramonfernandezvisual.com/" }],
+    links: [
+      { rel: "canonical", href: "https://ramonfernandezvisual.com/" },
+      { rel: "alternate", hrefLang: "es", href: "https://ramonfernandezvisual.com/" },
+      { rel: "alternate", hrefLang: "en", href: "https://ramonfernandezvisual.com/en" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://ramonfernandezvisual.com/" },
+    ],
   }),
   component: Index,
 });
 
 function Index() {
-  return (
-    <main style={{ backgroundColor: "#080808" }}>
-      <CustomCursor />
-      <Header />
-      <Hero />
-      <Reveal><Manifesto /></Reveal>
-      <PortfolioSection />
-      <Reveal><Services /></Reveal>
-      <Reveal><Collaborate /></Reveal>
-      <Reveal><Process /></Reveal>
-      <Reveal><About /></Reveal>
-      <Reveal><FAQ /></Reveal>
-      <Reveal><Contact /></Reveal>
-      <Footer />
-    </main>
-  );
+  return <PortfolioPage lang="es" />;
 }

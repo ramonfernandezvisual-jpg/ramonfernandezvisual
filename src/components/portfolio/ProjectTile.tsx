@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
+import { META_EN, useLang, useT } from "@/lib/i18n";
 
 /** Etiqueta bajo la portada: usa metaLine si existe. */
-function metaOf(project: Project) {
-  return project.metaLine ?? `${project.category.toLowerCase()} · ${project.year}`;
+function metaOf(project: Project, lang: "es" | "en") {
+  const es = project.metaLine ?? `${project.category.toLowerCase()} · ${project.year}`;
+  return lang === "en" ? (META_EN[es] ?? es) : es;
 }
 
 export function ProjectTile({
@@ -19,6 +21,8 @@ export function ProjectTile({
   showMeta?: boolean;
   className?: string;
 }) {
+  const t = useT();
+  const lang = useLang();
   const aspect = (project.tileOrientation ?? project.orientation) === "horizontal" ? "aspect-[16/9]" : "aspect-[9/16]";
   const pending = !project.youtubeUrl;
 
@@ -51,7 +55,7 @@ export function ProjectTile({
             className="absolute left-5 top-5 border px-3 py-1 font-mono text-[10px] tracking-[0.2em]"
             style={{ borderColor: "#2a2a2a", color: "#ecd012" }}
           >
-            EN PREPARACIÓN
+            {t("EN PREPARACIÓN", "IN PREPARATION")}
           </span>
         )}
       </div>
@@ -68,7 +72,7 @@ export function ProjectTile({
             className="mt-1 font-mono text-[11px] tracking-[0.12em]"
             style={{ color: "#8a8a8a" }}
           >
-            {pending ? "próximamente" : metaOf(project)}
+            {pending ? t("próximamente", "coming soon") : metaOf(project, lang)}
           </p>
         </div>
       )}

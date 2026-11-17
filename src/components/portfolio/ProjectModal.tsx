@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { getYoutubeId, type Project } from "@/data/projects";
+import { useLang, useT } from "@/lib/i18n";
 
 export function ProjectModal({
   project,
@@ -13,6 +14,7 @@ export function ProjectModal({
   onPrev?: () => void;
   onNext?: () => void;
 }) {
+  const t = useT();
   const onClose = useCallback(() => {
     rawClose();
   }, [rawClose]);
@@ -47,7 +49,7 @@ export function ProjectModal({
         >
           <button
             onClick={onClose}
-            aria-label="Cerrar vídeo"
+            aria-label={t("Cerrar vídeo", "Close video")}
             className="group fixed right-4 top-4 z-[110] flex h-12 w-12 items-center justify-center md:right-8 md:top-8 md:h-14 md:w-14"
             style={{ color: "#f5f5f5" }}
           >
@@ -65,19 +67,19 @@ export function ProjectModal({
             >
               <button
                 onClick={onPrev}
-                aria-label="Proyecto anterior"
+                aria-label={t("Proyecto anterior", "Previous project")}
                  className="flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:min-h-0 md:text-[11px]"
                 style={{ color: "#8a8a8a" }}
               >
-                ← ANTERIOR
+                {t("← ANTERIOR", "← PREVIOUS")}
               </button>
               <button
                 onClick={onNext}
-                aria-label="Proyecto siguiente"
+                aria-label={t("Proyecto siguiente", "Next project")}
                  className="flex min-h-11 items-center font-mono text-[10px] tracking-[0.2em] transition-colors hover:text-[#ecd012] md:min-h-0 md:text-[11px]"
                 style={{ color: "#8a8a8a" }}
               >
-                SIGUIENTE →
+                {t("SIGUIENTE →", "NEXT →")}
               </button>
             </div>
           )}
@@ -99,6 +101,8 @@ export function ProjectModal({
 }
 
 function ModalPlayer({ project }: { project: Project }) {
+  const t = useT();
+  const lang = useLang();
   const ytId = useMemo(() => getYoutubeId(project.youtubeUrl), [project.youtubeUrl]);
   const isHorizontal = project.orientation === "horizontal";
   return (
@@ -113,7 +117,7 @@ function ModalPlayer({ project }: { project: Project }) {
       {ytId ? (
         <iframe
           className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&hl=es&vq=hd1080`}
+          src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&hl=${lang}&vq=hd1080`}
           title={project.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -127,10 +131,10 @@ function ModalPlayer({ project }: { project: Project }) {
           />
           <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
             <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#ecd012" }}>
-              EN PREPARACIÓN
+              {t("EN PREPARACIÓN", "IN PREPARATION")}
             </p>
             <p className="font-sans text-sm" style={{ color: "#f5f5f5" }}>
-              El vídeo de este proyecto se añadirá próximamente.
+              {t("El vídeo de este proyecto se añadirá próximamente.", "This project's video will be added soon.")}
             </p>
           </div>
         </>

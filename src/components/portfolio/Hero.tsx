@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-
-const WORDS = [
-  "CORTOMETRAJES",
-  "SPOTS",
-  "PERSONAJES",
-  "MARCA BLANCA",
-  "EN REMOTO",
-];
-
-const AREA_INDEX = [
-  { id: "01", label: "CORTOMETRAJES" },
-  { id: "02", label: "SPOTS" },
-  { id: "03", label: "PERSONAJES" },
-  { id: "04", label: "EDICIÓN" },
-  { id: "05", label: "ARQUITECTURA E INTERIORISMO" },
-];
+import { useT } from "@/lib/i18n";
 
 export function Hero() {
+  const t = useT();
+  const WORDS = [
+    t("CORTOMETRAJES", "SHORT FILMS"),
+    "SPOTS",
+    t("PERSONAJES", "CHARACTERS"),
+    t("MARCA BLANCA", "WHITE LABEL"),
+    t("EN REMOTO", "REMOTE"),
+  ];
+  const AREA_INDEX = [
+    { id: "01", label: t("CORTOMETRAJES", "SHORT FILMS") },
+    { id: "02", label: "SPOTS" },
+    { id: "03", label: t("PERSONAJES", "CHARACTERS") },
+    { id: "04", label: t("EDICIÓN", "EDITING") },
+    { id: "05", label: t("ARQUITECTURA E INTERIORISMO", "ARCHITECTURE & INTERIOR DESIGN") },
+  ];
   const [i, setI] = useState(0);
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -52,8 +52,8 @@ export function Hero() {
           className="relative z-10 flex items-center justify-between font-mono text-[11px] tracking-[0.22em]"
           style={{ color: "#8a8a8a" }}
         >
-          <span style={{ color: "#ecd012" }}>PROYECTOS — 2026</span>
-          <span className="flex items-center gap-2">REMOTO<span className="rf-blink inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#ecd012" }} /></span>
+          <span style={{ color: "#ecd012" }}>{t("PROYECTOS — 2026", "PROJECTS — 2026")}</span>
+          <span className="flex items-center gap-2">{t("REMOTO", "REMOTE")}<span className="rf-blink inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#ecd012" }} /></span>
         </motion.div>
 
         {/* Composición principal */}
@@ -85,7 +85,7 @@ export function Hero() {
                 className="font-sans font-medium leading-[1.35] tracking-[-0.02em] whitespace-nowrap md:tracking-normal md:text-2xl"
                 style={{ color: "#8a8a8a", fontSize: "clamp(0.68rem, 4.3vw, 1.5rem)" }}
               >
-                DIRECCIÓN VISUAL EN
+                {t("DIRECCIÓN VISUAL EN", "VISUAL DIRECTION IN")}
               </span>
               <span
                 className="relative inline-block max-w-full shrink-0 overflow-hidden font-sans font-bold uppercase leading-[1.35] tracking-[-0.01em] md:text-2xl"
@@ -122,7 +122,7 @@ export function Hero() {
              className="group flex min-h-11 items-center gap-3 font-sans text-[13px] font-medium tracking-[0.18em] md:min-h-0"
             style={{ color: "#f5f5f5" }}
           >
-            <span>VER PROYECTOS</span>
+            <span>{t("VER PROYECTOS", "VIEW PROJECTS")}</span>
             <motion.span
               animate={{ y: [0, 6, 0] }}
               transition={{
@@ -141,7 +141,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.3 }}
-          aria-label="Índice de áreas"
+          aria-label={t("Índice de áreas", "Areas index")}
           className="relative z-10 mt-6 flex flex-wrap gap-x-6 gap-y-2 md:mt-8 md:gap-x-10"
         >
           {AREA_INDEX.map((a) => (

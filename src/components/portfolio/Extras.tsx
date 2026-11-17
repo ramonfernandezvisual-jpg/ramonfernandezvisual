@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useT } from "@/lib/i18n";
 
 /* Aparición suave de secciones */
 export function Reveal({ children }: { children: ReactNode }) {
@@ -50,14 +51,22 @@ export function Marquee() {
 }
 
 /* Manifiesto */
-const MANIFESTO = [
+const MANIFESTO_ES = [
   "Primero, qué se quiere contar. Después, cómo.",
   "Cada decisión la tomo yo.",
   "Un plano bonito no basta si no dice algo.",
   "Si se nota el truco, algo ha fallado.",
 ];
+const MANIFESTO_EN = [
+  "First, what you want to say. Then, how.",
+  "I make every decision.",
+  "A beautiful shot is not enough if it says nothing.",
+  "If the trick shows, something has gone wrong.",
+];
 
 export function Manifesto() {
+  const t = useT();
+  const MANIFESTO = t(MANIFESTO_ES, MANIFESTO_EN);
   return (
     <section className="px-5 py-6 md:px-10 md:py-24 lg:py-32" style={{ backgroundColor: "#080808" }}>
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
@@ -83,9 +92,12 @@ export function Manifesto() {
 }
 
 /* Detrás de cada pieza */
-const STEPS = ["Idea y guion", "Personajes y entornos", "Generación e iteración", "Montaje", "Sonido y entrega"];
+const STEPS_ES = ["Idea y guion", "Personajes y entornos", "Generación e iteración", "Montaje", "Sonido y entrega"];
+const STEPS_EN = ["Idea and script", "Characters and environments", "Generation and iteration", "Editing", "Sound and delivery"];
 
 export function Process() {
+  const t = useT();
+  const STEPS = t(STEPS_ES, STEPS_EN);
   return (
     <section
       className="border-t px-5 py-10 md:px-10 md:py-24 lg:py-32"
@@ -96,11 +108,14 @@ export function Process() {
             className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
             style={{ color: "#f5f5f5" }}
           >
-            DETRÁS DE CADA PIEZA
+            {t("DETRÁS DE CADA PIEZA", "BEHIND EVERY PIECE")}
           </h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
           <p className="mt-6 max-w-3xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:mt-8" style={{ color: "#8a8a8a" }}>
-            Todo se decide mucho antes del primer plano. Empieza con una idea clara y un buen guion. Después se diseñan los personajes y los entornos, con unas referencias que fijan la luz, el color y el tono. Entonces se genera, se prueba y se vuelve a probar hasta que cada plano dice lo que tiene que decir. Lo que marca la diferencia es lo que lo rodea, el ritmo del montaje, el sonido y el cuidado hasta la entrega.
+            {t(
+              "Todo se decide mucho antes del primer plano. Empieza con una idea clara y un buen guion. Después se diseñan los personajes y los entornos, con unas referencias que fijan la luz, el color y el tono. Entonces se genera, se prueba y se vuelve a probar hasta que cada plano dice lo que tiene que decir. Lo que marca la diferencia es lo que lo rodea, el ritmo del montaje, el sonido y el cuidado hasta la entrega.",
+              "Everything is decided long before the first shot. It starts with a clear idea and a good script. Then the characters and environments are designed, with references that set the light, the color and the tone. Then we generate, test and test again until every shot says what it has to say. What makes the difference is everything around it: the rhythm of the edit, the sound and the care taken through to delivery.",
+            )}
           </p>
           <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 md:mt-14 md:grid-cols-3 md:gap-8 lg:mt-20 lg:grid-cols-5">
             {STEPS.map((s, i) => (
@@ -121,7 +136,7 @@ export function Process() {
 }
 
 /* Preguntas frecuentes */
-const FAQS = [
+const FAQS_ES = [
   ["¿Trabajas en marca blanca?", "Sí. Trabajo bajo el nombre de la agencia o productora, sin contacto con el cliente final y sin publicar nada sin permiso."],
   ["¿Cuánto tarda una pieza?", "Depende de la pieza. El plazo se fija en el presupuesto y se cumple."],
   ["¿Cómo empezamos?", "Cuéntame la idea o mándame el guion si ya lo tenéis, y te propongo un enfoque y un presupuesto."],
@@ -129,8 +144,18 @@ const FAQS = [
   ["¿Cuándo no conviene usar IA?", "Cuando la pieza depende de una actuación real o de un producto en movimiento muy preciso. En esos casos te lo diré con sinceridad, y la IA puede quedarse solo en lo que de verdad suma."],
   ["¿Cómo usas la IA?", "Al servicio de la idea. No copio el estilo de otros artistas y cada pieza parte de una dirección de arte propia."],
 ];
+const FAQS_EN = [
+  ["Do you work white label?", "Yes. I work under the name of the agency or production company, with no contact with the end client and without publishing anything without permission."],
+  ["How long does a piece take?", "It depends on the piece. The deadline is set in the quote and I keep to it."],
+  ["How do we start?", "Tell me the idea, or send me the script if you already have one, and I will propose an approach and a quote."],
+  ["Where do you work from?", "Remotely, during Spanish afternoon hours, with teams from all over Spain."],
+  ["When is AI not the right choice?", "When the piece depends on a real performance or on very precise product movement. In those cases I will tell you honestly, and AI can be limited to what truly adds value."],
+  ["How do you use AI?", "In the service of the idea. I do not copy other artists' style and each piece starts from its own art direction."],
+];
 
 export function FAQ() {
+  const t = useT();
+  const FAQS = t(FAQS_ES, FAQS_EN);
   const [open, setOpen] = useState<number | null>(null);
   return (
     <section id="faq" className="px-5 pb-8 pt-6 md:px-10 md:pb-24 md:pt-0 lg:pb-32" style={{ backgroundColor: "#080808" }}>
@@ -139,7 +164,7 @@ export function FAQ() {
             className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
             style={{ color: "#f5f5f5" }}
           >
-            PREGUNTAS FRECUENTES
+            {t("PREGUNTAS FRECUENTES", "FREQUENTLY ASKED QUESTIONS")}
           </h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
           <div className="mt-10 border-b md:mt-14 lg:mt-20" style={{ borderColor: "#161616" }}>
@@ -278,13 +303,20 @@ export function BrushTrail() {
 
 /* Ventana de contacto */
 const EMAIL = "ramonfernandezvisual@gmail.com";
-const DOORS = [
+const DOORS_ES = [
   ["Soy agencia o productora", "Colaboración para agencia o productora"],
   ["Busco colaboración estable", "Colaboración estable"],
   ["Soy una marca", "Proyecto para una marca"],
 ];
+const DOORS_EN = [
+  ["I am an agency or production company", "Collaboration for an agency or production company"],
+  ["I am looking for a stable collaboration", "Stable collaboration"],
+  ["I am a brand", "Project for a brand"],
+];
 
 export function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const t = useT();
+  const DOORS = t(DOORS_ES, DOORS_EN);
   useEffect(() => {
     if (!open) return;
     const k = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -304,7 +336,7 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
           style={{ backgroundColor: "rgba(8,8,8,0.9)" }}
           role="dialog"
           aria-modal="true"
-          aria-label="¿Qué necesitas?"
+          aria-label={t("¿Qué necesitas?", "What do you need?")}
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -317,14 +349,14 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
           >
             <button
               onClick={onClose}
-              aria-label="Cerrar"
+              aria-label={t("Cerrar", "Close")}
                className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center font-sans text-2xl md:h-10 md:w-10"
               style={{ color: "#f5f5f5" }}
             >
               ×
             </button>
             <h3 className="font-sans text-3xl font-extrabold tracking-[-0.03em] md:text-4xl" style={{ color: "#f5f5f5" }}>
-              ¿Qué necesitas?
+              {t("¿Qué necesitas?", "What do you need?")}
             </h3>
             <div className="mt-8 flex flex-col gap-3">
               {DOORS.map(([label, subject]) => (
@@ -341,7 +373,7 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
               ))}
             </div>
             <p className="mt-6 font-mono text-[11px] tracking-[0.12em]" style={{ color: "#8a8a8a" }}>
-              Te respondo yo, sin intermediarios.
+              {t("Te respondo yo, sin intermediarios.", "I reply myself, with no intermediaries.")}
             </p>
           </motion.div>
         </motion.div>

@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
+import { useT } from "@/lib/i18n";
 const ramon = "/ramon.jpg";
 
 
 export function About() {
+  const t = useT();
   return (
     <section
       id="sobre-mi"
@@ -19,7 +21,7 @@ export function About() {
             className="whitespace-nowrap font-mono text-xs tracking-[0.2em]"
             style={{ color: "#f5f5f5" }}
           >
-            07 — SOBRE MÍ
+            {t("07 — SOBRE MÍ", "07 — ABOUT ME")}
           </motion.span>
         </div>
 
@@ -56,11 +58,20 @@ export function About() {
              className="font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed lg:text-2xl lg:leading-snug"
             style={{ color: "#f5f5f5" }}
           >
-            Soy Ramón Fernández. Creo cortometrajes, campañas y personajes para agencias, productoras y marcas, y cuido cada pieza desde la primera idea hasta el último detalle del montaje.
+            {t(
+              "Soy Ramón Fernández. Creo cortometrajes, campañas y personajes para agencias, productoras y marcas, y cuido cada pieza desde la primera idea hasta el último detalle del montaje.",
+              "I am Ramón Fernández. I create short films, campaigns and characters for agencies, production companies and brands, and I take care of every piece from the first idea to the last detail of the edit.",
+            )}
             <br /><br />
-            Aprendí a construir imágenes mucho antes de que existiera la IA. Durante más de quince años levanté espacios y atmósferas desde cero, y desde 2019 trabajo por mi cuenta para empresas y profesionales. Esa experiencia es la que hoy me guía en cada plano, porque sé cómo se comporta la luz, cómo se compone un encuadre y qué hace creíble una escena.
+            {t(
+              "Aprendí a construir imágenes mucho antes de que existiera la IA. Durante más de quince años levanté espacios y atmósferas desde cero, y desde 2019 trabajo por mi cuenta para empresas y profesionales. Esa experiencia es la que hoy me guía en cada plano, porque sé cómo se comporta la luz, cómo se compone un encuadre y qué hace creíble una escena.",
+              "I learned to build images long before AI existed. For more than fifteen years I built spaces and atmospheres from scratch, and since 2019 I have worked on my own for companies and professionals. That experience is what guides me in every shot today, because I know how light behaves, how a frame is composed and what makes a scene believable.",
+            )}
             <br /><br />
-            Para mí la tecnología nunca es un atajo, sino una herramienta al servicio de la dirección visual. Lo que de verdad importa es que la historia llegue.
+            {t(
+              "Para mí la tecnología nunca es un atajo, sino una herramienta al servicio de la dirección visual. Lo que de verdad importa es que la historia llegue.",
+              "For me, technology is never a shortcut, but a tool in the service of visual direction. What really matters is that the story gets across.",
+            )}
           </p>
 
           <div className="mt-10 flex items-center gap-3">
@@ -72,7 +83,7 @@ export function About() {
               className="font-mono text-[11px] tracking-[0.22em]"
               style={{ color: "#f5f5f5" }}
             >
-              DISPONIBLE PARA COLABORACIONES Y PROYECTOS REMOTOS
+              {t("DISPONIBLE PARA COLABORACIONES Y PROYECTOS REMOTOS", "AVAILABLE FOR COLLABORATIONS AND REMOTE PROJECTS")}
             </span>
           </div>
         </motion.div>
@@ -88,8 +99,8 @@ export function About() {
              textWrap: "balance",
           }}
         >
-          Diferentes disciplinas.<br />
-          Una misma mirada visual
+          {t("Diferentes disciplinas.", "Different disciplines.")}<br />
+          {t("Una misma mirada visual", "The same visual outlook")}
           <span style={{ color: "#ecd012" }}>.</span>
 
         </motion.h2>

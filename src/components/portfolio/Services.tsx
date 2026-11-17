@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
+import { useT } from "@/lib/i18n";
 
-const services = [
+const servicesEs = [
   {
     title: "Cortometrajes y piezas narrativas",
     text: "Historias cortas, desde la idea hasta el montaje final.",
@@ -15,7 +16,24 @@ const services = [
   },
 ];
 
+const servicesEn = [
+  {
+    title: "Short films and narrative pieces",
+    text: "Short stories, from the idea to the final edit.",
+  },
+  { title: "Spots", text: "Short ads that tell your brand's story." },
+  { title: "Brand campaigns", text: "Several connected pieces for the same brand." },
+  { title: "Monthly content for social media", text: "A fixed number of pieces per month for your social channels." },
+  { title: "Characters", text: "Characters that give your brand a recognizable face." },
+  {
+    title: "Turn an ordinary scene into a cinematic scene",
+    text: "Your usual footage, taken to a film-like scene with its atmosphere, its shots and its camera changes.",
+  },
+];
+
 export function Services() {
+  const t = useT();
+  const services = t(servicesEs, servicesEn);
   return (
     <section
       id="servicios"
@@ -25,7 +43,7 @@ export function Services() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12">
           <span className="whitespace-nowrap font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
-            SERVICIOS
+            {t("SERVICIOS", "SERVICES")}
           </span>
         </div>
         <motion.h2
@@ -36,7 +54,7 @@ export function Services() {
           className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
           style={{ color: "#f5f5f5" }}
         >
-          QUÉ PUEDO HACER POR TU MARCA
+          {t("QUÉ PUEDO HACER POR TU MARCA", "WHAT I CAN DO FOR YOUR BRAND")}
         </motion.h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
           <div className="mt-10 md:mt-14 lg:mt-20">
@@ -79,7 +97,7 @@ export function Services() {
             className="mt-14 font-sans text-[17px] leading-[1.5] md:mt-20 md:text-2xl md:leading-normal"
             style={{ color: "#f5f5f5" }}
           >
-            Cuéntame tu presupuesto y te propongo algo a medida
+            {t("Cuéntame tu presupuesto y te propongo algo a medida", "Tell me your budget and I will propose something tailored")}
             <span style={{ color: "#ecd012" }}>.</span>
           </p>
 
@@ -88,7 +106,7 @@ export function Services() {
             className="group mt-10 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
             style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
           >
-            <span>ESCRÍBEME</span>
+            <span>{t("ESCRÍBEME", "WRITE TO ME")}</span>
             <span
               className="inline-block transition-transform duration-500 group-hover:translate-x-2"
               style={{ color: "#ecd012" }}

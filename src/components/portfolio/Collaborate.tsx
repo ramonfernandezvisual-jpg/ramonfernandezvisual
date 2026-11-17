@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
+import { useT } from "@/lib/i18n";
 
-const blocks = [
+const blocksEs = [
   {
     title: "Agencias y productoras",
     text: "Me incorporo a vuestros proyectos como parte del equipo, en producción o en edición. También en marca blanca si lo necesitáis, bajo vuestro nombre y sin contacto directo con vuestro cliente.",
@@ -15,7 +16,24 @@ const blocks = [
   },
 ];
 
+const blocksEn = [
+  {
+    title: "Agencies and production companies",
+    text: "I join your projects as part of the team, in production or in editing. Also white label if you need it, under your name and without direct contact with your client.",
+  },
+  {
+    title: "Ongoing collaboration",
+    text: "If you need someone on a continuous basis, I work a fixed number of hours per week, during Spanish afternoon hours.",
+  },
+  {
+    title: "Brands",
+    text: "Campaign pieces in horizontal and vertical, ready for the web and social media.",
+  },
+];
+
 export function Collaborate() {
+  const t = useT();
+  const blocks = t(blocksEs, blocksEn);
   return (
     <section
       id="colaboro"
@@ -25,7 +43,7 @@ export function Collaborate() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6">
         <div className="col-span-12">
           <span className="whitespace-nowrap font-mono text-xs tracking-[0.2em]" style={{ color: "#ecd012" }}>
-            06 — CÓMO COLABORO
+            {t("06 — CÓMO COLABORO", "06 — HOW I COLLABORATE")}
           </span>
         </div>
         <motion.h2
@@ -36,7 +54,7 @@ export function Collaborate() {
             className="col-span-12 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] md:text-[clamp(1.375rem,3vw,2.5rem)]"
             style={{ color: "#f5f5f5" }}
           >
-            CÓMO COLABORO
+            {t("CÓMO COLABORO", "HOW I COLLABORATE")}
           </motion.h2>
         <div className="col-span-12 lg:col-span-10 lg:col-start-3">
 
@@ -65,7 +83,7 @@ export function Collaborate() {
           </div>
 
            <p className="mt-14 font-sans text-[17px] leading-[1.5] md:mt-20 md:text-2xl md:leading-normal" style={{ color: "#f5f5f5" }}>
-            Cada encargo empieza por entender qué necesitáis contar y a quién
+            {t("Cada encargo empieza por entender qué necesitáis contar y a quién", "Every project starts by understanding what you need to say and to whom")}
             <span style={{ color: "#ecd012" }}>.</span>
           </p>
         </div>

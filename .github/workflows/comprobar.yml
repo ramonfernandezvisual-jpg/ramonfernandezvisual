@@ -1,0 +1,20 @@
+name: Comprobar construcción
+
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+      - name: Comprobar que se generan las dos páginas
+        run: |
+          ls dist/client
+          test -f dist/client/index.html
+          ls dist/client/en* 

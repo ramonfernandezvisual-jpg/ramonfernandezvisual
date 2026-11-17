@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useT } from "@/lib/i18n";
 
 export function SectionHeader({
   number,
@@ -11,6 +12,7 @@ export function SectionHeader({
   subtitle: string;
   count?: number;
 }) {
+  const t = useT();
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -25,7 +27,7 @@ export function SectionHeader({
         </span>
         {typeof count === "number" && (
           <span className="font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-            {String(count).padStart(2, "0")} {count === 1 ? "PROYECTO" : "PROYECTOS"}
+            {String(count).padStart(2, "0")} {count === 1 ? t("PROYECTO", "PROJECT") : t("PROYECTOS", "PROJECTS")}
           </span>
         )}
       </div>

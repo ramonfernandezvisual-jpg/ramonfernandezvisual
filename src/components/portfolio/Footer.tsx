@@ -1,14 +1,15 @@
 import { Logo } from "./Logo";
-
-const socials = [
-  {
-    label: "INSTAGRAM — VISUAL / CREATIVO",
-    handle: "@ramonfernandez.visual",
-    href: "https://www.instagram.com/ramonfernandez.visual",
-  },
-];
+import { useT } from "@/lib/i18n";
 
 export function Footer() {
+  const t = useT();
+  const socials = [
+    {
+      label: t("INSTAGRAM — VISUAL / CREATIVO", "INSTAGRAM — VISUAL / CREATIVE"),
+      handle: "@ramonfernandez.visual",
+      href: "https://www.instagram.com/ramonfernandez.visual",
+    },
+  ];
   const go = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
@@ -26,20 +27,23 @@ export function Footer() {
               Ramón Fernández
             </p>
              <p className="mt-6 max-w-xs font-sans text-[16px] leading-[1.55] md:text-sm md:leading-relaxed" style={{ color: "#8a8a8a" }}>
-              Cortometrajes, campañas y personajes para agencias, productoras y marcas. Disponible en remoto.
+              {t(
+                "Cortometrajes, campañas y personajes para agencias, productoras y marcas. Disponible en remoto.",
+                "Short films, campaigns and characters for agencies, production companies and brands. Available remotely.",
+              )}
             </p>
           </div>
 
           {/* Navegación */}
           <div className="col-span-12 md:col-span-6 lg:col-span-2">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-              NAVEGACIÓN
+              {t("NAVEGACIÓN", "NAVIGATION")}
             </p>
             <ul className="space-y-2">
               {[
-                { id: "portfolio", label: "PROYECTOS" },
-                { id: "sobre-mi", label: "SOBRE MÍ" },
-                { id: "contacto", label: "CONTACTO" },
+                { id: "portfolio", label: t("PROYECTOS", "PROJECTS") },
+                { id: "sobre-mi", label: t("SOBRE MÍ", "ABOUT") },
+                { id: "contacto", label: t("CONTACTO", "CONTACT") },
               ].map((n) => (
                 <li key={n.id}>
                   <button
@@ -60,7 +64,7 @@ export function Footer() {
           {/* Redes */}
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-              PERFILES
+              {t("PERFILES", "PROFILES")}
             </p>
             <ul className="space-y-3">
               {socials.map((s) => (
@@ -95,7 +99,7 @@ export function Footer() {
           {/* Contacto */}
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <p className="mb-4 font-mono text-[10px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
-              CONTACTO
+              {t("CONTACTO", "CONTACT")}
             </p>
             <a
               href="mailto:ramonfernandezvisual@gmail.com"
@@ -118,7 +122,7 @@ export function Footer() {
           style={{ borderColor: "#161616", color: "#8a8a8a" }}
         >
           <span>© 2026 RAMÓN FERNÁNDEZ</span>
-          <span>PROYECTOS · MMXXVI</span>
+          <span>{t("PROYECTOS · MMXXVI", "PROJECTS · MMXXVI")}</span>
         </div>
       </div>
     </footer>

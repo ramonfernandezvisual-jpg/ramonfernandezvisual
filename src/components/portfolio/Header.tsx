@@ -1,14 +1,38 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "./Logo";
+import { useLang, useT } from "@/lib/i18n";
 
-const nav = [
-  { id: "portfolio", label: "PROYECTOS", description: "" },
-  { id: "sobre-mi", label: "SOBRE MÍ", description: "Quién está detrás" },
-  { id: "contacto", label: "CONTACTO", description: "Correo y WhatsApp" },
-];
+function LangSwitch({ className = "" }: { className?: string }) {
+  const lang = useLang();
+  const item = (code: "es" | "en", href: string) => (
+    <a
+      href={href}
+      hrefLang={code}
+      lang={code}
+      aria-current={lang === code ? "true" : undefined}
+      className="flex min-h-11 items-center px-1 transition-colors hover:text-[#ecd012] md:min-h-0"
+      style={{ color: lang === code ? "#ecd012" : "#8a8a8a" }}
+    >
+      {code.toUpperCase()}
+    </a>
+  );
+  return (
+    <div className={`flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] ${className}`}>
+      {item("es", "/")}
+      <span style={{ color: "#3a3a3a" }}>/</span>
+      {item("en", "/en")}
+    </div>
+  );
+}
 
 export function Header() {
+  const t = useT();
+  const nav = [
+    { id: "portfolio", label: t("PROYECTOS", "PROJECTS"), description: "" },
+    { id: "sobre-mi", label: t("SOBRE MÍ", "ABOUT"), description: t("Quién está detrás", "Who is behind the work") },
+    { id: "contacto", label: t("CONTACTO", "CONTACT"), description: t("Correo y WhatsApp", "Email and WhatsApp") },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("portfolio");
@@ -102,9 +126,11 @@ export function Header() {
             ))}
           </nav>
 
+          <LangSwitch className="hidden md:flex" />
+
           <button
             onClick={() => setOpen(true)}
-            aria-label="Abrir menú"
+            aria-label={t("Abrir menú", "Open menu")}
              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
           >
             <span className="h-px w-6" style={{ backgroundColor: "#f5f5f5" }} />
@@ -127,11 +153,11 @@ export function Header() {
               <Logo className="text-4xl" />
               <button
                 onClick={() => setOpen(false)}
-                aria-label="Cerrar menú"
+                aria-label={t("Cerrar menú", "Close menu")}
                  className="flex min-h-11 items-center font-mono text-xs tracking-[0.2em]"
                 style={{ color: "#f5f5f5" }}
               >
-                CERRAR
+                {t("CERRAR", "CLOSE")}
               </button>
             </div>
             <nav className="flex flex-1 flex-col justify-center gap-8 px-8">
@@ -150,6 +176,7 @@ export function Header() {
                 </motion.button>
               ))}
             </nav>
+            <LangSwitch className="px-8 pb-6" />
             <div className="px-8 pb-10 font-mono text-[11px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
               RAMÓN FERNÁNDEZ · 2026
             </div>
