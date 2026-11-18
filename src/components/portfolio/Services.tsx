@@ -6,9 +6,14 @@ const servicesEs = [
     title: "Cortometrajes y piezas narrativas",
     text: "Historias cortas, desde la idea hasta el montaje final.",
   },
-  { title: "Spots", text: "Anuncios cortos que cuentan la historia de tu marca." },
-  { title: "Campañas de marca", text: "Varias piezas conectadas entre sí para una misma marca." },
-  { title: "Contenido mensual para redes", text: "Un número fijo de piezas al mes para tus redes." },
+  {
+    title: "Spots y campañas",
+    text: "Anuncios breves, o varias piezas enlazadas, que cuentan la historia de tu marca.",
+  },
+  {
+    title: "Contenido para redes",
+    text: "Piezas nuevas cada mes, con versiones más breves de tus proyectos adaptadas a cada plataforma.",
+  },
   { title: "Personajes", text: "Personajes que dan una cara reconocible a tu marca." },
   {
     title: "Convertir una escena normal en escena cinematográfica",
@@ -17,10 +22,6 @@ const servicesEs = [
   {
     title: "Piezas de producto con historia",
     text: "Tu producto aparece dentro de una pequeña historia, en una situación real, no como una imagen de catálogo.",
-  },
-  {
-    title: "Adaptación de proyectos a redes",
-    text: "Tus proyectos ajustados en versiones más cortas, pensadas para cada red.",
   },
   {
     title: "Arquitectura e interiorismo",
@@ -33,9 +34,14 @@ const servicesEn = [
     title: "Short films and narrative pieces",
     text: "Short stories, from the idea to the final edit.",
   },
-  { title: "Spots", text: "Short ads that tell your brand's story." },
-  { title: "Brand campaigns", text: "Several connected pieces for the same brand." },
-  { title: "Monthly content for social media", text: "A fixed number of pieces per month for your social channels." },
+  {
+    title: "Spots and campaigns",
+    text: "Short ads, or several linked pieces, that tell your brand's story.",
+  },
+  {
+    title: "Content for social media",
+    text: "New pieces every month, with shorter versions of your projects adapted to each platform.",
+  },
   { title: "Characters", text: "Characters that give your brand a recognizable face." },
   {
     title: "Turn an ordinary scene into a cinematic scene",
@@ -44,10 +50,6 @@ const servicesEn = [
   {
     title: "Product pieces with a story",
     text: "Your product appears inside a small story, in a real situation, not as a catalog image.",
-  },
-  {
-    title: "Adapting projects for social media",
-    text: "Your projects adjusted into shorter versions, designed for each platform.",
   },
   {
     title: "Architecture and interior design",
