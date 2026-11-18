@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto · Ramón Fernández Visual</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--card:#111111;--line:#262626;--txt:#f5f5f5;--mut:#8a8a8a;--yel:#ecd012}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:Poppins,system-ui,sans-serif;font-weight:300;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+.tag{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.22em;color:var(--yel);text-transform:uppercase}
+h1{font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02;font-size:clamp(34px,8vw,64px);margin:18px 0 14px}
+h1 span{color:var(--yel)}
+.intro{color:var(--mut);max-width:520px;margin:0 0 44px}
+fieldset{border:0;padding:0;margin:0 0 40px}
+legend{padding:0;margin-bottom:6px;font-weight:600;font-size:19px;display:flex;gap:14px;align-items:baseline}
+legend .n{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.2em;color:var(--mut);font-weight:400}
+.hint{color:var(--mut);font-size:13px;margin:0 0 12px}
+.opts{display:grid;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:block;padding:14px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-weight:400;font-size:15px;transition:border-color .15s,background .15s}
+.opt:hover span{border-color:#444}
+.opt input:checked+span{border-color:var(--yel);background:#16150a}
+.opt input:focus-visible+span{outline:2px solid var(--yel);outline-offset:2px}
+label.f{display:block;font-size:13px;color:var(--mut);margin:0 0 6px}
+input[type=text],input[type=email],textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--txt);font:400 15px Poppins,system-ui,sans-serif;padding:14px 16px}
+input:focus,textarea:focus{outline:2px solid var(--yel);outline-offset:1px;border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.field{margin-bottom:14px}
+button,.btn{font:600 14px Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;text-decoration:none;display:inline-block}
+.primary{background:var(--yel);color:#080808}
+.primary:hover{filter:brightness(1.07)}
+.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.ghost:hover{border-color:#555}
+.err{color:#ff8a7a;font-size:14px;margin:14px 0 0;min-height:20px}
+#res{display:none}
+#res h2{font-weight:700;text-transform:uppercase;font-size:clamp(26px,6vw,40px);letter-spacing:-.02em;margin:0 0 10px}
+#res h2 span{color:var(--yel)}
+pre{white-space:pre-wrap;word-wrap:break-word;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;font:400 14px/1.6 Poppins,system-ui,sans-serif;margin:18px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.small{color:var(--mut);font-size:13px}
+footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag">Ramón Fernández Visual</div>
+
+  <div id="form">
+    <h1>Cuéntame tu proyecto<span>.</span></h1>
+    <p class="intro">Responde unas preguntas breves. Al terminar, tu mensaje queda listo para enviármelo por WhatsApp.</p>
+
+    <form id="f" novalidate>
+      <fieldset>
+        <legend><span class="n">01</span>¿Qué quieres contar?</legend>
+        <p class="hint">Elige una opción.</p>
+        <div class="opts" data-q="q1"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">02</span>¿Cuánto crees que durará?</legend>
+        <div class="opts" data-q="q2"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">03</span>¿Dónde se va a ver?</legend>
+        <div class="opts" data-q="q3"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">04</span>¿Quieres también versiones cortas para redes?</legend>
+        <div class="opts" data-q="q4"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">05</span>¿Qué tienes ya?</legend>
+        <div class="opts" data-q="q5"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">06</span>¿Qué presupuesto manejas?</legend>
+        <p class="hint">Opcional. Una cifra aproximada me ayuda a proponerte algo que encaje.</p>
+        <input type="text" id="presupuesto" autocomplete="off">
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">07</span>¿Para cuándo lo necesitas?</legend>
+        <p class="hint">Opcional. Una fecha aproximada.</p>
+        <input type="text" id="fecha" autocomplete="off">
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">08</span>Tus datos</legend>
+        <div class="row">
+          <div class="field"><label class="f" for="nombre">Nombre *</label><input type="text" id="nombre" autocomplete="name"></div>
+          <div class="field"><label class="f" for="empresa">Empresa (opcional)</label><input type="text" id="empresa" autocomplete="organization"></div>
+        </div>
+        <div class="field"><label class="f" for="correo">Correo *</label><input type="email" id="correo" autocomplete="email"></div>
+        <div class="field"><label class="f" for="mensaje">Cuéntame más</label><textarea id="mensaje"></textarea></div>
+      </fieldset>
+
+      <button type="submit" class="primary">Preparar mi mensaje</button>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+  </div>
+
+  <div id="res">
+    <h1>Listo<span>.</span></h1>
+    <p class="intro">Este es tu mensaje. Ábrelo en WhatsApp y pulsa enviar para que me llegue.</p>
+    <pre id="txt"></pre>
+    <div class="actions">
+      <a class="btn primary" id="wa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+      <button class="ghost" id="copy" type="button">Copiar mensaje</button>
+      <button class="ghost" id="back" type="button">Volver</button>
+    </div>
+    <p class="small" id="copied"></p>
+    <p class="small">Si prefieres escribirme por correo, mi dirección es ramonfernandezvisual@gmail.com. Pega el mensaje en el correo.</p>
+  </div>
+
+  <footer>Responderé lo antes posible.</footer>
+</div>
+
+<script>
+var Q={
+ q1:["Cortometraje o pieza narrativa","Spot o campaña","Contenido para redes","Personajes","Escena cinematográfica a partir de mi grabación","Pieza de producto con historia","Arquitectura e interiorismo","Aún no lo sé"],
+ q2:["Hasta 30 segundos","Menos de un minuto","Entre 1 y 3 minutos","Más largo","Aún no lo sé"],
+ q3:["En redes","En mi web","En un evento o pantalla grande","En varios sitios"],
+ q4:["Sí","No","Aún no lo sé"],
+ q5:["Solo una idea","Un brief","Un guion","Nada todavía, quiero que me propongas algo"]
+};
+var LABEL={q1:"Quiere contar",q2:"Duración",q3:"Dónde se verá",q4:"Versiones cortas para redes",q5:"Parte de"};
+Object.keys(Q).forEach(function(k){
+  var box=document.querySelector('[data-q="'+k+'"]');
+  Q[k].forEach(function(t,i){
+    var l=document.createElement("label");l.className="opt";
+    var inp=document.createElement("input");inp.type="radio";inp.name=k;inp.value=t;
+    var s=document.createElement("span");s.textContent=t;
+    l.appendChild(inp);l.appendChild(s);box.appendChild(l);
+  });
+});
+function val(id){return document.getElementById(id).value.trim()}
+function pick(k){var c=document.querySelector('input[name="'+k+'"]:checked');return c?c.value:""}
+var WA="34669250343",msg="";
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var err=document.getElementById("err");err.textContent="";
+  if(!pick("q1")){err.textContent="Elige qué quieres contar en la pregunta 01.";return}
+  if(!val("nombre")){err.textContent="Escribe tu nombre.";document.getElementById("nombre").focus();return}
+  var m=val("correo");
+  if(!m||m.indexOf("@")<1||m.indexOf(".",m.indexOf("@"))<0){err.textContent="Escribe un correo válido.";document.getElementById("correo").focus();return}
+  var L=["Hola Ramón, soy "+val("nombre")+(val("empresa")?" de "+val("empresa"):"")+". Te cuento mi proyecto.",""];
+  ["q1","q2","q3","q4","q5"].forEach(function(k){if(pick(k))L.push(LABEL[k]+" · "+pick(k))});
+  if(val("presupuesto"))L.push("Presupuesto · "+val("presupuesto"));
+  if(val("fecha"))L.push("Para cuándo · "+val("fecha"));
+  if(val("mensaje")){L.push("");L.push(val("mensaje"))}
+  L.push("");L.push("Mi correo · "+m);
+  msg=L.join("\n");
+  document.getElementById("txt").textContent=msg;
+  document.getElementById("wa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+  document.getElementById("form").style.display="none";
+  document.getElementById("res").style.display="block";
+  window.scrollTo(0,0);
+});
+document.getElementById("back").addEventListener("click",function(){
+  document.getElementById("res").style.display="none";
+  document.getElementById("form").style.display="block";
+  window.scrollTo(0,0);
+});
+document.getElementById("copy").addEventListener("click",function(){
+  var c=document.getElementById("copied");
+  try{navigator.clipboard.writeText(msg).then(function(){c.textContent="Mensaje copiado."},function(){c.textContent="No se pudo copiar. Selecciona el texto y cópialo a mano."})}
+  catch(x){c.textContent="No se pudo copiar. Selecciona el texto y cópialo a mano."}
+});
+</script>
+</body>
+</html>
