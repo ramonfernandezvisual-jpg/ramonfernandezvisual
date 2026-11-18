@@ -42,12 +42,6 @@ export function Contact() {
               "Do you have a project, a collaboration or an opportunity where I can contribute?",
             )}
           </p>
-           <p className="mt-3 max-w-2xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed" style={{ color: "#8a8a8a" }}>
-            {t(
-              "Cuéntame la idea en dos frases. Te respondo en menos de 24 horas",
-              "Tell me the idea in two sentences. I reply within 24 hours",
-            )}
-          </p>
 
           {lang === "es" && (
             <div className="mt-10 md:mt-12">
