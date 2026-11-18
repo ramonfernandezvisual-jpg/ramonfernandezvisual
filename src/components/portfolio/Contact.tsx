@@ -108,8 +108,9 @@ export function Contact() {
               </span>
             </button>
             {lang === "es" && (
-              <a
-                href="/presupuesto/"
+              <button
+                type="button"
+                onClick={() => window.location.assign("/presupuesto/")}
                 className="group -mt-px md:mt-0 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
                 style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
               >
@@ -120,7 +121,7 @@ export function Contact() {
                 >
                   →
                 </span>
-              </a>
+              </button>
             )}
           </div>
         </motion.div>
