@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { BrushTrail, ContactModal } from "./Extras";
-import { useT } from "@/lib/i18n";
+import { useLang, useT } from "@/lib/i18n";
 
 export function Contact() {
   const t = useT();
+  const lang = useLang();
   const [modal, setModal] = useState(false);
   return (
     <section
@@ -91,20 +92,37 @@ export function Contact() {
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setModal(true)}
-            className="group mt-16 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:mt-24 md:text-2xl"
-            style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
-          >
-            <span>{t("ESCRÍBEME", "WRITE TO ME")}</span>
-            <span
-              className="inline-block transition-transform duration-500 group-hover:translate-x-2"
-              style={{ color: "#ecd012" }}
+          <div className="mt-16 flex flex-wrap gap-x-12 md:mt-24">
+            <button
+              type="button"
+              onClick={() => setModal(true)}
+              className="group inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
+              style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
             >
-              →
-            </span>
-          </button>
+              <span>{t("ESCRÍBEME", "WRITE TO ME")}</span>
+              <span
+                className="inline-block transition-transform duration-500 group-hover:translate-x-2"
+                style={{ color: "#ecd012" }}
+              >
+                →
+              </span>
+            </button>
+            {lang === "es" && (
+              <a
+                href="/presupuesto/"
+                className="group -mt-px md:mt-0 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
+                style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
+              >
+                <span>CUÉNTAME TU PROYECTO</span>
+                <span
+                  className="inline-block transition-transform duration-500 group-hover:translate-x-2"
+                  style={{ color: "#ecd012" }}
+                >
+                  →
+                </span>
+              </a>
+            )}
+          </div>
         </motion.div>
       </div>
       <ContactModal open={modal} onClose={() => setModal(false)} />
