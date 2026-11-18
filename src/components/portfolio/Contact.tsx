@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { motion } from "motion/react";
-import { BrushTrail, ContactModal } from "./Extras";
+import { BrushTrail } from "./Extras";
 import { useLang, useT } from "@/lib/i18n";
 
 export function Contact() {
   const t = useT();
   const lang = useLang();
-  const [modal, setModal] = useState(false);
   return (
     <section
       id="contacto"
@@ -92,8 +90,8 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="mt-16 md:mt-24">
-            {lang === "es" ? (
+          {lang === "es" && (
+            <div className="mt-16 md:mt-24">
               <button
                 type="button"
                 onClick={() => window.location.assign("/presupuesto/")}
@@ -104,22 +102,10 @@ export function Contact() {
                   →
                 </span>
               </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setModal(true)}
-                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
-              >
-                <span>Write to me</span>
-                <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
-                  →
-                </span>
-              </button>
-            )}
-          </div>
+            </div>
+          )}
         </motion.div>
       </div>
-      <ContactModal open={modal} onClose={() => setModal(false)} />
     </section>
   );
 }
