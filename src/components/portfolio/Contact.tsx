@@ -92,33 +92,26 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="mt-16 flex flex-wrap gap-x-12 md:mt-24">
-            <button
-              type="button"
-              onClick={() => setModal(true)}
-              className="group inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
-              style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
-            >
-              <span>{t("ESCRÍBEME", "WRITE TO ME")}</span>
-              <span
-                className="inline-block transition-transform duration-500 group-hover:translate-x-2"
-                style={{ color: "#ecd012" }}
-              >
-                →
-              </span>
-            </button>
-            {lang === "es" && (
+          <div className="mt-16 md:mt-24">
+            {lang === "es" ? (
               <button
                 type="button"
                 onClick={() => window.location.assign("/presupuesto/")}
-                className="group -mt-px md:mt-0 inline-flex items-center gap-4 border-t border-b py-6 font-sans text-lg font-medium tracking-[0.14em] transition-colors md:text-2xl"
-                style={{ borderColor: "#2a2a2a", color: "#f5f5f5" }}
+                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
               >
-                <span>CUÉNTAME TU PROYECTO</span>
-                <span
-                  className="inline-block transition-transform duration-500 group-hover:translate-x-2"
-                  style={{ color: "#ecd012" }}
-                >
+                <span>Cuéntame tu proyecto</span>
+                <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
+                  →
+                </span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setModal(true)}
+                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
+              >
+                <span>Write to me</span>
+                <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
                   →
                 </span>
               </button>
