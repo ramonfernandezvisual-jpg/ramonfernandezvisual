@@ -49,7 +49,22 @@ export function Contact() {
             )}
           </p>
 
-          <div className="mt-16 grid grid-cols-12 gap-6 md:mt-24">
+          {lang === "es" && (
+            <div className="mt-10 md:mt-12">
+              <button
+                type="button"
+                onClick={() => window.location.assign("/presupuesto/")}
+                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
+              >
+                <span>Cuéntame tu proyecto</span>
+                <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
+                  →
+                </span>
+              </button>
+            </div>
+          )}
+
+          <div className="mt-14 grid grid-cols-12 gap-6 md:mt-20">
             <div className="col-span-12 space-y-1 md:col-span-6">
               <p className="font-mono text-[11px] tracking-[0.2em]" style={{ color: "#8a8a8a" }}>
                 {t("CONTACTO DIRECTO", "DIRECT CONTACT")}
@@ -90,20 +105,6 @@ export function Contact() {
             </div>
           </div>
 
-          {lang === "es" && (
-            <div className="mt-16 md:mt-24">
-              <button
-                type="button"
-                onClick={() => window.location.assign("/presupuesto/")}
-                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
-              >
-                <span>Cuéntame tu proyecto</span>
-                <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
-                  →
-                </span>
-              </button>
-            </div>
-          )}
         </motion.div>
       </div>
     </section>
