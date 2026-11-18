@@ -56,7 +56,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
 
   <div id="form">
     <h1>Cuéntame tu proyecto<span>.</span></h1>
-    <p class="intro">Responde unas preguntas breves. Al terminar, tu mensaje queda listo para enviármelo por WhatsApp.</p>
+    <p class="intro">Responde unas preguntas breves. Al terminar, tu mensaje queda listo para enviármelo por correo.</p>
 
     <form id="f" novalidate>
       <fieldset>
@@ -114,15 +114,16 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
 
   <div id="res">
     <h1>Listo<span>.</span></h1>
-    <p class="intro">Este es tu mensaje. Ábrelo en WhatsApp y pulsa enviar para que me llegue.</p>
+    <p class="intro">Este es tu mensaje. Ábrelo en tu correo y pulsa enviar para que me llegue.</p>
     <pre id="txt"></pre>
     <div class="actions">
-      <a class="btn primary" id="wa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+      <a class="btn primary" id="mail" href="#">Abrir mi correo</a>
+      <a class="btn ghost" id="gm" href="#" target="_blank" rel="noopener">Enviar con Gmail</a>
       <button class="ghost" id="copy" type="button">Copiar mensaje</button>
       <button class="ghost" id="back" type="button">Volver</button>
     </div>
     <p class="small" id="copied"></p>
-    <p class="small">Si prefieres escribirme por correo, mi dirección es ramonfernandezvisual@gmail.com. Pega el mensaje en el correo.</p>
+    <p class="small">Si no se abre ningún correo, copia el mensaje y envíalo a ramonfernandezvisual@gmail.com.</p>
   </div>
 
   <footer>Responderé lo antes posible.</footer>
@@ -148,7 +149,7 @@ Object.keys(Q).forEach(function(k){
 });
 function val(id){return document.getElementById(id).value.trim()}
 function pick(k){var c=document.querySelector('input[name="'+k+'"]:checked');return c?c.value:""}
-var WA="34669250343",msg="";
+var TO="ramonfernandezvisual@gmail.com",msg="";
 document.getElementById("f").addEventListener("submit",function(e){
   e.preventDefault();
   var err=document.getElementById("err");err.textContent="";
@@ -164,7 +165,9 @@ document.getElementById("f").addEventListener("submit",function(e){
   L.push("");L.push("Mi correo · "+m);
   msg=L.join("\n");
   document.getElementById("txt").textContent=msg;
-  document.getElementById("wa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+  var subj="Presupuesto · "+val("nombre")+(val("empresa")?" · "+val("empresa"):"");
+  document.getElementById("mail").href="mailto:"+TO+"?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
+  document.getElementById("gm").href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
   document.getElementById("form").style.display="none";
   document.getElementById("res").style.display="block";
   window.scrollTo(0,0);

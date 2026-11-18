@@ -38,8 +38,8 @@ export function Contact() {
             style={{ color: "#8a8a8a" }}
           >
             {t(
-              "¿Tienes un proyecto, una colaboración o una oportunidad en la que pueda aportar?",
-              "Do you have a project, a collaboration or an opportunity where I can contribute?",
+              "¿Tienes un proyecto en mente?",
+              "Do you have a project in mind?",
             )}
           </p>
 
@@ -48,7 +48,7 @@ export function Contact() {
               <button
                 type="button"
                 onClick={() => window.location.assign("/presupuesto/")}
-                className="group inline-flex h-14 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
+                className="group inline-flex h-16 w-full items-center justify-center gap-4 border border-[#f5f5f5] px-8 font-sans text-sm font-bold uppercase tracking-[0.14em] text-[#f5f5f5] transition-colors hover:border-[#ecd012] hover:bg-[#ecd012] hover:text-[#080808] md:w-auto md:text-base"
               >
                 <span>Cuéntame tu proyecto</span>
                 <span className="inline-block text-[#ecd012] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#080808]">
@@ -65,6 +65,9 @@ export function Contact() {
               </p>
               <p className="font-sans text-2xl font-semibold md:text-3xl" style={{ color: "#f5f5f5" }}>
                 Ramón Fernández
+              </p>
+              <p className="font-sans text-base md:text-lg" style={{ color: "#8a8a8a" }}>
+                {t("Artista visual", "Visual artist")}
               </p>
             </div>
 
