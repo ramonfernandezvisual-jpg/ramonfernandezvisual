@@ -14,6 +14,18 @@ const servicesEs = [
     title: "Convertir una escena normal en escena cinematográfica",
     text: "Tu grabación de siempre, llevada a una escena de cine con su atmósfera, sus planos y sus cambios de cámara.",
   },
+  {
+    title: "Piezas de producto con historia",
+    text: "Tu producto aparece dentro de una pequeña historia, en una situación real, no como una imagen de catálogo.",
+  },
+  {
+    title: "Adaptación de proyectos a redes",
+    text: "Tus proyectos ajustados en versiones más cortas, pensadas para cada red.",
+  },
+  {
+    title: "Arquitectura e interiorismo",
+    text: "Espacios con atmósfera, luz y movimiento, pensados para estudios de arquitectura.",
+  },
 ];
 
 const servicesEn = [
@@ -28,6 +40,18 @@ const servicesEn = [
   {
     title: "Turn an ordinary scene into a cinematic scene",
     text: "Your usual footage, taken to a film-like scene with its atmosphere, its shots and its camera changes.",
+  },
+  {
+    title: "Product pieces with a story",
+    text: "Your product appears inside a small story, in a real situation, not as a catalog image.",
+  },
+  {
+    title: "Adapting projects for social media",
+    text: "Your projects adjusted into shorter versions, designed for each platform.",
+  },
+  {
+    title: "Architecture and interior design",
+    text: "Spaces with atmosphere, light and movement, designed for architecture studios.",
   },
 ];
 
