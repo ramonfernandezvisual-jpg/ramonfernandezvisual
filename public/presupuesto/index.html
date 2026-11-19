@@ -115,6 +115,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
   <div id="ok" style="display:none">
     <h1>Enviado<span>.</span></h1>
     <p class="intro">Tu mensaje me ha llegado. Te respondo lo antes posible.</p>
+    <div class="actions"><a class="btn primary" href="/">Volver a la web</a></div>
   </div>
 
   <div id="res">
@@ -172,9 +173,9 @@ document.getElementById("f").addEventListener("submit",function(e){
     window.scrollTo(0,0);
   }
   var body={_subject:subj,_template:"table",_captcha:"false",_honey:"",
-    nombre:val("nombre"),empresa:val("empresa"),email:m,
-    quiere_contar:pick("q1"),duracion:pick("q2"),donde_se_vera:pick("q3"),versiones_cortas_redes:pick("q4"),parte_de:pick("q5"),
-    presupuesto:val("presupuesto"),para_cuando:val("fecha"),mensaje:val("mensaje")};
+    "Nombre":val("nombre"),"Empresa":val("empresa"),email:m,
+    "Qué quiere contar":pick("q1"),"Duración":pick("q2"),"Dónde se verá":pick("q3"),"Versiones cortas para redes":pick("q4"),"Qué tiene ya":pick("q5"),
+    "Presupuesto":val("presupuesto"),"Para cuándo":val("fecha"),"Mensaje":val("mensaje")};
   fetch("https://formsubmit.co/ajax/"+TO,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)})
    .then(function(r){return r.json()})
    .then(function(j){
