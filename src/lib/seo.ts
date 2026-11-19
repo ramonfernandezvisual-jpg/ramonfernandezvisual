@@ -1,6 +1,6 @@
 export function personLd(lang: "es" | "en") {
   const es = lang === "es";
-  const url = es ? "https://ramonfernandezvisual.com/" : "https://ramonfernandezvisual.com/en";
+  const url = es ? "https://ramonfernandezvisual.com/" : "https://ramonfernandezvisual.com/en/";
   return JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [

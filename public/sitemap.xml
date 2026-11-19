@@ -3,11 +3,11 @@
   <url>
     <loc>https://ramonfernandezvisual.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://ramonfernandezvisual.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ramonfernandezvisual.com/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ramonfernandezvisual.com/en/"/>
   </url>
   <url>
-    <loc>https://ramonfernandezvisual.com/en</loc>
+    <loc>https://ramonfernandezvisual.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://ramonfernandezvisual.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ramonfernandezvisual.com/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ramonfernandezvisual.com/en/"/>
   </url>
 </urlset>

@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ramonfernandezvisual.com/" },
       { rel: "alternate", hrefLang: "es", href: "https://ramonfernandezvisual.com/" },
-      { rel: "alternate", hrefLang: "en", href: "https://ramonfernandezvisual.com/en" },
+      { rel: "alternate", hrefLang: "en", href: "https://ramonfernandezvisual.com/en/" },
       { rel: "alternate", hrefLang: "x-default", href: "https://ramonfernandezvisual.com/" },
     ],
   }),
