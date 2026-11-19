@@ -118,17 +118,11 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
   </div>
 
   <div id="res">
-    <h1>Listo<span>.</span></h1>
-    <p class="intro">Este es tu mensaje. Ábrelo en tu correo y pulsa enviar para que me llegue.</p>
-    <pre id="txt"></pre>
+    <h1>No se ha enviado<span>.</span></h1>
+    <p class="intro">Ha habido un problema al enviar tu mensaje. Inténtalo de nuevo en unos minutos, o escríbeme a ramonfernandezvisual@gmail.com.</p>
     <div class="actions">
-      <a class="btn primary" id="mail" href="#">Abrir mi correo</a>
-      <a class="btn ghost" id="gm" href="#" target="_blank" rel="noopener">Enviar con Gmail</a>
-      <button class="ghost" id="copy" type="button">Copiar mensaje</button>
-      <button class="ghost" id="back" type="button">Volver</button>
+      <button class="primary" id="back" type="button">Volver al formulario</button>
     </div>
-    <p class="small" id="copied"></p>
-    <p class="small">Si no se abre ningún correo, copia el mensaje y envíalo a ramonfernandezvisual@gmail.com.</p>
   </div>
 
   <footer>Responderé lo antes posible.</footer>
@@ -169,14 +163,10 @@ document.getElementById("f").addEventListener("submit",function(e){
   if(val("mensaje")){L.push("");L.push(val("mensaje"))}
   L.push("");L.push("Mi correo · "+m);
   msg=L.join("\n");
-  document.getElementById("txt").textContent=msg;
   var subj="Presupuesto · "+val("nombre")+(val("empresa")?" · "+val("empresa"):"");
-  document.getElementById("mail").href="mailto:"+TO+"?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
-  document.getElementById("gm").href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
   var btn=document.getElementById("go");btn.disabled=true;btn.textContent="Enviando…";
   function fail(){
     btn.disabled=false;btn.textContent="Enviar";
-    document.querySelector("#res .intro").textContent="No se ha podido enviar de forma automática. Usa uno de estos botones para que me llegue.";
     document.getElementById("form").style.display="none";
     document.getElementById("res").style.display="block";
     window.scrollTo(0,0);
@@ -201,11 +191,6 @@ document.getElementById("back").addEventListener("click",function(){
   document.getElementById("res").style.display="none";
   document.getElementById("form").style.display="block";
   window.scrollTo(0,0);
-});
-document.getElementById("copy").addEventListener("click",function(){
-  var c=document.getElementById("copied");
-  try{navigator.clipboard.writeText(msg).then(function(){c.textContent="Mensaje copiado."},function(){c.textContent="No se pudo copiar. Selecciona el texto y cópialo a mano."})}
-  catch(x){c.textContent="No se pudo copiar. Selecciona el texto y cópialo a mano."}
 });
 </script>
 </body>
