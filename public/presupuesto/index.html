@@ -56,7 +56,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
 
   <div id="form">
     <h1>Cuéntame tu proyecto<span>.</span></h1>
-    <p class="intro">Responde unas preguntas breves. Al terminar, tu mensaje queda listo para enviármelo por correo.</p>
+    <p class="intro">Responde unas preguntas breves. Al terminar, tu mensaje me llega directamente a mi correo.</p>
 
     <form id="f" novalidate>
       <fieldset>
@@ -107,9 +107,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:v
         <div class="field"><label class="f" for="mensaje">Cuéntame más</label><textarea id="mensaje"></textarea></div>
       </fieldset>
 
-      <button type="submit" class="primary">Preparar mi mensaje</button>
+      <button type="submit" class="primary" id="go">Enviar</button>
       <p class="err" id="err" role="alert"></p>
     </form>
+  </div>
+
+  <div id="ok" style="display:none">
+    <h1>Enviado<span>.</span></h1>
+    <p class="intro">Tu mensaje me ha llegado. Te respondo lo antes posible.</p>
   </div>
 
   <div id="res">
@@ -168,9 +173,29 @@ document.getElementById("f").addEventListener("submit",function(e){
   var subj="Presupuesto · "+val("nombre")+(val("empresa")?" · "+val("empresa"):"");
   document.getElementById("mail").href="mailto:"+TO+"?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
   document.getElementById("gm").href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(subj)+"&body="+encodeURIComponent(msg);
-  document.getElementById("form").style.display="none";
-  document.getElementById("res").style.display="block";
-  window.scrollTo(0,0);
+  var btn=document.getElementById("go");btn.disabled=true;btn.textContent="Enviando…";
+  function fail(){
+    btn.disabled=false;btn.textContent="Enviar";
+    document.querySelector("#res .intro").textContent="No se ha podido enviar de forma automática. Usa uno de estos botones para que me llegue.";
+    document.getElementById("form").style.display="none";
+    document.getElementById("res").style.display="block";
+    window.scrollTo(0,0);
+  }
+  var body={_subject:subj,_template:"table",_captcha:"false",_honey:"",
+    nombre:val("nombre"),empresa:val("empresa"),email:m,
+    quiere_contar:pick("q1"),duracion:pick("q2"),donde_se_vera:pick("q3"),versiones_cortas_redes:pick("q4"),parte_de:pick("q5"),
+    presupuesto:val("presupuesto"),para_cuando:val("fecha"),mensaje:val("mensaje")};
+  fetch("https://formsubmit.co/ajax/"+TO,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)})
+   .then(function(r){return r.json()})
+   .then(function(j){
+     if(j&&(j.success===true||j.success==="true")){
+       btn.disabled=false;btn.textContent="Enviar";
+       document.getElementById("form").style.display="none";
+       document.getElementById("ok").style.display="block";
+       window.scrollTo(0,0);
+     }else{fail()}
+   })
+   .catch(fail);
 });
 document.getElementById("back").addEventListener("click",function(){
   document.getElementById("res").style.display="none";

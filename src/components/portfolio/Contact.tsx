@@ -38,8 +38,17 @@ export function Contact() {
             style={{ color: "#8a8a8a" }}
           >
             {t(
-              "¿Tienes un proyecto en mente?",
-              "Do you have a project in mind?",
+              "¿Tienes una historia en mente?",
+              "Do you have a story in mind?",
+            )}
+          </p>
+          <p
+            className="mt-3 max-w-2xl font-sans text-[16px] leading-[1.55] md:text-xl md:leading-relaxed"
+            style={{ color: "#8a8a8a" }}
+          >
+            {t(
+              "Dime qué necesitas y te preparo una propuesta a medida.",
+              "Tell me what you need and I will prepare a tailored proposal.",
             )}
           </p>
 
