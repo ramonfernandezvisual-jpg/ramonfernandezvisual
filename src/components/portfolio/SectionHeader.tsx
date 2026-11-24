@@ -31,12 +31,12 @@ export function SectionHeader({
           </span>
         )}
       </div>
-      <h3
+      <h2
         className="mt-3 font-sans text-[24px] font-semibold uppercase leading-[1.08] tracking-[-0.02em] [overflow-wrap:normal] md:mt-4 md:text-[clamp(1.375rem,3vw,2.5rem)]"
         style={{ color: "#f5f5f5" }}
       >
         {title}
-      </h3>
+      </h2>
       <p
         className="mt-3 max-w-xl font-sans text-[16px] leading-[1.55] md:mt-4 md:text-[15px] md:leading-relaxed"
         style={{ color: "#8a8a8a" }}

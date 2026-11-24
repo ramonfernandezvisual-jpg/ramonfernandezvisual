@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: shareCoverUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Portada actual de Ramón Fernández — Dirección visual" },
+      { property: "og:image:alt", content: "Ramón Fernández — Dirección visual y producción audiovisual con IA" },
     ],
     scripts: [{ type: "application/ld+json", children: personLd("es") }],
     links: [

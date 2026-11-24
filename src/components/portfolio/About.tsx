@@ -36,7 +36,7 @@ export function About() {
           <div className="relative aspect-[4/5] w-full overflow-hidden" style={{ backgroundColor: "#111" }}>
             <img
               src={ramon}
-              alt="Ramón Fernández"
+              alt={t("Ramón Fernández, artista visual", "Ramón Fernández, visual artist")}
               className="h-full w-full object-cover"
               style={{ filter: "grayscale(100%) contrast(1.05)" }}
             />
