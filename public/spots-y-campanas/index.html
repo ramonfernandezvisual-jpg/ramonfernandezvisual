@@ -20,8 +20,10 @@ a{color:inherit}
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:72px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 nav a{text-decoration:none;color:var(--mut)}
 nav a:hover{color:var(--yel)}
-.logo{font-weight:800;font-size:30px;letter-spacing:-.04em;color:var(--txt)}
-.logo i{color:var(--yel);font-style:normal}
+nav a.logo{color:var(--yel)}
+.logo{display:inline-flex;align-items:baseline;font-weight:800;font-size:44px;letter-spacing:-.04em;color:var(--yel);line-height:1}
+.logo span{display:inline-block}
+.logo .r{transform:scaleX(-1)}
 .tag{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.22em;color:var(--yel);text-transform:uppercase}
 h1{font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.95;font-size:clamp(40px,9vw,84px);margin:18px 0 22px}
 h1 span{color:var(--yel)}
@@ -50,7 +52,7 @@ footer{margin-top:80px;border-top:1px solid var(--line);padding-top:20px;color:v
 <body>
 <div class="wrap">
   <nav>
-    <a class="logo" href="/">Rf<i>.</i></a>
+    <a class="logo" href="/" aria-label="Ramón Fernández"><span class="r">R</span><span>f</span><span>.</span></a>
     <a href="/#portfolio">Ver proyectos</a>
   </nav>
 
