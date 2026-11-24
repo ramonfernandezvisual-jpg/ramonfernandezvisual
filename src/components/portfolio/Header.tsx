@@ -67,20 +67,12 @@ export function Header() {
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (!e.isIntersecting) return;
-          const id = e.target.id === "faq" ? "contacto" : e.target.id;
-          if (nav.some((n) => n.id === id)) setActive(id);
-          try {
-            const { pathname, search } = window.location;
-            window.history.replaceState(null, "", pathname + search + (id === "hero" ? "" : `#${id}`));
-          } catch {
-            /* sin efecto */
-          }
+          if (e.isIntersecting) setActive(e.target.id === "faq" ? "contacto" : e.target.id);
         });
       },
       { rootMargin: "-40% 0px -55% 0px" },
     );
-    ["hero", "portfolio", "servicios", "sobre-mi", "colaboro", "contacto", "faq"].forEach((id) => {
+    [...nav.map((n) => n.id), "faq"].forEach((id) => {
       const el = document.getElementById(id);
       if (el) obs.observe(el);
     });
