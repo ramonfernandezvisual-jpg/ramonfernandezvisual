@@ -133,6 +133,23 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      const junk = ["fbclid", "igshid", "igsh"];
+      let changed = false;
+      Array.from(url.searchParams.keys()).forEach((k) => {
+        if (k.startsWith("utm_") || junk.includes(k)) {
+          url.searchParams.delete(k);
+          changed = true;
+        }
+      });
+      if (changed) window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch {
+      /* sin efecto */
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
