@@ -140,16 +140,16 @@ const FAQS_ES = [
   ["¿Trabajas en marca blanca?", "Sí. Trabajo bajo el nombre de la agencia o productora, sin contacto con el cliente final y sin publicar nada sin permiso."],
   ["¿Cuánto tarda una pieza?", "Depende de la pieza. El plazo se fija en el presupuesto y se cumple."],
   ["¿Cómo empezamos?", "Cuéntame la idea o mándame el guion si ya lo tenéis, y te propongo un enfoque y un presupuesto."],
-  ["¿Desde dónde trabajas?", "En remoto, en horario de tarde española, con equipos de toda España."],
-  ["¿Cuándo no conviene usar IA?", "Cuando la pieza depende de una actuación real o de un producto en movimiento muy preciso. En esos casos te lo diré con sinceridad, y la IA puede quedarse solo en lo que de verdad suma."],
+  ["¿Desde dónde trabajas?", "En remoto, con equipos de cualquier país."],
+  ["¿Cuándo no conviene usar IA?", "Depende de cada proyecto, y la tecnología avanza casi cada día. Lo valoramos juntos antes de empezar, y si algo no encaja te lo diré con sinceridad."],
   ["¿Cómo usas la IA?", "Al servicio de la idea. No copio el estilo de otros artistas y cada pieza parte de una dirección de arte propia."],
 ];
 const FAQS_EN = [
   ["Do you work white label?", "Yes. I work under the name of the agency or production company, with no contact with the end client and without publishing anything without permission."],
   ["How long does a piece take?", "It depends on the piece. The deadline is set in the quote and I keep to it."],
   ["How do we start?", "Tell me the idea, or send me the script if you already have one, and I will propose an approach and a quote."],
-  ["Where do you work from?", "Remotely, during Spanish afternoon hours, with teams from all over Spain."],
-  ["When is AI not the right choice?", "When the piece depends on a real performance or on very precise product movement. In those cases I will tell you honestly, and AI can be limited to what truly adds value."],
+  ["Where do you work from?", "Remotely, with teams from any country."],
+  ["When is AI not the right choice?", "It depends on each project, and the technology moves almost every day. We assess it together before starting, and if something does not fit I will tell you honestly."],
   ["How do you use AI?", "In the service of the idea. I do not copy other artists' style and each piece starts from its own art direction."],
 ];
 
